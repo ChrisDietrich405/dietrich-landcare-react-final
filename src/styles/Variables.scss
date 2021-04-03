@@ -1,0 +1,17 @@
+$primary-color: #448c7e; //main place where you put your variables and then 
+$primary: #488d7f;
+$primary-darken: darken($primary, 30%); // darken is a sass function
+$nav-link-color: white;
+$nav-link-hover-color: $primary;
+$dropdown-min-width: 7rem; 
+$dropdown-link-color: white; 
+$dropdown-link-hover-color: $primary;
+$dropdown-bg: $primary;  
+$dropdown-link-active-color: $primary;        
+$dropdown-link-active-bg: white;
+$dropdown-border-radius: 15px;  
+$link-active-color: white; 
+$nav-link-hover-color: white;  
+$hr-color: black;                    
+$hr-height: 1.5px;                  
+$hr-opacity: 1;                           //import this file into other files 

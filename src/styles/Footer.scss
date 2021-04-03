@@ -1,0 +1,72 @@
+.footer {
+    background-image: url("./StylesImages/triangle.png");
+    background-repeat: repeat-x;
+    width: 100vw;
+    position: relative;
+    background-color: #448c7e;
+}
+
+.footer-container { 
+    padding-top: 5rem; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+    justify-content: space-between; 
+    width: 100%; 
+    margin-top: 2rem; 
+    color: white;
+    font-size: .9rem; 
+    z-index: 2;
+    padding-right: 3rem; 
+}
+
+.footer-container-top {
+    display: flex; 
+    flex-direction: row; 
+    width: 90%;  
+    justify-content: space-around;
+    align-items: center; 
+    margin-bottom: 2rem;   
+}
+
+.footer-container-bottom {
+    z-index: 3;
+}
+
+.footer-facebook, 
+.footer-instagram {
+    width: 5rem;  
+}
+
+.footer-container-top-title a {
+    color: white; 
+}
+
+.footer-container-top-title p {
+    margin: 1px !important; 
+}
+
+@media(max-width: 1043px) {
+    .footer-container {
+        display: block; 
+    }
+
+    .footer-container-top {
+        display: block; 
+        text-align: center;
+        width: 100%;  
+    }
+
+    .footer-container-top-title {
+        margin-bottom: 1.5rem; 
+    } 
+    
+    .footer-copyright {
+        justify-content: center; 
+        text-align: center; 
+    }
+}
+
+
+
+

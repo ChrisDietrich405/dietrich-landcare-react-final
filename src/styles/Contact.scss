@@ -1,0 +1,167 @@
+/* .c-background-pic {
+  background-image: url("/images/practice.pic.jpg");
+  z-index: -1; 
+} */
+
+.viewport {
+  height: 100vh; 
+  background-color: white; 
+  padding-top: 3rem; 
+
+  .row > * {
+    padding-right: 0;
+    padding-left: 0; 
+  }
+}
+
+.container {
+  margin-top: 3rem;
+}
+
+.c-container {
+  margin-top: 3rem;
+  background-color: rgb(246, 242, 242);
+  padding-bottom: 1rem; 
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.col-md-6 .c-form {
+  background-color: rgb(255, 255, 255);
+  padding: 25px 30px;   
+  border-radius: 40px; 
+}
+
+.row-container {
+  border-radius: 18px; 
+  box-shadow: 4px 4px 4px 4px; 
+}
+
+.col-md-6 .c-contact-form {
+  position: relative;
+  background-color: #448c7e;
+  padding: 30px 30px;
+  border-radius: 0 18px 18px 0px;
+  .contact-radio-btn p {
+    padding-top: 1.3rem; 
+  } 
+}
+
+.c-title-contact { 
+  top: 1.5rem; 
+}
+
+.c-information {
+  list-style: none;
+  display: flex;
+}
+
+.c-information img {
+  max-width: 30px;
+  list-style-type: none;
+  margin-right: 20px;
+  padding-bottom: 20px;
+}
+
+.c-social-media svg {
+  font-size: 50px;
+  border-radius: 10px;
+}
+
+.c-social-media {
+  display: flex;
+}
+
+.c-instagram,
+.c-twitter {
+  padding-left: 40px;
+}
+
+.c-social-media svg {
+  font-size: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.c-social-media svg:hover {
+  transform: scale(1.5);
+}
+.grid-one,
+.grid-two { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; 
+}
+
+.message {
+  display: flex; 
+  margin-top: 1rem; 
+  height: 6rem; 
+}
+
+.c-fields {
+  display: flex; 
+  margin-top: 0 !important; 
+  margin-bottom: 0 !important; 
+  position: relative;
+  padding: 11.5px 0;
+  label {
+    position: absolute;
+    padding: 5px 5px;
+    transition: transform .5s ease; 
+  }
+  input
+  {
+    width: 250px;
+    padding: 6px;
+    border-radius: 6px;
+  }
+  textarea
+  {
+    width: 350px;
+    padding: 6px;
+    border-radius: 6px;  
+  }
+}
+
+.c-fields .focus, .c-fields.filled label {
+  transform: translateY(-80%) !important;
+}
+
+.contact-submit-btn {
+  display: flex; 
+  justify-items: center; 
+  align-items: center; 
+  padding-left: 1rem; 
+}
+
+.c-btn {
+  display: flex; 
+  align-items: center; 
+  padding: 5px 15px; 
+  border-radius: 6px;
+}
+
+.c-circle {
+  color: black;
+  top: 5%;
+  width: 15px;
+  height: 15px;
+}
+
+.c-contact-form:before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  background-color: #448c7e;
+  transform: rotate(45deg);
+  top: 50px;
+  left: -13px;
+}
+
+.c-quote {
+  top: 100px; 
+  left: 340px; 
+}
