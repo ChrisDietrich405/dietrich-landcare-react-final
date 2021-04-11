@@ -20,6 +20,7 @@ class App extends Component{
                    value="tree"
                    checked={value === "tree"}
                    onChange={this.onChange}/>
+            &nbsp; 
             Tree
           </label>
           <label className="contact-label">
@@ -27,6 +28,7 @@ class App extends Component{
                    value="trash"
                    checked={value === "trash"}
                    onChange={this.onChange}/>
+            &nbsp;
             Trash
           </label> 
           <label className="contact-label">
@@ -34,6 +36,7 @@ class App extends Component{
                    value="lawn"
                    checked={value === "lawn"}
                    onChange={this.onChange}/>
+            &nbsp;
             Lawn
           </label>
           <label className="contact-label">
@@ -41,6 +44,7 @@ class App extends Component{
                    value="install"
                    checked={value === "install"}
                    onChange={this.onChange}/>
+            &nbsp;
             Install
           </label> 
       </div>
