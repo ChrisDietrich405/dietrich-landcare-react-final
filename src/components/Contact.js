@@ -23,22 +23,22 @@ export default class Contact extends React.Component {
               <div className="c-form">
                 <div className="c-contact-info">
                   <h4 className="c-title">Let's get in touch!</h4>
-                  <p className="c-text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-                  dolorum adipisci recusandae praesentium dicta!
-                  </p>
+                  <div className="c-text">
+                    <p>We are available by phone,</p>
+                    <p>Monday-Saturday 7am-7:30 pm.</p>
+                  </div>
             <ul className="c-info">
               <li className="c-information">
                 <img src="/images/location.png" className="c-info-icons" />
-                <p>124 High Street, Brooklyn NY 23333</p>
-              </li>
-              <li className="c-information">
-                <img src="/images/email.png" className="c-info-icons" />
-                <p>DietrichLandCare@gmail.com</p>
+                <p>Baltimore, MD 21239</p>
               </li>
               <li className="c-information">
                 <img src="/images/phone.png" className="c-info-icons" />
-                <p>410 765-7777</p>
+                <p>(443) 608-3258</p>
+              </li>
+              <li className="c-information">
+                <img src="/images/email.png" className="c-info-icons" />
+                <p>office@dietrichlandcare.com</p>
               </li>
             </ul>
           </div>

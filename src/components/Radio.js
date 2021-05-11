@@ -20,33 +20,48 @@ class App extends Component{
                    value="tree"
                    checked={value === "tree"}
                    onChange={this.onChange}/>
-            &nbsp; 
-            Tree
+            Mowing, Lawn & Property Maintenance
           </label>
+          <br/>
           <label className="contact-label">
             <input type="radio"
                    value="trash"
                    checked={value === "trash"}
                    onChange={this.onChange}/>
-            &nbsp;
-            Trash
+            Power-Washing
           </label> 
+          <br/>
           <label className="contact-label">
             <input type="radio"
                    value="lawn"
                    checked={value === "lawn"}
                    onChange={this.onChange}/>
-            &nbsp;
-            Lawn
+            Snow Removal
           </label>
+          <br/>
           <label className="contact-label">
             <input type="radio"
                    value="install"
                    checked={value === "install"}
                    onChange={this.onChange}/>
-            &nbsp;
-            Install
+            Stump Removal
           </label> 
+          <br/>
+          <label className="contact-label">
+            <input type="radio"
+                   value="install"
+                   checked={value === "install"}
+                   onChange={this.onChange}/>
+            Demolition & Hauling
+          </label>
+          <br/> 
+          <label className="contact-label">
+            <input type="radio"
+                   value="install"
+                   checked={value === "install"}
+                   onChange={this.onChange}/>
+            Regrades
+          </label>
       </div>
     )
   }
