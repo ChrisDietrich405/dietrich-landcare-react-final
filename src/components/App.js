@@ -16,6 +16,11 @@ import Contact from "./Contact";
 import Footer from "./Footer"
 
 import TreeTrimming from "./TreeTrimming"; 
+import LawnCare from "./LawnCare"
+import PowerWashing from "./PowerWashing";
+import SnowRemoval from "./SnowRemoval";
+import StumpRemoval from "./StumpRemoval";
+import Demolition from "./Demolition";
 // import 'bootstrap/dist/css/bootstrap.css'
 
 
@@ -37,6 +42,11 @@ export default /*export default is a key word to export modules*/ function App()
           <Route path="/testimonials" component={Testimonials} />
           <Route path="/contact" component={Contact} />
           <Route path="/beforeAndAfter" component={BeforeandAfter} />
+          <Route path="/LawnCare" component={LawnCare} />
+          <Route path="/PowerWashing" component={PowerWashing} />
+          <Route path="/SnowRemoval" component={SnowRemoval} />
+          <Route path="/StumpRemoval" component={StumpRemoval} />
+          <Route path="/Demolition" component={Demolition} />
           <Route path="/treeTrimming" component={TreeTrimming} />
         </Switch>
       </div>

@@ -25,10 +25,23 @@ export default class Header extends React.Component {
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">  
                 <li>
-                <Link to="/treeTrimming" className="dropdown-item">Tree Trimming</Link>
+                <Link to="/LawnCare" className="dropdown-item">Lawn Care</Link>
                 </li>
-                <li><a className="dropdown-item" href="#">Lawn Care</a></li>
-                <li><a className="dropdown-item" href="#">Trash Removal</a></li>
+                <li>
+                <Link to="/PowerWashing" className="dropdown-item">Power Washing</Link>
+                </li>
+                <li>
+                <Link to="/SnowRemoval" className="dropdown-item">Snow Removal</Link>
+                </li>
+                <li>
+                <Link to="/StumpRemoval" className="dropdown-item">Stump Removal</Link>
+                </li>
+                <li>
+                <Link to="/Demolition" className="dropdown-item">Demolition & Hauling</Link>
+                </li>
+                <li>
+                <Link to="/Regrades" className="dropdown-item">Regrades</Link>
+                </li>
               </ul>
               </li>
               <li className="nav-item">
@@ -43,7 +56,7 @@ export default class Header extends React.Component {
             </ul>
 			<ul className="nav justify-content-end">
 				<li className="nav-item">
-          <a className="nav-link" href="tel:3457655555"><span><FontAwesomeIcon icon={faPhone} /></span> (410) 333-3333</a> 
+          <a className="nav-link" href="tel:3457655555"><span><FontAwesomeIcon icon={faPhone} /></span> (443) 608-3258</a> 
         </li>
         <li className="nav-item">
 					<a className="nav-link" href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
