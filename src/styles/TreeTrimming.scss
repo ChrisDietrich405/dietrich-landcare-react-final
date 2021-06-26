@@ -1,6 +1,5 @@
 .tree-trimming-container {
-    margin-top: 5rem; 
-    margin-bottom: 0; 
+    margin-top: 2rem;  
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -8,6 +7,7 @@
 
 .tree-trimming-description img {
     width: 40rem;
+    height: 18rem; 
     border-radius: 8px; 
     box-shadow: 5px 5px 5px gray;
 }
@@ -20,7 +20,8 @@ h1 {
 .tree-trimming-description {
     width: 90%; 
     margin-left: 2rem; 
-    margin-top: 3rem; 
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     display: grid; 
     grid-template-columns: auto auto;
     grid-column-gap: 2rem; 
@@ -33,5 +34,4 @@ h1 {
 
 .tree-trimming-image-description-bottom {
     width: 90%; 
-
 }

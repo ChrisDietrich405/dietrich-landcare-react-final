@@ -24,13 +24,13 @@ export default class Footer extends React.Component {
                      </div>
                      <div className="footer-container-top-title">
                          <h3>Address</h3>
-                         <p>Lorem ipsum dolor sit.</p>
-                         <p>kkkk</p>
+                         <p>1376 Loch Hill Rd</p>
+                         <p>Baltimore, MD 21239</p>
                      </div>
                      <div className="footer-container-top-title">
                          <h3>Office Hours</h3>
-                         <p>Lorem ipsum dolor sit.</p>
-                         <p>Lorem ipsum dolor sit.</p>
+                         <p>Monday-Saturday 9am-6pm</p>
+                         <p>Sundays 11am-5pm</p>
                      </div>
                      <div className="footer-container-top-title">
                          <h3>Follow Us</h3>

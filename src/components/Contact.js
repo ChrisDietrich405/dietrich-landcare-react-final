@@ -1,17 +1,21 @@
 import React from "react"; 
-import "../styles/Contact.scss";
-import Footer from "./Footer";
-import Radio from "./Radio"; 
-import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faCashRegister, faQuoteLeft} from "@fortawesome/free-solid-svg-icons";
 
 import classnames from "classnames";
 import axios from "axios";
+import * as Validator from 'validatorjs';
+
+import Footer from "./Footer";
+import Radio from "./Radio"; 
+
+import "../styles/Contact.scss";
 export default class Contact extends React.Component {
   constructor(props) { /* you only need the constructor function if you need to override something from the React Component  */
     super(props);
-    this.state = { firstName: "", lastName: "", email: "", phone: "", message: "" };
+    this.state = { firstName: "", lastName: "", email: "", phone: "", message: "", service: "", error: {}};
   }
   render() {
     return (
@@ -84,7 +88,7 @@ export default class Contact extends React.Component {
                     onChange={(event) => {
                       this.setState({ firstName: event.target.value });
                     }}
-                  />
+                  /> {"firstName" in this.state.error && <p>{this.state.error.firstName.join(",")}</p>}
                 </div>
                 <div className={classnames("c-fields", { "filled": this.state.lastName != ""})}>
                   <label htmlFor="lastName">Last Name</label>
@@ -96,7 +100,8 @@ export default class Contact extends React.Component {
                     onChange={(event) => {
                       this.setState({ lastName: event.target.value})
                     }}
-                  />
+                  /> {"lastName" in this.state.error && <p>{this.state.error.lastName.join(",")}</p>}
+                  {/* checking to see if the error property includes the lastName property */}
                 </div>
               </div>
               <div className="grid-two">
@@ -110,7 +115,7 @@ export default class Contact extends React.Component {
                     onChange={(event) => {
                       this.setState({ email: event.target.value });
                     }}
-                  />
+                  /> {"email" in this.state.error && <p>{this.state.error.email.join(",")}</p>}
                 </div>
                 <div className={classnames("c-fields", { "filled": this.state.phone != ""})}>
                   {" "}
@@ -123,11 +128,13 @@ export default class Contact extends React.Component {
                       onChange={(event) => {
                         this.setState({ phone: event.target.value });
                       }}
-                    />
+                    />{"phone" in this.state.error && <p>{this.state.error.phone.join(",")}</p>}
                   </div>
                 </div>
                 <div className="contact-radio-wrapper">
-                    <Radio />
+                    <Radio onChange={ service => {
+                        this.setState({ service: service })
+                    }}/> {"service" in this.state.error && <p>{this.state.error.service.join(",")}</p>}
                 </div>
                   <div className="message">
                     <div className={classnames("c-fields", { "filled": this.state.message != ""})}>
@@ -140,7 +147,7 @@ export default class Contact extends React.Component {
                           this.setState({ message: event.target.value });
                         }}
                       >
-                      </textarea>
+                      </textarea> {"message" in this.state.error && <p>{this.state.error.message.join(",")}</p>}
                     </div>
                     <div className="contact-submit-btn">
                       <button className="c-btn">Submit</button>
@@ -159,26 +166,34 @@ export default class Contact extends React.Component {
     </>
     );
   }
+
   onSubmit(event) {
     event.preventDefault()
-    axios.defaults.headers.common['project']         = 'HELBOR';
-    axios.defaults.headers.common['key']             = 'uZBBaTYzk2dr9Q5nF8SLW2Df0V4RPQWs9zK0vcie';
-    axios.post("http://api.corretoron.com.br/auth", { 
-      email:this.state.email, 
-      password:this.state.username
-    }).then(response => {
-      console.log(response.data)
-      alert("login successful")
-    }).catch(error => {
-      console.log(error)
-      alert("password incorrect")
+    
+    const validator = new Validator(this.state, { //validating the state which includes all the properties 
+      firstName: "required",
+      lastName: "required",
+      email: "required|email", //required is one validator, email is another validator and we could add more
+      // for example max 
+      phone: "required",
+      service: "required",
+      message: "required"
     })
-      
-  //   fetch("http://api.dietrich.landcare.database")
-  // .then(response => response.json())
-  // .then(data => { console.log(data) } )
+   if(validator.passes()) {
+     axios.post("http://localhost:3300/contact", this.state) //when you use post the second argument is the data
+     .then( response => alert("message was sent"))              //being sent
+     .catch(err => {
+       if(err.response.status === 400) {  //400 is a validation error 
+         this.setState({error: err.response.data}) //for example "first name wasn't entered"
+       } else {
+         alert("some error happened")
+       }
+     })                                                      
+   } else {
+       this.setState({error: validator.errors.errors})
+   }
   }
-  onInputFocus /*onInputFocus is a method*/(event) {
+  onInputFocus(event) {
     event.target.previousElementSibling.className = "focus";
   }
   onInputBlur(event) {

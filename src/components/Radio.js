@@ -8,6 +8,7 @@ class App extends Component{
 
   onChange = e => {
     this.setState({value : e.target.value})
+    this.props.onChange(e.target.value)
   }
   
   render() {

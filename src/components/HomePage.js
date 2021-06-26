@@ -7,13 +7,13 @@ export default class HomePage extends React.Component {
     return <div>
     <SlideShow timeOut={3000} images={  [    // timeOUt and images are examples of attributes
       {
-        url: "/images/what.jpg",
-        title: "lorem ipsum 0",
+        url: "/images/home1.jpg",
+        title: "Hedge Trimming",
         description: "lorem ipsum lorem ipsum lorem lipsum"   
       },
       {
-        url: "/images/ever.jpg",
-        title: "lorem ipsum 1",
+        url: "/images/home2.jpg",
+        title: "clearing",
         description: "lorem ipsum lorem ipsum lorem lipsum" 
       },
       {
@@ -33,13 +33,10 @@ export default class HomePage extends React.Component {
                <img src="/images/what.jpg" alt="" className="bottom-pic"/>
             </div>
             <div className="box2">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit enim adipisci provident minima! Saepe
-                similique dignissimos eos minus laborum exercitationem voluptatibus reiciendis voluptate, perferendis ad
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, eius nam.
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, necessitatibus?</p>
+                <p>Our professionally trained landscape designers are committed to surpassing your expectations and doing everything we can to ensure you are proud of your landscape. We offer a number of different landscape services that you can choose from, and we take the time to customize it to your specific needs in order for it to reflect you best and ensure it aligns to the outdoor activities you enjoy the most. Whether you are looking for a hardscape or softscape installation, drainage solutions, energy-efficient outdoor lighting installations and more, we can assist you and grow your landscape vision according to your preferences.</p>
             </div>
             <div className="box3">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate cum vitae similique debitis nesciunt? Voluptate, accusamus tenetur nostrum magnam expedita rem reprehenderit animi illum adipisci quos eaque assumenda fugit eius dignissimos odio totam! Ullam tenetur id, tempora veritatis numquam totam?</p>
+                <p>We are certified in all aspects of landscaping that offers you efficient and dependable services that suit your budget and needs best. We craft innovative patios, terraces, retaining walls, dry rock creeks, outdoor fireplaces, walkways, energy-efficient lighting and more.</p>
             </div>
         </section>
     </div>
