@@ -11,7 +11,8 @@ export default class Demolition extends React.Component {
               <img src="/images/Demolition.jpg" alt=""/>
               <div className="tree-trimming-image-description">
                 <h3>Demolition and Hauling</h3>
-                <p>Dietrich Land Care can make your lawn the envy of your neighborhood. Our Service Leaders and in-house agronomists (soil scientists) provide customized programs that eliminate weeds while bringing you a green, vibrant and healthy lawn.</p>
+                <p>Our trained professionals provide cleanout and trash-removal services for residential and commercial properties, as well as construction and renovation sites.
+                We value prompt, professional and courteous service and take the time to inspect every job and location individually. Many of our reviews contain comments on how our customers appreciated our being on time.</p>
               </div>
             </div>
             <Footer />

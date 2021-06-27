@@ -41,7 +41,6 @@ componentDidMount() {
       const arrowCircle = beforeAndAfter.querySelector(".arrow-circle")
       beforeAndAfter.removeEventListener("mousemove", (e) => drag(e, beforeAndAfter, slider, before, arrowCircle))
     })
-    console.log("something")
   }
 
 render() {
@@ -70,7 +69,7 @@ render() {
         <div className="quotation-mark-container">
             <span className="quotation-mark"><p><FontAwesomeIcon icon={faQuoteLeft} /></p></span>
         </div>
-        <div className="picture-container"></div>
+        <div className="picture-container"><img src="/images/testimonial-face.jpg"></img></div>
         <p className="review-text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
       </div>
   </div> 
@@ -97,7 +96,7 @@ render() {
         <div className="quotation-mark-container">
             <span className="quotation-mark"><p><FontAwesomeIcon icon={faQuoteLeft} /></p></span>
         </div>
-        <div className="picture-container"></div>
+        <div className="picture-container"><img src="/images/testimonial-face.jpg"></img></div>
         <p className="review-text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
       </div>
   </div>
@@ -123,7 +122,7 @@ render() {
         <div className="quotation-mark-container">
             <span className="quotation-mark"><p><FontAwesomeIcon icon={faQuoteLeft} /></p></span>
         </div>
-        <div className="picture-container"></div>
+        <div className="picture-container"><img src="/images/testimonial-face.jpg"></img></div>
         <p className="review-text"> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
       </div>
   </div> 

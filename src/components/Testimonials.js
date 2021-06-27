@@ -25,7 +25,7 @@ export default class Testimonials extends React.Component {
       <div className="testimonial-container">
           <div className="row">
             <div className="order-lg-0 order-1 col-12 col-lg-6 text-center testimonial-container-client">
-              <img src="/images/testimonials.jpg" alt=""/>
+              <img src="/images/testimonials-face.jpg" alt=""/>
               <p><span><FontAwesomeIcon icon={faQuoteLeft} /></span>&nbsp; Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, assumenda.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ipsum.</p>
             </div>
             <div className="order-lg-1 order-0 col-12 col-lg-6 text-center" ><img src="/images/pic2.jpg" alt=""/></div>

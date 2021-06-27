@@ -21,6 +21,7 @@ import PowerWashing from "./PowerWashing";
 import SnowRemoval from "./SnowRemoval";
 import StumpRemoval from "./StumpRemoval";
 import Demolition from "./Demolition";
+import Regrades from "./Regrades";
 // import 'bootstrap/dist/css/bootstrap.css'
 
 
@@ -47,7 +48,7 @@ export default /*export default is a key word to export modules*/ function App()
           <Route path="/SnowRemoval" component={SnowRemoval} />
           <Route path="/StumpRemoval" component={StumpRemoval} />
           <Route path="/Demolition" component={Demolition} />
-          <Route path="/treeTrimming" component={TreeTrimming} />
+          <Route path="/Regrades" component={Regrades} />
         </Switch>
       </div>
     </Router>

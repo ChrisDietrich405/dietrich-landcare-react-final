@@ -6,6 +6,7 @@
     margin-top: 70px; 
     height: 40vw;
     width: 100vw;
+    object-fit: fill; 
     background-size: cover;
     transition: background-image 2s ease-out;
     .gradient {
@@ -24,6 +25,8 @@
       color: white;
     } 
   }
+
+  
 
   @media(max-width: 1043px) {
       .slide-show h3 {
