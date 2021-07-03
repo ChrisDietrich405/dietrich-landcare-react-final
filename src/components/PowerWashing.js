@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/TreeTrimming.scss";
+
 import Footer from "./Footer";
 
 export default class PowerWashing extends React.Component {

@@ -1,3 +1,7 @@
+//create one page for services, create a call to action
+//the cta would direct to his most direct communication
+
+
 import React from "react" /*"react is a module" */;
 import {
   BrowserRouter as Router,
@@ -15,8 +19,8 @@ import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Footer from "./Footer"
 
-import TreeTrimming from "./TreeTrimming"; 
-import LawnCare from "./LawnCare"
+ 
+import LawnCare from "./Services"
 import PowerWashing from "./PowerWashing";
 import SnowRemoval from "./SnowRemoval";
 import StumpRemoval from "./StumpRemoval";
@@ -29,7 +33,7 @@ import "../styles/App.scss";
 import "../styles/Header.scss";
 import "../styles/SlideShow.scss"; 
 import "../styles/HomePage.scss";
-import "../styles/TreeTrimming.scss"; 
+
 
 
 export default /*export default is a key word to export modules*/ function App() {
