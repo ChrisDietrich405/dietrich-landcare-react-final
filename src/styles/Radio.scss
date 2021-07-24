@@ -1,11 +1,23 @@
-.contact-radio-wrapper { 
-    width: 30rem; 
+// .contact-radio-wrapper { 
+//     width: 30rem; 
+// }
+
+// .contact-radio-button {
+//     margin-top: 1rem; 
+//     padding-top: 1rem; 
+//     width: 15rem; 
+// }
+
+.radio {
+    margin: 0 auto; 
 }
 
-.contact-radio-button {
-    margin-top: 1rem; 
-    padding-top: 1rem; 
-    width: 15rem; 
+.radio {
+    .col-6 {
+        display: flex; 
+        flex-direction: column;
+        align-items: start; 
+    }
 }
 
 .contact-radio-btn p {

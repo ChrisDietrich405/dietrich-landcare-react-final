@@ -1,0 +1,50 @@
+
+.viewport {
+    display: flex; 
+    justify-content: center; 
+    height: 100%; 
+    background-color: white; 
+    padding-top: 6rem; 
+    
+    .row-container {
+        width: 100%; 
+        height: 1000px; 
+        display: flex; 
+        justify-content: center; 
+
+        .col-8 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    
+    .first-column, .third-column {
+        background-color: #448c7e; 
+    }
+    
+    .contact-title {
+        margin-top: 1rem !important; 
+        margin-bottom: 1rem; 
+    }
+    
+    .connect-with-us-container {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    
+    .c-span {
+        margin-right: 18px; 
+    }
+
+    .c-social-media {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+
+        > div {
+            margin-right: 18px; 
+        }
+    }
+}
+

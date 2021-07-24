@@ -7,24 +7,20 @@ export default class HomePage extends React.Component {
     return <div>
     <SlideShow timeOut={3000} images={  [    // timeOUt and images are examples of attributes
       {
-        url: "/images/home1.jpg",
-        title: "Hedge Trimming",
-        description: "lorem ipsum lorem ipsum lorem lipsum"   
+        url: "/images/scroll-image1.png", //1366 768
+        title: "Hedge Trimming", 
       },
       {
-        url: "/images/home2.jpg",
-        title: "clearing",
-        description: "lorem ipsum lorem ipsum lorem lipsum" 
+        url: "/images/scroll-image2.png",
+        title: "lawn mowing",
       },
       {
-        url: "/images/pic3.jpg",
+        url: "/images/scroll-image3.png",
         title: "lorem ipsum 2",
-        description: "lorem ipsum lorem ipsum lorem lipsum"
       },
       {
-        url: "/images/pic4.jpg",
-        title: "lorem ipsum 3",
-        description: "lorem ipsum lorem ipsum lorem lipsum"
+        url: "/images/scroll-image4.png",
+        title: "retaining walls",
       }
     ]}></SlideShow>
     <div className="home-page-bottom-container">

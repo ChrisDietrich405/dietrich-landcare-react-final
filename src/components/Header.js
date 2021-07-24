@@ -4,7 +4,8 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; //component
-import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";  //"@fortawesome/free-solid-svg-icons" example of a package
+import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons"; 
+import { HashLink } from 'react-router-hash-link'; //"@fortawesome/free-solid-svg-icons" example of a package
 export default class Header extends React.Component {
   render() {
     return (
@@ -25,7 +26,7 @@ export default class Header extends React.Component {
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">  
                 <li>
-                <Link to="/LawnCare" className="dropdown-item">Lawn Care</Link>
+                <Link to="/services" className="dropdown-item">Lawn Care</Link>
                 </li>
                 <li>
                 <Link to="/PowerWashing" className="dropdown-item">Power Washing</Link>
@@ -40,7 +41,8 @@ export default class Header extends React.Component {
                 <Link to="/Demolition" className="dropdown-item">Demolition & Hauling</Link>
                 </li>
                 <li>
-                <Link to="/Regrades" className="dropdown-item">Regrades</Link>
+                <HashLink to="/services#regrades" className="dropdown-item">Regrades</HashLink>
+                {/* <Link to="/Regrades" className="dropdown-item">Regrades</Link> */}
                 </li>
               </ul>
               </li>
@@ -52,6 +54,9 @@ export default class Header extends React.Component {
               </li>
               <li className="nav-item">
                 <Link to="/contact" className="nav-link">Contact</Link>
+              </li> 
+              <li className="nav-item">
+                <Link to="/contact2" className="nav-link">Contact2</Link>
               </li> 
             </ul>
 			<ul className="nav justify-content-end">

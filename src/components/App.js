@@ -1,5 +1,6 @@
 //create one page for services, create a call to action
 //the cta would direct to his most direct communication
+//add Services title
 
 
 import React from "react" /*"react is a module" */;
@@ -12,28 +13,24 @@ import {
 import '@popperjs/core'
 import 'bootstrap/dist/js/bootstrap'  //bootstrap uses popperjs 
 
+
 import Header from "./Header";
 import Testimonials from "./Testimonials";
 import BeforeandAfter from "./BeforeandAfter";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
+import Contact2 from "./Contact2";
 import Footer from "./Footer"
 
  
-import LawnCare from "./Services"
-import PowerWashing from "./PowerWashing";
-import SnowRemoval from "./SnowRemoval";
-import StumpRemoval from "./StumpRemoval";
-import Demolition from "./Demolition";
-import Regrades from "./Regrades";
-// import 'bootstrap/dist/css/bootstrap.css'
+import Services from "./Services"
 
+// import 'bootstrap/dist/css/bootstrap.css'
 
 import "../styles/App.scss";
 import "../styles/Header.scss";
 import "../styles/SlideShow.scss"; 
 import "../styles/HomePage.scss";
-
 
 
 export default /*export default is a key word to export modules*/ function App() {
@@ -46,13 +43,9 @@ export default /*export default is a key word to export modules*/ function App()
           <Route path="/" exact={true} component={HomePage} />
           <Route path="/testimonials" component={Testimonials} />
           <Route path="/contact" component={Contact} />
+          <Route path="/contact2" component={Contact2} />
           <Route path="/beforeAndAfter" component={BeforeandAfter} />
-          <Route path="/LawnCare" component={LawnCare} />
-          <Route path="/PowerWashing" component={PowerWashing} />
-          <Route path="/SnowRemoval" component={SnowRemoval} />
-          <Route path="/StumpRemoval" component={StumpRemoval} />
-          <Route path="/Demolition" component={Demolition} />
-          <Route path="/Regrades" component={Regrades} />
+          <Route path="/services" component={Services} />
         </Switch>
       </div>
     </Router>

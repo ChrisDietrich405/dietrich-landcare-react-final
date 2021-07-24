@@ -14,55 +14,58 @@ class App extends Component{
   render() {
     const {value} = this.state; 
     return (
-      <div className="contact-radio-btn">
+      <div className="row radio">
           <p>What services are you interested in?</p>
-          <label className="contact-label">
-            <input type="radio"
-                   value="tree"
-                   checked={value === "tree"}
-                   onChange={this.onChange}/>
-            Mowing, Lawn & Property Maintenance
-          </label>
-          <br/>
-          <label className="contact-label">
-            <input type="radio"
-                   value="trash"
-                   checked={value === "trash"}
-                   onChange={this.onChange}/>
-            Power-Washing
-          </label> 
-          <br/>
-          <label className="contact-label">
-            <input type="radio"
-                   value="lawn"
-                   checked={value === "lawn"}
-                   onChange={this.onChange}/>
-            Snow Removal
-          </label>
-          <br/>
-          <label className="contact-label">
-            <input type="radio"
-                   value="install"
-                   checked={value === "install"}
-                   onChange={this.onChange}/>
-            Stump Removal
-          </label> 
-          <br/>
-          <label className="contact-label">
-            <input type="radio"
-                   value="install"
-                   checked={value === "install"}
-                   onChange={this.onChange}/>
-            Demolition & Hauling
-          </label>
-          <br/> 
-          <label className="contact-label">
-            <input type="radio"
-                   value="install"
-                   checked={value === "install"}
-                   onChange={this.onChange}/>
-            Regrades
-          </label>
+          <div className="col-6">
+            <label className="contact-label">
+              <input type="radio"
+                     value="tree"
+                     checked={value === "tree"}
+                     onChange={this.onChange}/>
+              Mowing, Lawn & Property Maintenance
+            </label>
+
+            <label className="contact-label">
+              <input type="radio"
+                     value="trash"
+                     checked={value === "trash"}
+                     onChange={this.onChange}/>
+              Power-Washing
+            </label> 
+         
+            <label className="contact-label">
+              <input type="radio"
+                     value="lawn"
+                     checked={value === "lawn"}
+                     onChange={this.onChange}/>
+              Snow Removal
+            </label>
+          </div>
+          <div className="col-6" style={{display: 'flex', flexDirection: 'column'}}>
+            <label className="contact-label">
+              <input type="radio"
+                     value="install"
+                     checked={value === "install"}
+                     onChange={this.onChange}/>
+              Stump Removal
+            </label>
+            
+            <label className="contact-label">
+              <input type="radio"
+                    value="install"
+                    checked={value === "install"}
+                    onChange={this.onChange}/>
+              Demolition & Hauling
+            </label>
+        
+            <label className="contact-label">
+              <input type="radio"
+                    value="install"
+                    checked={value === "install"}
+                    onChange={this.onChange}/>
+              Regrades
+            </label>
+          </div>
       </div>
     )
   }

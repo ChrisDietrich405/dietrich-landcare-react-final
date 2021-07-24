@@ -2,12 +2,15 @@ import React from "react";
 import "../styles/Services.scss";
 import Footer from "./Footer";
 
-export default class LawnCare extends React.Component {
+export default class Services extends React.Component {
     render() {
         return (
           <div className="services-main-container">
             <div className="services-container">
-              <div className="services-description">
+              
+              <h1>Service</h1>
+              <hr />
+              <div className="services-description" id="lawn-care">
                 <img src="/images/LawnCare.jpg" alt=""/>
                 <div className="services-image-description">
                   <h3>Lawn Care</h3>
@@ -37,7 +40,7 @@ export default class LawnCare extends React.Component {
               <div className="services-description">
                 <div className="services-image-description">
                   <h3>Stump Removal</h3>
-                  <p>If you are stuck in your property and you have hard access outside, grab the phone and call us. You don’t want to risk being stuck for hours or going out at the expense of your safety. We’ll help you get rid of snow and keep your sidewalk clear.</p>
+                  <p>We provide the best stump removal service in the Baltimore area. We provide a variety of services, including stump grinding and removal. We have the skill and experience necessary to remove all types of tree stumps, offering the highest quality services and customer care.</p>
                 </div>
                 <img src="/images/StumpRemoval.jpg" alt=""/>
               </div>
@@ -51,7 +54,7 @@ export default class LawnCare extends React.Component {
               </div>
             </div>
             <div className="services-container">
-            <div className="services-description">
+            <div className="services-description" id="regrades">
               <div className="services-image-description">
                 <h3>Regrades</h3>
                 <p>Most clients we visit can benefit from some form of grading to further get water away from their houses. Negative grading creates hydrostatic pressure on walls by constantly forcing water to flow towards the house. With high-density clay fill, we change the grade around your entire house to create a holistic system that deters water from coming near the vulnerable points around the house and property.</p>
