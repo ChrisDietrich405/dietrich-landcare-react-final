@@ -8,63 +8,67 @@ class App extends Component{
 
   onChange = e => {
     this.setState({value : e.target.value})
-    this.props.onChange(e.target.value)
+    this.props.change(e.target.value)
   }
   
   render() {
     const {value} = this.state; 
     return (
-      <div className="row radio">
-          <p>What services are you interested in?</p>
-          <div className="col-6">
+      
+      <div className="checkbox-container">
+        <p>What services are you interested in?</p>
+        <div className="service-container">
+          <div>
             <label className="contact-label">
-              <input type="radio"
-                     value="tree"
-                     checked={value === "tree"}
+              <input type="checkbox"
+                     value="property-maintenance"
+                     className="checkbox-background-color"
+                     checked={value === "property-maintenance"}
                      onChange={this.onChange}/>
-              Mowing, Lawn & Property Maintenance
+              <span>Property Maintenance</span>
             </label>
 
             <label className="contact-label">
-              <input type="radio"
-                     value="trash"
-                     checked={value === "trash"}
+              <input type="checkbox"
+                     value="power-washing"
+                     checked={value === "power-washing"}
+                       onChange={this.onChange}/>
+                <span>Power-Washing</span>
+              </label> 
+
+              <label className="contact-label">
+                <input type="checkbox"
+                       value="snow-removal"
+                       checked={value === "snow-removal"}
+                       onChange={this.onChange}/>
+                <span>Snow Removal</span>
+              </label>
+            </div>
+            <div>
+            <label className="contact-label">
+              <input type="checkbox"
+                     value="stump-removal"
+                     checked={value === "stump-removal"}
                      onChange={this.onChange}/>
-              Power-Washing
-            </label> 
-         
-            <label className="contact-label">
-              <input type="radio"
-                     value="lawn"
-                     checked={value === "lawn"}
-                     onChange={this.onChange}/>
-              Snow Removal
+              <span>Stump Removal</span>
             </label>
-          </div>
-          <div className="col-6" style={{display: 'flex', flexDirection: 'column'}}>
+
             <label className="contact-label">
-              <input type="radio"
-                     value="install"
-                     checked={value === "install"}
-                     onChange={this.onChange}/>
-              Stump Removal
-            </label>
-            
-            <label className="contact-label">
-              <input type="radio"
-                    value="install"
-                    checked={value === "install"}
-                    onChange={this.onChange}/>
-              Demolition & Hauling
-            </label>
-        
-            <label className="contact-label">
-              <input type="radio"
-                    value="install"
-                    checked={value === "install"}
-                    onChange={this.onChange}/>
-              Regrades
-            </label>
+              <input type="checkbox"
+                     value="demolition"
+                     checked={value === "demolition"}
+                       onChange={this.onChange}/>
+               <span>Demolition & Hauling</span>
+              </label> 
+
+              <label className="contact-label">
+                <input type="checkbox"
+                       value="regrades"
+                       checked={value === "regrades"}
+                       onChange={this.onChange}/>
+                <span>Regrades</span>
+              </label>
+            </div>
           </div>
       </div>
     )

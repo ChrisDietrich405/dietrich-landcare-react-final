@@ -55,9 +55,6 @@ export default class Header extends React.Component {
               <li className="nav-item">
                 <Link to="/contact" className="nav-link">Contact</Link>
               </li> 
-              <li className="nav-item">
-                <Link to="/contact2" className="nav-link">Contact2</Link>
-              </li> 
             </ul>
 			<ul className="nav justify-content-end">
 				<li className="nav-item">

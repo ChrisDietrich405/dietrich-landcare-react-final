@@ -1,7 +1,7 @@
 /* .c-background-pic {
-  background-image: url("/images/practice.pic.jpg");
-  z-index: -1; 
-} */
+//   background-image: url("/images/practice.pic.jpg");
+//   z-index: -1; 
+// } */
 
 .viewport {
   height: 100vh; 
@@ -32,7 +32,6 @@
   padding: 25px 30px;   
   border-radius: 4px; 
 }
-
 
 .row-container {
   border-radius: 18px; 
@@ -153,12 +152,6 @@
   transform: translateY(-30%) !important;
 }
 
-.c-btn {
-  display: flex; 
-  align-items: center; 
-  padding: 10px 220px; 
-  border-radius: 6px;
-}
 
 .c-circle {
   color: black;
@@ -181,3 +174,57 @@
   top: 100px; 
   left: 340px; 
 }
+
+
+.viewport {
+    display: flex; 
+    justify-content: center; 
+    height: 100%; 
+    background-color: white; 
+    padding-top: 6rem; 
+    
+    .row-container {
+        width: 100%; 
+        height: 1000px; 
+        display: flex; 
+        justify-content: center; 
+
+        .col-8 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+    
+    .first-column, .third-column {
+        background-color: #448c7e; 
+    }
+    
+    .contact-title {
+        margin-top: 1rem !important; 
+        margin-bottom: 1rem; 
+    }
+    
+    .connect-with-us-container {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+    }
+    
+    .c-span {
+        margin-right: 18px; 
+    }
+
+    .c-social-media {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+
+        > div {
+            margin-right: 18px; 
+        }
+    }
+    .grid-one, .grid-two {
+      display: flex; 
+      justify-content: space-around; 
+    }
+  }
