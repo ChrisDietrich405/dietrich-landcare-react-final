@@ -1,6 +1,6 @@
 .checkbox-container {
     width: 100%; 
-    margin-bottom: 2rem; 
+    margin-bottom: 1rem; 
 }
 
 .service-container {
@@ -37,21 +37,21 @@
 }
 
 .contact-label {
-    padding: 0 1rem;  
+    padding: 0 1rem;
+    display: flex; 
+    align-items: center !important; 
+    justify-content: center !important;   
 }
 
-.contact-label:checked:before{
-    background-color:green;
-    }
-
+.contact-label span {
+  padding-top: 5px; 
+}
 
 .checkbox-background-color::before {
-
     display: block; 
-    width: 20px; 
-    height: 20px; 
+    width: 60px; 
+    height: 60px; 
     content: ""; 
-    background: black; 
 }
 
 .checkbox-background-color:checked::before {
@@ -60,7 +60,8 @@
     content: "\f00c"; 
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
-    font-size: 15px; 
+    font-size: 15px;
+    padding-bottom: 15px;  
 }
 
 

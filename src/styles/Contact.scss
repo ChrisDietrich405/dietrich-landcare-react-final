@@ -1,11 +1,5 @@
-/* .c-background-pic {
-//   background-image: url("/images/practice.pic.jpg");
-//   z-index: -1; 
-// } */
-
 .viewport {
   height: 100vh; 
-  background-color: white; 
   padding-top: 3rem; 
 
   .row > * {
@@ -16,6 +10,10 @@
 
 .container {
   margin-top: 3rem;
+}
+
+.row {
+  height: 100px; 
 }
 
 .c-container {
@@ -37,16 +35,6 @@
   border-radius: 18px; 
   box-shadow: 4px 4px 4px 4px; 
 }
-
-// .col-md-6 .c-contact-form {
-//   position: relative;
-//   background-color: #448c7e;
-//   padding: 30px 30px;
-//   border-radius: 0 18px 18px 0px;
-//   .contact-radio-btn p {
-//     padding-top: 1.3rem; 
-//   } 
-// }
 
 .c-title-contact { 
   top: 1.5rem; 
@@ -71,15 +59,6 @@
   padding-bottom: 20px;
 }
 
-// .c-social-media svg {
-//   font-size: 500px;
-//   border-radius: 10px;
-// }
-
-// .c-social-media {
-//   display: flex;
-// }
-
 .c-text {
   font-size: .8rem !important; 
   font-weight: 5000 !important;
@@ -90,42 +69,37 @@
   font-weight: 4000 !important; 
 }
 
-// .c-instagram,
-// .c-twitter {
-//   padding-left: 40px;
-// }
-
-// .c-paragraph {
-//   font-size: .8rem !important; 
-// }
-
-// .c-social-media svg {
-//   font-size: 50px;
-//   padding: 10px;
-//   border-radius: 10px;
-//   transition: 0.3s;
-// }
-
-// .c-social-media svg:hover {
-//   transform: scale(1.5);
-// }
-
 .grid-one,
 .grid-two { 
   display: grid; 
   grid-template-columns: 1fr 1fr;
   gap: 1rem; 
+  margin: 20px; 
 }
 
 .message {
-  margin-top: 1rem; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 6rem; 
   height: 6rem; 
+
+  textarea {
+    height: 200px; 
+  }
 }
 
-.c-fields {
+.c-btn {
+  margin-top: 30px; 
+  padding: 10px 30px; 
+  border-radius: 10px;
+  background-color:#448c7e;
+  color: white; 
+}
+
+.c-fields { 
   display: flex; 
-  margin-top: 0 !important; 
-  margin-bottom: 0 !important; 
   position: relative;
   padding: 11.5px 0;
   label {
@@ -142,16 +116,25 @@
   }
   textarea
   {
+    margin-top: 30px; 
     width: 520px;
+    height: 200px; 
     padding: 6px;
     border-radius: 6px;  
   }
 }
 
-.c-fields .focus, .c-fields.filled label {
-  transform: translateY(-30%) !important;
+.c-fields .message-animation {
+  padding: 40px 20px; 
 }
 
+.c-fields .focus, .c-fields.filled label {
+  transform: translateY(-80%) !important;
+}
+
+.c-fields .focus-message, .c-fields.filled label {
+  transform: translateY(-30%) !important;
+}
 
 .c-circle {
   color: black;
@@ -159,16 +142,6 @@
   width: 15px;
   height: 15px;
 }
-
-// .c-contact-form:before {
-//   content: "";
-//   width: 26px;
-//   height: 26px;
-//   background-color: #448c7e;
-//   transform: rotate(45deg);
-//   top: 50px;
-//   left: -13px;
-// }
 
 .c-quote {
   top: 100px; 
@@ -185,7 +158,7 @@
     
     .row-container {
         width: 100%; 
-        height: 1000px; 
+        height: 1100px; 
         display: flex; 
         justify-content: center; 
 
@@ -197,6 +170,14 @@
     
     .first-column, .third-column {
         background-color: #448c7e; 
+    }
+
+    .first-column {
+        border-radius: 10px 0 0 10px; 
+    }
+
+    .third-column {
+        border-radius: 0 10px 10px 0; 
     }
     
     .contact-title {
@@ -218,9 +199,10 @@
         display: flex; 
         justify-content: center;
         align-items: center;
+        margin-bottom: 20px; 
 
         > div {
-            margin-right: 18px; 
+            margin-right: 38px; 
         }
     }
     .grid-one, .grid-two {

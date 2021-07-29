@@ -150,10 +150,10 @@ export default class Contact extends React.Component {
                   <div className="message">
                       
                       <div className={classnames("c-fields", { "filled": this.state.message != "" })}>
-                        <label htmlFor="Message">Message</label>
+                        <label htmlFor="Message" className="message-animation">Message</label>
                         <textarea value= {this.state.message}
-                          onFocus={this.onInputFocus.bind(this)}n
-                          onBlur={this.onInputBlur.bind(this)}
+                          onFocus={this.onInputFocusMessage.bind(this)}n
+                          onBlur={this.onInputBlurMessage.bind(this)}
                           id="Message"
                           onChange={(event) => {
                             this.setState({ message: event.target.value });
@@ -207,10 +207,18 @@ export default class Contact extends React.Component {
        this.setState({error: validator.errors.errors})
    }
   }
+
   onInputFocus(event) {
     event.target.previousElementSibling.className = "focus";
   }
   onInputBlur(event) {
+    event.target.previousElementSibling.className = "";
+  }
+
+  onInputFocusMessage(event) {
+    event.target.previousElementSibling.className = "focus-message";
+  }
+  onInputBlurMessage(event) {
     event.target.previousElementSibling.className = "";
   }
 }
