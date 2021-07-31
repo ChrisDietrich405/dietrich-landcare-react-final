@@ -152,7 +152,7 @@ export default class Contact extends React.Component {
                       <div className={classnames("c-fields", { "filled": this.state.message != "" })}>
                         <label htmlFor="Message" className="message-animation">Message</label>
                         <textarea value= {this.state.message}
-                          onFocus={this.onInputFocusMessage.bind(this)}n
+                          onFocus={this.onInputFocusMessage.bind(this)}
                           onBlur={this.onInputBlurMessage.bind(this)}
                           id="Message"
                           onChange={(event) => {

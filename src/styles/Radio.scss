@@ -47,11 +47,23 @@
   padding-top: 5px; 
 }
 
+.checkbox-background-color {
+    position: relative; 
+}
+
 .checkbox-background-color::before {
+    border: solid 1px black; 
+    border-radius: 4px; 
+    padding-left: 2px; 
+    background: white; 
+    position: absolute; 
+    top: -2px; 
+    left: -8px; 
     display: block; 
-    width: 60px; 
-    height: 60px; 
+    width: 17px; 
+    height: 17px; 
     content: ""; 
+    box-sizing: unset; 
 }
 
 .checkbox-background-color:checked::before {
@@ -60,9 +72,8 @@
     content: "\f00c"; 
     font-family: "Font Awesome 5 Pro";
     font-weight: 900;
-    font-size: 15px;
-    padding-bottom: 15px;  
+    font-size: 13px;
+    line-height: 18px;  
 }
-
 
 
