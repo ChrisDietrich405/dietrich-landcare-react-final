@@ -147,13 +147,12 @@ export default class Contact extends React.Component {
                     </div>
                   
                   </div>
-                  <div className="message">
-                      
-                      <div className={classnames("c-fields", { "filled": this.state.message != "" })}>
-                        <label htmlFor="Message" className="message-animation">Message</label>
+                  <div className="message-container">
+                      <div className="message-text" className={classnames("c-fields", { "filled": this.state.message != "" })}>
+                        <label htmlFor="Message">Message</label>
                         <textarea value= {this.state.message}
-                          onFocus={this.onInputFocusMessage.bind(this)}
-                          onBlur={this.onInputBlurMessage.bind(this)}
+                          onFocus={this.onInputFocus.bind(this)}
+                          onBlur={this.onInputBlur.bind(this)}
                           id="Message"
                           onChange={(event) => {
                             this.setState({ message: event.target.value });
@@ -162,12 +161,15 @@ export default class Contact extends React.Component {
                         </textarea> 
                         {"message" in this.state.error && <p>{this.state.error.message.join(",")}</p>}
                       </div>
+                  
 
                       <div className="contact-submit-btn">
                         <button className="c-btn">Submit</button>
                       </div>
-
                   </div>
+                
+
+                
 
                 </form>
 
@@ -209,18 +211,12 @@ export default class Contact extends React.Component {
   }
 
   onInputFocus(event) {
-    event.target.previousElementSibling.className = "focus";
+    event.target.previousElementSibling.classList.add("focus");
   }
   onInputBlur(event) {
-    event.target.previousElementSibling.className = "";
+    event.target.previousElementSibling.classList.remove("focus");
   }
 
-  onInputFocusMessage(event) {
-    event.target.previousElementSibling.className = "focus-message";
-  }
-  onInputBlurMessage(event) {
-    event.target.previousElementSibling.className = "";
-  }
 }
 
 
