@@ -11,7 +11,7 @@ export default class Services extends React.Component {
               <h1>Service</h1>
               <hr />
               <div className="services-description" id="lawn-care">
-                <img src="/images/LawnCare.jpg" alt=""/>
+                <img src="/images/lawn-care.png" alt=""/>
                 <div className="services-image-description">
                   <h3>Lawn Care</h3>
                   <p>Dietrich Land Care can make your lawn the envy of your neighborhood. Our Service Leaders and in-house agronomists (soil scientists) provide customized programs that eliminate weeds while bringing you a green, vibrant and healthy lawn.</p>
@@ -24,12 +24,12 @@ export default class Services extends React.Component {
                   <h3>Power Washing</h3>
                   <p>We are one of the leading exterior cleaning service providers catering to residential and commercial soft washing, pressure washing, power washing, pressure cleaning, and exterior property maintenance in Maryland. We have been washing for over 19 years and know the "Ins and Outs" of the industry.</p>
                 </div>
-                <img src="/images/PowerWashing.jpg" alt=""/>
+                <img src="/images/power-washing.png" alt=""/>
               </div>
             </div>
             <div className="services-container">
               <div className="services-description">
-                <img src="/images/SnowRemoval.jpg" alt=""/>
+                <img src="/images/snow-removal.png" alt=""/>
                 <div className="services-image-description">
                   <h3>Snow Removal</h3>
                   <p>If you are stuck in your property and you have hard access outside, grab the phone and call us. You don’t want to risk being stuck for hours or going out at the expense of your safety. We’ll help you get rid of snow and keep your sidewalk clear.</p>
@@ -61,7 +61,7 @@ export default class Services extends React.Component {
               </div>
               <img src="/images/Regrades.jpg" alt=""/>
             </div>
-            <Footer />
+
           </div>
           
           </div>

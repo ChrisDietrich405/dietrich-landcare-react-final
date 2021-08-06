@@ -1,3 +1,5 @@
+@import "./Variables.scss"; 
+
 .viewport {
   height: 100vh; 
   padding-top: 3rem; 
@@ -6,24 +8,25 @@
     padding-right: 0;
     padding-left: 0; 
   }
+
+  .container {
+    margin-top: 30px; 
+  }
+
+  .c-container {
+    margin-top: 3rem;
+    background-color: rgb(246, 242, 242);
+    padding-bottom: 1rem; 
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
 }
 
-.container {
-  margin-top: 3rem;
-}
 
-.row {
-  height: 100px; 
-}
 
-.c-container {
-  margin-top: 3rem;
-  background-color: rgb(246, 242, 242);
-  padding-bottom: 1rem; 
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
+
 
 .col-md-6 .c-form {
   background-color: rgb(255, 255, 255);
@@ -34,6 +37,10 @@
 .row-container {
   border-radius: 18px; 
   box-shadow: 4px 4px 4px 4px; 
+}
+
+.second-column {
+  padding-bottom: 30px; 
 }
 
 .c-title-contact { 
@@ -94,12 +101,13 @@
   margin-top: 30px; 
   padding: 10px 30px; 
   border-radius: 10px;
-  background-color:#448c7e;
+  background-color: $primary-color;
   color: white; 
 }
 
 .c-fields { 
-  display: flex; 
+  display: flex;
+  flex-direction: column;  
   position: relative;
   padding: 11.5px 0;
   label {
@@ -115,13 +123,17 @@
     border-radius: 6px;
   }
   textarea
-  {
-    margin-top: 30px; 
+  { 
     width: 520px;
     height: 200px; 
     padding: 6px;
-    border-radius: 6px;  
+    border-radius: 6px; 
   }
+}
+
+.error-message {
+  font-size: 12px; 
+  color: red; 
 }
 
 .c-fields .focus, .filled label {
@@ -156,9 +168,10 @@
     
     .row-container {
         width: 100%; 
-        height: 1100px; 
         display: flex; 
         justify-content: center; 
+        margin-bottom: 30px; 
+        
 
         .col-8 {
             padding-left: 20px;

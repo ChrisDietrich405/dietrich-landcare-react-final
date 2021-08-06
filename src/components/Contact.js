@@ -9,7 +9,7 @@ import axios from "axios";
 import * as Validator from 'validatorjs';  //the validator library doesn't have the export default keyword
 //the asterisk allows you to change the name. Without the asterisk you can't change the name 
 
-import Radio from "./Radio"; 
+import ServicesCheckbox from "./ServicesCheckbox"; 
 
 import "../styles/Contact.scss";
 
@@ -81,9 +81,9 @@ export default class Contact extends React.Component {
                         are checking to see if it's in the error object)
                         in this.state.error && <p>{this.state.error.service.join(",")}</p>} */}
 
-                <Radio change={ targetValue => {
+                <ServicesCheckbox change={ targetValue => {
                             this.setState({ service: targetValue})
-                        }}/> {"service" in this.state.error && <p>{this.state.error.service.join(",")}</p>}
+                        }}/> {"service" in this.state.error && <p className="error-message">{this.state.error.service.join(",")}</p>}
 
                 <form onSubmit={this.onSubmit.bind(this)}>
                   <div className="grid-one">
@@ -98,7 +98,7 @@ export default class Contact extends React.Component {
                         onChange={(event) => {
                           this.setState({ firstName: event.target.value });
                         }}
-                      /> {"firstName" in this.state.error && <p>{this.state.error.firstName.join(",")}</p>}
+                      /> {"firstName" in this.state.error && <p className="error-message">{this.state.error.firstName.join(",")}</p>}
                     </div>
 
                     <div className={classnames("c-fields", { "filled": this.state.lastName != "" })}>
@@ -111,7 +111,7 @@ export default class Contact extends React.Component {
                         onChange={(event) => {
                           this.setState({ lastName: event.target.value})
                         }}
-                      /> {"lastName" in this.state.error && <p>{this.state.error.lastName.join(",")}</p>}
+                      /> {"lastName" in this.state.error && <p className="error-message">{this.state.error.lastName.join(",")}</p>}
                       {/* checking to see if the error property includes the lastName property */}
                     </div>
 
@@ -129,7 +129,7 @@ export default class Contact extends React.Component {
                         onChange={(event) => {
                           this.setState({ email: event.target.value });
                         }}
-                      /> {"email" in this.state.error && <p>{this.state.error.email.join(",")}</p>}
+                      /> {"email" in this.state.error && <p className="error-message">{this.state.error.email.join(",")}</p>}
                     </div>
 
                     <div className={classnames("c-fields", { "filled": this.state.phone != "" })}>
@@ -143,7 +143,7 @@ export default class Contact extends React.Component {
                         onChange={(event) => {
                           this.setState({ phone: event.target.value });
                         }}
-                      />{"phone" in this.state.error && <p>{this.state.error.phone.join(",")}</p>}
+                      />{"phone" in this.state.error && <p className="error-message">{this.state.error.phone.join(",")}</p>}
                     </div>
                   
                   </div>
@@ -159,7 +159,7 @@ export default class Contact extends React.Component {
                           }}
                         >
                         </textarea> 
-                        {"message" in this.state.error && <p>{this.state.error.message.join(",")}</p>}
+                        {"message" in this.state.error && <p className="error-message">{this.state.error.message.join(",")}</p>}
                       </div>
                   
 
@@ -194,7 +194,7 @@ export default class Contact extends React.Component {
       phone: "required",
       service: "required",
       message: "required"
-    })
+    }, {"required.firstName": "The first name field is required", "required.lastName": "The last name field is required"} )
    if(validator.passes()) {
      axios.post("http://localhost:3300/contact", this.state) //when you use post the second argument is the data
      .then( response => alert("message was sent"))              //being sent

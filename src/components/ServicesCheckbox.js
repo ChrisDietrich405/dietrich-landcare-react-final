@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import "../styles/Radio.scss";
+import "../styles/ServicesCheckbox.scss";
+
+
 
 class App extends Component{
   state = {
@@ -14,8 +16,9 @@ class App extends Component{
   render() {
     const {value} = this.state; 
     return (
-      
+     
       <div className="checkbox-container">
+         
         <p>What services are you interested in?</p>
         <div className="service-container">
           <div>

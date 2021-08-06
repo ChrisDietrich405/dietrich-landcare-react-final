@@ -23,6 +23,7 @@ export default class HomePage extends React.Component {
         title: "retaining walls",
       }
     ]}></SlideShow>
+    {/* <Contact someattribute="something" /> */}
     <div className="home-page-bottom-container">
         <section className="home-page-bottom-section">
             <div className="box1">
@@ -36,7 +37,7 @@ export default class HomePage extends React.Component {
             </div>
         </section>
     </div>
-    <Footer />
+  
     </div>
   }
 }
