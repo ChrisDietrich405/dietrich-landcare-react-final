@@ -3,16 +3,18 @@ import "../styles/Services.scss";
 import Footer from "./Footer";
 
 export default class Services extends React.Component {
-
+   
    componentDidUpdate() {
  
-    const element = document.getElementById(this.props.location.state);
-    const y = element.getBoundingClientRect().top - 120;
+    // const element = document.getElementById(this.props.location.state);
+    // const y = element.getBoundingClientRect().y + window.innerHeight - document.querySelector('nav').offsetHeight;
     
-    window.scrollTo({top: y, behavior: 'smooth'});
+    window.scrollTo({top: document.getElementById(this.props.location.state).getBoundingClientRect().top - document.querySelector('nav').offsetHeight, behavior: 'smooth'});;
     //   document.getElementById(this.props.location.state).scrollIntoView(false);
     //     console.log(this.props.location)
     }
+
+    // window.scrollTo({top: 1082.24609375+window.innerHeight-93, behavior: 'smooth'});
   
     render() {
         return (
