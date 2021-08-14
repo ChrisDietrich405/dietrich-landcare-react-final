@@ -26,23 +26,22 @@ export default class Header extends React.Component {
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">  
                 <li>
-                <Link to="/services" className="dropdown-item">Lawn Care</Link>
+                <Link to={{pathname: "/services", state: "lawn-care"}} className="dropdown-item">Lawn Care</Link>
                 </li>
                 <li>
-                <Link to="/PowerWashing" className="dropdown-item">Power Washing</Link>
+                <Link to={{pathname: "/services", state: "power-washing"}} className="dropdown-item">Power Washing</Link>
                 </li>
                 <li>
-                <Link to="/SnowRemoval" className="dropdown-item">Snow Removal</Link>
+                <Link to={{pathname: "/services", state: "snow-removal"}} className="dropdown-item">Snow Removal</Link>
                 </li>
                 <li>
-                <Link to="/StumpRemoval" className="dropdown-item">Stump Removal</Link>
+                <Link to={{pathname: "/services", state: "stump-removal"}} className="dropdown-item">Stump Removal</Link>
                 </li>
                 <li>
-                <Link to="/Demolition" className="dropdown-item">Demolition & Hauling</Link>
+                <Link to={{pathname: "/services", state: "demolition"}} className="dropdown-item">Demolition & Hauling</Link>
                 </li>
-                <li>
-                <HashLink to="/services#regrades" className="dropdown-item">Regrades</HashLink>
-                {/* <Link to="/Regrades" className="dropdown-item">Regrades</Link> */}
+                <li> 
+                <Link to={{pathname: "/services", state: "regrades"}} className="dropdown-item">Regrades</Link>
                 </li>
               </ul>
               </li>

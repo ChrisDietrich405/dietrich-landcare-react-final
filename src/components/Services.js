@@ -3,6 +3,17 @@ import "../styles/Services.scss";
 import Footer from "./Footer";
 
 export default class Services extends React.Component {
+
+   componentDidUpdate() {
+ 
+    const element = document.getElementById(this.props.location.state);
+    const y = element.getBoundingClientRect().top - 120;
+    
+    window.scrollTo({top: y, behavior: 'smooth'});
+    //   document.getElementById(this.props.location.state).scrollIntoView(false);
+    //     console.log(this.props.location)
+    }
+  
     render() {
         return (
           <div className="services-main-container">
@@ -18,7 +29,7 @@ export default class Services extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="services-container">
+            <div className="services-container" id="power-washing">
               <div className="services-description">
                 <div className="services-image-description">
                   <h3>Power Washing</h3>
@@ -28,7 +39,7 @@ export default class Services extends React.Component {
               </div>
             </div>
             <div className="services-container">
-              <div className="services-description">
+              <div className="services-description" id="snow-removal">
                 <img src="/images/snow-removal.png" alt=""/>
                 <div className="services-image-description">
                   <h3>Snow Removal</h3>
@@ -37,7 +48,7 @@ export default class Services extends React.Component {
               </div>
             </div>
             <div className="services-container">
-              <div className="services-description">
+              <div className="services-description" id="stump-removal">
                 <div className="services-image-description">
                   <h3>Stump Removal</h3>
                   <p>We provide the best stump removal service in the Baltimore area. We provide a variety of services, including stump grinding and removal. We have the skill and experience necessary to remove all types of tree stumps, offering the highest quality services and customer care.</p>
@@ -45,7 +56,7 @@ export default class Services extends React.Component {
                 <img src="/images/StumpRemoval.jpg" alt=""/>
               </div>
             <div className="services-container">
-            <div className="services-description">
+            <div className="services-description" id="demolition">
               <img src="/images/Demolition.jpg" alt=""/>
               <div className="services-image-description">
                 <h3>Demolition and Hauling</h3>

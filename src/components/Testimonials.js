@@ -40,7 +40,6 @@ export default class Testimonials extends React.Component {
             </div>
           </div>
       </div>
-      <Footer />
       </div>
 
   )
