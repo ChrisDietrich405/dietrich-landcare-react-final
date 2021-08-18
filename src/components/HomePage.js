@@ -1,25 +1,31 @@
 import React from "react";
 import SlideShow from "./SlideShow";
-import Footer from "./Footer"; 
+import Footer from "./Footer";
+
+import scrollImage1 from "../images/scroll-image1.png"
+import scrollImage2 from "../images/scroll-image2.png"
+import scrollImage3 from "../images/scroll-image3.png"
+import scrollImage4 from "../images/scroll-image4.png"
+
 
 export default class HomePage extends React.Component {
   render() {
     return <div>
     <SlideShow timeOut={3000} images={  [    // timeOUt and images are examples of attributes
       {
-        url: "/images/scroll-image1.png", //1366 768
+        url: scrollImage1, 
         title: "Hedge Trimming", 
       },
       {
-        url: "/images/scroll-image2.png",
+        url: scrollImage2,
         title: "lawn mowing",
       },
       {
-        url: "/images/scroll-image3.png",
+        url: scrollImage3,
         title: "lorem ipsum 2",
       },
       {
-        url: "/images/scroll-image4.png",
+        url: scrollImage4,
         title: "retaining walls",
       }
     ]}></SlideShow>
