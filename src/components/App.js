@@ -48,6 +48,7 @@ export default /*export default is a key word to export modules*/ function App()
             <meta name="Dietrich Landcare Title" content="Helmet application" />
             <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
+        
         <Switch> 
           <Route path="/" exact={true} component={HomePage} />
           <Route path="/testimonials" component={Testimonials} />
@@ -56,8 +57,8 @@ export default /*export default is a key word to export modules*/ function App()
           <Route path="/services" component={Services} />
         </Switch>
       </div>
-      <Footer/>
       <SmoothScroll />
+      <Footer/>
     </Router>
   );
 } /*at the moment you export a block of code it becomes a module */

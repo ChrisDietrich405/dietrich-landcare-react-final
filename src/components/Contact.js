@@ -11,6 +11,10 @@ import * as Validator from 'validatorjs';  //the validator library doesn't have 
 
 import ServicesCheckbox from "./ServicesCheckbox"; 
 
+import Phone from "../images/phone.png"
+import Email from "../images/email.png"
+import Location from "../images/location.png"
+
 import "../styles/Contact.scss";
 
 export default class Contact extends React.Component {
@@ -35,15 +39,15 @@ export default class Contact extends React.Component {
               <p>We are available by phone: Monday-Saturday 7am-7:30 pm.</p>
               <ul className="c-info">
                 <li className="c-information">
-                  <img alt="Phone" src="/images/phone.png" className="c-info-icons" />
+                  <img src={Phone} alt="Phone" className="c-info-icons" />
                   <p>(443) 608-3258</p>
                 </li>
                 <li className="c-information">
-                  <img alt="Information" src="/images/email.png" className="c-info-icons" />
+                  <img src={Email} alt="Information" className="c-info-icons" />
                   <p>office@dietrichlandcare.com</p>
                 </li>
                 <li className="c-information">
-                  <img alt="Location" src="/images/location.png" className="c-info-icons" />
+                  <img src={Location} alt="Location" className="c-info-icons" />
                   <p>Baltimore, MD 21239</p>
                 </li>
               </ul>

@@ -2,6 +2,8 @@ import React from "react"
 
 import { CgArrowUpR } from "react-icons/all"
 
+import "../styles/SmoothScroll.scss";
+
 export default class SmoothScroll extends React.Component {
 
     state = { shouldScrollToTop: false }
