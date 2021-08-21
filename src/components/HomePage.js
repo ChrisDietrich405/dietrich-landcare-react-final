@@ -2,6 +2,8 @@ import React from "react";
 import SlideShow from "./SlideShow";
 import Footer from "./Footer";
 
+import SmoothScroll from "./SmoothScroll"
+
 import scrollImage1 from "../images/scroll-image1.png"
 import scrollImage2 from "../images/scroll-image2.png"
 import scrollImage3 from "../images/scroll-image3.png"
@@ -41,6 +43,7 @@ export default class HomePage extends React.Component {
             <div className="box3">
                 <p>We are certified in all aspects of landscaping that offers you efficient and dependable services that suit your budget and needs best. We craft innovative patios, terraces, retaining walls, dry rock creeks, outdoor fireplaces, walkways, energy-efficient lighting and more.</p>
             </div>
+        <SmoothScroll />
         </section>
     </div>
   

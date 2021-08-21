@@ -14,6 +14,7 @@ import {
 } from "react-router-dom"; /* rrd is a package that allows you to create navigation in a react application */
 import '@popperjs/core'
 import 'bootstrap/dist/js/bootstrap'  //bootstrap uses popperjs 
+import {Helmet} from "react-helmet";
 
 
 import Header from "./Header";
@@ -22,6 +23,7 @@ import BeforeandAfter from "./BeforeandAfter";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Footer from "./Footer"
+import SmoothScroll from "./SmoothScroll"
 
  
 import Services from "./Services"
@@ -40,6 +42,12 @@ export default /*export default is a key word to export modules*/ function App()
       {/*router is a component of the React router library */}
       <div className="App">
       <Header/>  
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Dietrich Landcare</title>
+            <meta name="Dietrich Landcare Title" content="Helmet application" />
+            <link rel="canonical" href="http://mysite.com/example" />
+        </Helmet>
         <Switch> 
           <Route path="/" exact={true} component={HomePage} />
           <Route path="/testimonials" component={Testimonials} />
@@ -49,6 +57,7 @@ export default /*export default is a key word to export modules*/ function App()
         </Switch>
       </div>
       <Footer/>
+      <SmoothScroll />
     </Router>
   );
 } /*at the moment you export a block of code it becomes a module */
