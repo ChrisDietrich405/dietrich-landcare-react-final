@@ -6,9 +6,8 @@ import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg
 import classnames from "classnames";
 
 import axios from "axios";
-import * as Validator from 'validatorjs';  //the validator library doesn't have the export default keyword
-//the asterisk allows you to change the name. Without the asterisk you can't change the name 
-
+import * as Validator from 'validatorjs'; 
+ 
 import ServicesCheckbox from "./ServicesCheckbox"; 
 
 import Phone from "../images/phone.png"
@@ -18,11 +17,10 @@ import Location from "../images/location.png"
 import "../styles/Contact.scss";
 
 export default class Contact extends React.Component {
-  constructor(props) { /* you only need the constructor function if you need to override something from the React Component  */
+  constructor(props) {
     super(props);
-    this.state = { firstName: "", lastName: "", email: "", phone: "", message: "", service: "", error: {}};
+    this.state = { firstName: "", lastName: "", email: "", phone: "", message: "", service: "", error: {} };
   }
-  //firstName, phone, message are examples of state properties
   
   render() {
     return (
@@ -78,13 +76,6 @@ export default class Contact extends React.Component {
 
               <div className="c-contact-form">
 
-                {/* <Radio onChange={ service => { service refers to e.target.value from the radio component
-                            this.setState({ service: service }) the first service refer to the state and the
-                            second refers to the e.target.value
-                        }}/> {"service"("service" is a string and we 
-                        are checking to see if it's in the error object)
-                        in this.state.error && <p>{this.state.error.service.join(",")}</p>} */}
-
                 <ServicesCheckbox change={ targetValue => {
                             this.setState({ service: targetValue})
                         }}/> {"service" in this.state.error && <p className="error-message">{this.state.error.service.join(",")}</p>}
@@ -116,7 +107,7 @@ export default class Contact extends React.Component {
                           this.setState({ lastName: event.target.value})
                         }}
                       /> {"lastName" in this.state.error && <p className="error-message">{this.state.error.lastName.join(",")}</p>}
-                      {/* checking to see if the error property includes the lastName property */}
+                      
                     </div>
 
                   </div>
@@ -190,21 +181,19 @@ export default class Contact extends React.Component {
   onSubmit(event) {
     event.preventDefault()
     
-    const validator = new Validator(this.state, { //validating the state which includes all the properties 
+    const validator = new Validator(this.state, { 
       firstName: "required",
       lastName: "required",
-      email: "required|email", //required is one validator, email is another validator and we could add more
-      // for example max 
+      email: "required|email", 
       phone: "required",
       service: "required",
       message: "required"
     }, {"required.firstName": "The first name field is required", "required.lastName": "The last name field is required"} )
    if(validator.passes()) {
-     axios.post("http://localhost:3300/contact", this.state) //when you use post the second argument is the data
-     .then( response => alert("message was sent"))              //being sent
+     axios.post("http://localhost:3300/contact", this.state) 
+     .then( response => alert("message was sent"))             
      .catch(err => {
-       if(err.response.status === 400) {  //400 is a validation error 
-         this.setState({error: err.response.data}) //for example "first name wasn't entered"
+       if(err.response.status === 400) {  
        } else {
          alert("some error happened")
        }

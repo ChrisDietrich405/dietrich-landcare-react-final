@@ -19,16 +19,13 @@ import {Helmet} from "react-helmet";
 
 import Header from "./Header";
 import Testimonials from "./Testimonials";
-import BeforeandAfter from "./BeforeandAfter";
+// import BeforeandAfter from "./BeforeandAfter";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Footer from "./Footer"
 import SmoothScroll from "./SmoothScroll"
 
- 
 import Services from "./Services"
-
-// import 'bootstrap/dist/css/bootstrap.css'
 
 import "../styles/App.scss";
 import "../styles/Header.scss";
@@ -36,10 +33,9 @@ import "../styles/SlideShow.scss";
 import "../styles/HomePage.scss";
 
 
-export default /*export default is a key word to export modules*/ function App() {
+export default function App() {
   return (
     <Router>
-      {/*router is a component of the React router library */}
       <div className="App">
       <Header/>  
         <Helmet>
@@ -47,13 +43,12 @@ export default /*export default is a key word to export modules*/ function App()
             <title>Dietrich Landcare</title>
             <meta name="Dietrich Landcare Title" content="Helmet application" />
             <link rel="canonical" href="http://mysite.com/example" />
-        </Helmet>
-        
+        </Helmet>    
         <Switch> 
           <Route path="/" exact={true} component={HomePage} />
           <Route path="/testimonials" component={Testimonials} />
           <Route path="/contact" component={Contact} />
-          <Route path="/beforeAndAfter" component={BeforeandAfter} />
+          {/* <Route path="/beforeAndAfter" component={BeforeandAfter} /> */}
           <Route path="/services" component={Services} />
         </Switch>
       </div>
@@ -61,6 +56,6 @@ export default /*export default is a key word to export modules*/ function App()
       <Footer/>
     </Router>
   );
-} /*at the moment you export a block of code it becomes a module */
+} 
 
 

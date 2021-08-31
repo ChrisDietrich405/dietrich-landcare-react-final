@@ -17,8 +17,7 @@ export default class Testimonials extends React.Component {
       <h1 className="title">Testimonials</h1>
       <hr/>
       <div className="testimonial-container">
-          <div className="row">
-           
+          <div className="row">     
             <div className="col-12 col-lg-6 text-center" > <img src={scrollImage1} alt="" /></div>
             <div className="col-12 col-lg-6 text-center testimonial-container-client">
               <img src={testimonialPerson1} alt=""/>

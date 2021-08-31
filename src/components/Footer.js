@@ -7,6 +7,7 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default class Footer extends React.Component {
     render () {
+        
         function currentTime() {
             let time = new Date()
             let timeNow = time.getUTCFullYear()
@@ -38,7 +39,7 @@ export default class Footer extends React.Component {
                          <p><a href="https://www.instagram.com/dietrich_landcarellc/"><span><FontAwesomeIcon icon={faInstagram} /></span>&nbsp;Instagram</a></p>
                          
                      </div>
-                 </div>
+                </div>
                     <div className="footer-container-bottom">
                      <div className="footer-copyright">
                          <h4>DietrichLandcare©{currentTime()}</h4>

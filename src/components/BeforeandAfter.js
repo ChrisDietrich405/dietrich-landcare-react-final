@@ -6,9 +6,9 @@ import { faQuoteLeft, faChevronRight, faChevronLeft} from "@fortawesome/free-sol
 
 const drag = (e, container, slider, before, arrowCircle) => {
     let xPos = e.layerX;
-    let size = container.offsetWidth; //current width of the div
+    let size = container.offsetWidth; 
     before.style.width = xPos + "px";  
-    slider.style.left = xPos + "px";   // left here is similar to a dynamic definition of position:absolute another example top, bottom
+    slider.style.left = xPos + "px";   
     arrowCircle.style.left = xPos + "px";
     if(xPos < 3) {
         before.style.width = 0;
