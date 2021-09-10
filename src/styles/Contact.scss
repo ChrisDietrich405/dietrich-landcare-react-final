@@ -11,6 +11,7 @@
 
   .container {
     margin-top: 30px; 
+    align-items: center; 
   }
 
   .c-container {
@@ -24,7 +25,6 @@
 
 }
 
-
 .c-info-icons {
   width: 1.2rem; 
 }
@@ -34,11 +34,6 @@
   background-color: rgb(255, 255, 255);
   padding: 25px 30px;   
   border-radius: 4px; 
-}
-
-.row-container {
-  border-radius: 18px; 
-  box-shadow: 4px 4px 4px 4px; 
 }
 
 .second-column {
@@ -96,6 +91,7 @@
 
   textarea {
     height: 200px; 
+    width: 800px; 
   }
 }
 
@@ -120,13 +116,14 @@
   }
   input
   {
+    border: 1px solid gray; 
     width: 250px;
     padding: 6px;
     border-radius: 6px;
   }
   textarea
   { 
-    width: 520px;
+    width: 593px;
     height: 200px; 
     padding: 6px;
     border-radius: 6px; 

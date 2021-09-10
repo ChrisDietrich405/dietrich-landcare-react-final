@@ -24,7 +24,7 @@
 }
 
 .home-page-bottom-section {
-    margin: 3rem 3rem; 
+    margin: 0 3rem; 
     display: grid;
     grid-template-areas: "box1 box2"
     "box3 box3";
@@ -35,7 +35,7 @@
 
 .box1{
     width: 20rem; 
-    grid-area: box1; 
+    grid-area: box1;
 }
 
 .paragraph {
@@ -44,7 +44,11 @@
 }
 
 .box2{
-    grid-area: box2;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    text-align: left; 
+    margin-top: 2rem; 
 }
 
 .box3{

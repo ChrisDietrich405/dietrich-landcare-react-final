@@ -15,7 +15,7 @@ export default class Services extends React.Component {
           <div className="services-main-container">
             <div className="services-container">
               
-              <h1>Service</h1>
+              <h1>Services</h1>
               <hr />
               <div className="services-description" id="lawn-care">
                 {/* <img src="/images/lawn-care.png" alt=""/> */}

@@ -1,3 +1,22 @@
+//gradient for slide show make it only for the text not the whole bottom 
+//and make the background rectangle have maybe 70% opacity
+
+
+
+
+//The service field is required. in the center below the question 
+//the inputs error messages to the left and the border should be the same color as the message color
+
+
+
+
+//practice delete, put in contact form 
+
+//retaining walls service tab
+//slideshow needs to be reduced and add arrows to both sides so that the user has control 
+
+
+
 //create one page for services, create a call to action
 //the cta would direct to his most direct communication
 //add Services title
@@ -5,21 +24,18 @@
 //fix the arrow on services 
 
 
-import React from "react" /*"react is a module" */;
+import React from "react" 
 import {
   BrowserRouter as Router,
-  Switch /* switch is a component that switches the routes */,
-  Route /* route is a path */,
-  Link /* link links a href paths internally (never outside) */,
-} from "react-router-dom"; /* rrd is a package that allows you to create navigation in a react application */
-import '@popperjs/core'
-import 'bootstrap/dist/js/bootstrap'  //bootstrap uses popperjs 
+  Switch,
+  Route,
+} from "react-router-dom"; 
+import 'bootstrap/dist/js/bootstrap'  
 import {Helmet} from "react-helmet";
 
 
 import Header from "./Header";
 import Testimonials from "./Testimonials";
-// import BeforeandAfter from "./BeforeandAfter";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
 import Footer from "./Footer"
@@ -48,7 +64,6 @@ export default function App() {
           <Route path="/" exact={true} component={HomePage} />
           <Route path="/testimonials" component={Testimonials} />
           <Route path="/contact" component={Contact} />
-          {/* <Route path="/beforeAndAfter" component={BeforeandAfter} /> */}
           <Route path="/services" component={Services} />
         </Switch>
       </div>

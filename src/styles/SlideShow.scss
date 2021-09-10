@@ -3,9 +3,9 @@
 .slide-show {
     position: relative; 
     text-align: center;
-    margin-top: 70px; 
+    margin: 70px auto; 
     height: 40vw;
-    width: 100vw;
+    width: 80vw;
     object-fit: fill; 
     background-size: cover;
     transition: background-image 2s ease-out;

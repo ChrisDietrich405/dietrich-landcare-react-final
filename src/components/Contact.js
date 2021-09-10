@@ -29,11 +29,10 @@ export default class Contact extends React.Component {
            
           <div className="row row-container">
 
-            <div className="col-2 center-block text-center first-column">
-            </div>
 
             <div className="col-8 center-block text-center second-column">
               <h1 className="contact-title">Let's get in touch!</h1>
+              <hr />
               <p>We are available by phone: Monday-Saturday 7am-7:30 pm.</p>
               <ul className="c-info">
                 <li className="c-information">
@@ -170,7 +169,7 @@ export default class Contact extends React.Component {
 
               </div>
             </div>
-            <div className="col-2 center-block text-center third-column"/>
+            
           </div>
 
         </div>

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { CgArrowUpR } from "react-icons/all"
+import { AiOutlineArrowUp } from "react-icons/all"
 
 import "../styles/SmoothScroll.scss";
 
@@ -30,7 +30,7 @@ export default class SmoothScroll extends React.Component {
     render() {
         return this.state.shouldScrollToTop && (
             <div className="scroll-top" onClick={ this.scrollToTop.bind(this) }>
-                <CgArrowUpR size={50}/>
+                <AiOutlineArrowUp size={50} />
             </div>
         )
         
