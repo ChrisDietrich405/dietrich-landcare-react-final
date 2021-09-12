@@ -5,7 +5,7 @@ This project includes bootstrap and also the useContext React Hook
 
 ## How To Run This Project
 
-1. Clone project (in terminal add `git clone https://github.com/ChrisDietrich405/GC.Shop`)
+1. Clone project (in terminal add `git clone https://github.com/ChrisDietrich405/dietrich-landcare-react-final`)
 2. Install dependencies (in terminal run `npm install`)
 3. Run project (in terminal run `npm start`)
 
