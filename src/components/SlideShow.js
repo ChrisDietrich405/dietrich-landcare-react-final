@@ -8,11 +8,13 @@ export default class SlideShow extends React.Component {
         this.state = { position: 0, select: this.props.images[0] };
       }
     render() {
-        return <div className="slide-show" style={{backgroundImage: `url(${this.state.select.url})`}}>
-              <div className="gradient">
-              <h3>{this.state.select.title}</h3>
-              </div>
-        </div>;
+        return ( 
+          <div className="slide-show" style={{backgroundImage: `url(${this.state.select.url})`}}>
+                <div className="gradient">
+                <h3>{this.state.select.title}</h3>
+                </div>
+          </div>
+        )
       }
 
       componentDidMount(){                        

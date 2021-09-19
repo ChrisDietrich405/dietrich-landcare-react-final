@@ -7,10 +7,17 @@
   .row > * {
     padding-right: 0;
     padding-left: 0; 
+
+    hr {
+      width: 95%; 
+      height: 1px; 
+      border: 1px solid black; 
+      margin: 20px auto; 
+    }
   }
 
   .container {
-    margin-top: 30px; 
+    margin-top: 20px; 
     align-items: center; 
   }
 

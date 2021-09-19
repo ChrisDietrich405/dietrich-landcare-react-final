@@ -1,5 +1,11 @@
 @import "./Variables.scss";
 
+.home-page-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
 .home-page-middle {
     margin-bottom: 50px;
     height: 6rem;
