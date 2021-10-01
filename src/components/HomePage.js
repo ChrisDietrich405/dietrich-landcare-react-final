@@ -2,9 +2,9 @@ import React from "react";
 import SlideShow from "./SlideShow";
 import Footer from "./Footer";
 
-import scrollImage1 from "../images/hedge-trimming.jpg"
+import scrollImage1 from "../images/hedge-trimming.png"
 import scrollImage2 from "../images/scroll-image2.png"
-import scrollImage3 from "../images/mulching.jpg"
+import scrollImage3 from "../images/mulching.png"
 import scrollImage4 from "../images/scroll-image4.png"
 
 import lawnCare from "../images/lawn-care.png"
