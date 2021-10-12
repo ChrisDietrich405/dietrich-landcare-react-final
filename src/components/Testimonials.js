@@ -22,10 +22,10 @@ export default class Testimonials extends React.Component {
       <hr/>
       <div className="testimonial-container">
           <div className="row">     
-            <div className="col-12 col-lg-6 text-center" > <img src={testimonialLandscape1} alt="testimonial landscape" /></div>
+            <div className="col-12 col-lg-6 text-center" > <img src={testimonialLandscape1} alt="a picture of a beautiful and clean garden" /></div>
             <div className="col-12 col-lg-6 text-center testimonial-container-client">
               <img src={testimonialPerson1} alt=""/>
-              <p><span><FontAwesomeIcon icon={faQuoteLeft} /></span>&nbsp;I had fallen behind on my gardening and called Dietrich Landcare for a clean up/regular landscaping service. They were prompt in getting back to my inquiry. Devin came out within the week to take a look at the property and get me a quote. He was quick, professional and gave me a realistic timeline of when I could be fit into their schedule. I would not hesitate to recommend this landscaping company to anyone </p>
+              <p><span><FontAwesomeIcon icon={faQuoteLeft} /></span>&nbsp;I had fallen behind on my gardening and called Dietrich Landcare for a clean up/regular landscaping service. They were prompt in getting back to my inquiry. Devin came out within the week to take a look at the property and get me a quote. He was quick, professional and gave me a realistic timeline of when I could be fit into their schedule. I would not hesitate to recommend this landscaping company to anyone - Mary Smith, Loch Raven </p>
             </div>
           </div>
       </div>

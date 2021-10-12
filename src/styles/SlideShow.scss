@@ -1,5 +1,11 @@
 @import "./Variables.scss";
 
+.slide-show-container {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
 .slide-show {
     position: relative; 
     text-align: center;
