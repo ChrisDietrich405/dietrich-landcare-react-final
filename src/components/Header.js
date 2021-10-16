@@ -17,12 +17,12 @@ export default class Header extends React.Component {
 
   navbarDropdownMouseEnter() {
     clearTimeout(this.toMouseLeave);
-    this.getDropdown().show();
+    this.getDropdown().show()
   }
 
   navbarMouseLeave() {
     clearTimeout(this.toMouseLeave);
-    this.toMouseLeave = setTimeout(() => this.getDropdown().hide(), 500);
+    this.toMouseLeave = setTimeout(this.getDropdown().hide, 1000);
   }
 
   navbarMouseEnter() {
@@ -30,7 +30,7 @@ export default class Header extends React.Component {
   }
 
   getDropdown() {
-    return new Dropdown(this.navbarDropdown.current);
+    return Dropdown.getOrCreateInstance(this.navbarDropdown.current);
   }
 
   render() {
@@ -68,6 +68,7 @@ export default class Header extends React.Component {
                   className="nav-link dropdown-toggle"
                   href="#"
                   ref={this.navbarDropdown}
+                  id="navbarDropdown"
                   role="button"
                   onMouseEnter={this.navbarDropdownMouseEnter.bind(this)}
                   onMouseLeave={this.navbarMouseLeave.bind(this)}
