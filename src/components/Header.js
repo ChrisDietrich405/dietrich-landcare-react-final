@@ -9,38 +9,39 @@ import { HashLink } from "react-router-hash-link";
 import { Dropdown } from "bootstrap";
 
 export default class Header extends React.Component {
-	bsNavbarDropdown = null;
 	toMouseLeave = null;
 	constructor(props) {
 		super(props);
 		this.navbarDropdown = React.createRef();
-		this.ulNavbarDropdown = React.createRef();
-		this.navbar = React.createRef();
 	}
 
-	navbarDropdownMouseOver() {
+	navbarDropdownMouseEnter() {
 		clearTimeout(this.toMouseLeave);
 		this.getDropdown().show();
 	}
 
 	navbarMouseLeave() {
-		this.toMouseLeave = setTimeout(() => this.getDropdown().hide(), 200);
+		clearTimeout(this.toMouseLeave);
+		this.toMouseLeave = setTimeout(() => {
+			try {
+				this.getDropdown().hide();
+			} catch (e) {}
+		}, 500);
 	}
 
-	navbarMouseOut() {
+	navbarMouseEnter() {
 		clearTimeout(this.toMouseLeave);
 	}
 
 	getDropdown() {
-		return new Dropdown(document.getElementById("navbarDropdown"));
+		return new Dropdown(this.navbarDropdown.current);
 	}
 
 	render() {
 		return (
 			<nav
-				ref={this.navbar}
 				onMouseLeave={this.navbarMouseLeave.bind(this)}
-				onMouseOut={this.navbarMouseOut.bind(this)}
+				onMouseEnter={this.navbarMouseEnter.bind(this)}
 				className="navbar navbar-expand-lg"
 			>
 				<div className="container-fluid">
@@ -71,9 +72,8 @@ export default class Header extends React.Component {
 									className="nav-link dropdown-toggle"
 									href="#"
 									ref={this.navbarDropdown}
-									id="navbarDropdown"
 									role="button"
-									onMouseOver={this.navbarDropdownMouseOver.bind(
+									onMouseEnter={this.navbarDropdownMouseEnter.bind(
 										this
 									)}
 									onMouseLeave={this.navbarMouseLeave.bind(
@@ -85,13 +85,14 @@ export default class Header extends React.Component {
 									Services
 								</a>
 								<ul
-									ref={this.ulNavbarDropdown}
 									className="dropdown-menu"
 									aria-labelledby="navbarDropdown"
+									onMouseEnter={this.navbarDropdownMouseEnter.bind(
+										this
+									)}
 									onMouseLeave={this.navbarMouseLeave.bind(
 										this
 									)}
-									onMouseOut={this.navbarMouseOut.bind(this)}
 								>
 									<li>
 										<Link
