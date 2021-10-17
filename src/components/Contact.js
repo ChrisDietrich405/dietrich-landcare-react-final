@@ -25,11 +25,8 @@ export default class Contact extends React.Component {
   render() {
     return (
       <div className="viewport">
-        <div className="container">
-           
+        <div className="container">  
           <div className="row row-container">
-
-
             <div className="col-8 center-block text-center second-column">
               <h1 className="contact-title">Let's get in touch!</h1>
               <hr />

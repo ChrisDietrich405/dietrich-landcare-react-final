@@ -241,6 +241,13 @@
       position: absolute !important; 
       bottom: 400px !important; 
     }
+  }
 
-  
+  @media only screen and (max-width:900px) {
+    .services-description {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      margin-right: 1.8rem; 
+    }
   }

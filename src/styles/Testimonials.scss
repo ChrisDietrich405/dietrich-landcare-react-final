@@ -45,9 +45,47 @@ hr {
   border: 1px solid black; 
 }
 
+.testimonial-person {
+  display: flex; 
+  justify-content: space-around;
+  align-items: center; 
+}
+
 @media(max-width: 1043px) {
   .testimonial-container {
     width: 100%; 
+    margin-left: 2rem; 
+  }
+
+  .testimonial-container p {
+    width: 80%; 
+    margin: 0 auto; 
+  }
+
+  .testimonial-person {
+    max-width: 80%; 
+    margin: 0 auto;  
+  }
+}
+
+@media only screen and (max-width:900px) {
+	.testimonial-container-client {
+    max-width: 90%; 
+	}
+
+  .testimonial-person {
+    max-width: 80%; 
+    margin: 0 auto;  
+  }
+
+  .testimonial-container p {
+    width: 80%; 
+    margin: 0 auto; 
+  }
+
+  .testimonial-pic img {
+    max-width: 90%;
+    margin: 0 auto; 
   }
 }
 
