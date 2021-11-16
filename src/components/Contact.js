@@ -23,6 +23,7 @@ export default class Contact extends React.Component {
   }
   
   render() {
+
     return (
       <div className="viewport">
         <div className="container">  
@@ -141,7 +142,7 @@ export default class Contact extends React.Component {
                   <div className="message-container">
                       <div className="message-text" className={classnames("c-fields", { "filled": this.state.message != "" })}>
                         <label htmlFor="Message">Message</label>
-                        <textarea value= {this.state.message}
+                        <textarea id="textarea-responsive" value= {this.state.message}
                           onFocus={this.onInputFocus.bind(this)}
                           onBlur={this.onInputBlur.bind(this)}
                           id="Message"

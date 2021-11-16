@@ -13,6 +13,8 @@ export default class Header extends React.Component {
   constructor(props) {
     super(props);
     this.navbarDropdown = React.createRef();
+    this.toggleNav = this.toggleNav.bind(this)
+    this.state = { toggle: false}
   }
 
   navbarDropdownMouseEnter() {
@@ -33,7 +35,12 @@ export default class Header extends React.Component {
     return Dropdown.getOrCreateInstance(this.navbarDropdown.current);
   }
 
+  toggleNav() {
+      this.setState({toggle: !this.state.toggle})
+  }
+
   render() {
+    console.log(this.state.toggle)
     return (
       <nav
         onMouseLeave={this.navbarMouseLeave.bind(this)}
@@ -41,8 +48,9 @@ export default class Header extends React.Component {
         className="navbar navbar-expand-lg"
       >
         <div className="container-fluid">
-          <a className="navbar-brand"></a>
+          <a className="navbar-brand "></a>
           <button
+            onClick={this.toggleNav}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"

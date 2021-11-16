@@ -1,3 +1,8 @@
+//arrows should be inside the slides and the slides should be 100%
+//make sure that the arrows are easy to see, maybe have a circle white
+//background
+
+
 //gradient for slide show make it only for the text not the whole bottom 
 //and make the background rectangle have maybe 70% opacity
 

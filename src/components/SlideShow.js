@@ -38,13 +38,18 @@ export default class SlideShow extends React.Component {
 
         return ( 
           <div className="slide-show-container">
-            	<AiOutlineArrowLeft onClick={prevSlideShow}/>
-          <div className="slide-show" style={{backgroundImage: `url(${this.state.select.url})`}}>
-                <div className="gradient">
-                <h3>{this.state.select.title}</h3>
-                </div>
-          </div>
-              <AiOutlineArrowRight onClick={nextSlideShow}/>
+            <div className="slide-show" style={{backgroundImage: `url(${this.state.select.url})`}}>
+              <div className="arrow-left-container">
+              	<AiOutlineArrowLeft className="arrow-left" onClick={prevSlideShow}/>
+              </div>
+                    <div className="gradient">
+                      <h3>{this.state.select.title}</h3>
+                    </div>
+            
+              <div className="arrow-right-container">
+              	<AiOutlineArrowRight className="arrow-right" onClick={nextSlideShow}/>
+              </div>
+            </div>
           </div>
         )
       }
@@ -70,8 +75,4 @@ export default class SlideShow extends React.Component {
           select: this.props.images[positionPlace], 
         });                                        
     }
-
-      
-
-      
 }
