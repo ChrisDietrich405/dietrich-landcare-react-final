@@ -26,7 +26,7 @@
      }
 
      .navbar-brand {
-         background: url("../images/dietrich-landcare.jpg") no-repeat center;
+        //  background: url("../images/dietrich-landcare.jpg") no-repeat center;
          background-size: cover; 
          height: 60px; 
          width: 70px;
@@ -101,10 +101,6 @@
      .navbar-toggler {
          color: white; 
      }
-
-//      .toggle-nav {
-//          display: none; 
-//      }
 }
   
 @media(max-width: 1043px) {

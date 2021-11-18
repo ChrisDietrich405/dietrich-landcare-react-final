@@ -40,6 +40,7 @@ import {Helmet} from "react-helmet";
 
 
 import Header from "./Header";
+import Navbar from "./Navbar"; 
 import Testimonials from "./Testimonials";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
@@ -58,7 +59,8 @@ export default function App() {
   return (
     <Router>
       <div className="App">
-      <Header/>  
+      <Navbar/>
+      {/* <Header/>   */}
         <Helmet>
             <meta charSet="utf-8" />
             <title>Dietrich Landcare</title>
