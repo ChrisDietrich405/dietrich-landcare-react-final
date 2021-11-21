@@ -30,23 +30,36 @@ export default class Navbar extends React.Component {
             <div className="logo-links">
                 <img src={logo} alt="" />
                 <ul>
-                    <li>Home</li>  
-                    
+                    <li className="nav-item">
+                      <Link to="/" className="nav-link">
+                        Home
+                      </Link>
+                    </li>                    
                     <li className="services" onClick={this.toggleShowServiceMenu} >
                       Services
                       {this.state.showServiceMenu ? (<div className="services-menu">
                       
                       <ul>
-                        <li>thing</li>
-                        <li>stuff</li>
-                        <li>other</li>
-                        <li>whatever</li>
+                        <li>Lawn Care</li>
+                        <li>Power Washing</li>
+                        <li>Snow Removal</li>
+                        <li>Stump Removal</li>
+                        <li>Demolition & Hauling</li>
+                        <li>Regrades</li>
                       </ul>
                     </div>) : ""}
                       
                     </li>
-                    <li>Testimonials</li>
-                    <li>Contact</li>
+                    <li className="nav-item">
+                      <Link to="/testimonials" className="nav-link">
+                        Testimonials
+                      </Link>
+                    </li>
+                    <li> 
+                      <Link to="/contact" className="nav-link">
+                        Contact
+                      </Link>
+                    </li>
                 </ul>
             </div>
             

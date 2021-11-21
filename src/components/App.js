@@ -59,8 +59,8 @@ export default function App() {
   return (
     <Router>
       <div className="App">
-      <Navbar/>
-      {/* <Header/>   */}
+      {/* <Navbar/> */}
+      <Header/>  
         <Helmet>
             <meta charSet="utf-8" />
             <title>Dietrich Landcare</title>

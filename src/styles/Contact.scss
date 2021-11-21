@@ -248,28 +248,29 @@
        padding-left: 1rem !important; 
     }
 
+    form {
+      display: flex; 
+      flex-direction: column; 
+      align-items: flex-start;
+      
+    }
+
     .grid-one  {
        display: flex; 
        flex-direction: column; 
+       margin: 0; 
     }
 
     .grid-two  {
       display: flex; 
-      flex-direction: column; 
+      flex-direction: column;
+      margin: 0;  
     }
 
     #Message {
-     max-width: 250px; 
+     max-width: 250px;
+     margin: 0;  
 
-    }
-
-    .message-container {
-      margin-right: 6.8rem; 
     }
   }
 
-  @media only screen and (max-width:770px) {
-    .message-container {
-      margin-left: 6.8rem; 
-   }
-  }

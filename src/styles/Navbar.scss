@@ -37,7 +37,7 @@ img {
 .social-media-icon {
     font-size: 32px; 
     margin-right: 20px;
-    background-color: #448c7e;;  
+    background-color: #448c7e;  
     color: #fff;
 }
 
@@ -52,6 +52,19 @@ img {
     z-index: 10000; 
     
     ul {
-        background-color: lightgrey;
+        background-color: #448c7e;  
+        width: 200px;
+        border-radius: 8px;  
+    }
+
+    li {
+        padding-left: 15px; 
+        color: #fff;
+        transition: .3s;
+    }
+
+    li:hover {
+        color: #448c7e; 
+        background-color: #ebedf0; 
     }
 }
