@@ -1,17 +1,16 @@
-@import "./Variables.scss";      
+@import "./Variables.scss";
 @import "bootstrap/scss/bootstrap";
-
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
 code {
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
 }
 
 input,
@@ -21,7 +20,7 @@ label {
 }
 
 p {
-  line-height: 1.5rem; 
+  line-height: 1.5rem;
 }
 
 * {
@@ -39,11 +38,6 @@ p {
 
 .services {
   position: relative;
-}
-
-.services div {
-  position: absolute;
-  /* display: none; */
 }
 
 .services ul {
@@ -81,9 +75,3 @@ p {
   background-color: white;
   cursor: pointer;
 }
-
-
-
-
-
-

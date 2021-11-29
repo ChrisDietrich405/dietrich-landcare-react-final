@@ -1,83 +1,113 @@
 import React from "react";
 import { Link, BrowserRouter as Router } from "react-router-dom";
+
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { HashLink } from "react-router-hash-link";
-import logo from '../images/logo.jpg';
+import { GiHamburgerMenu } from "react-icons/gi";
+// import { HashLink } from "react-router-hash-link";
+import logo from "../images/logo.jpg";
+
+import OutsideAlerter from "./OutsideAlerter";
 
 import "../styles/Navbar.scss";
-
-
 
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.state ={ showServiceMenu: true }
-    this.toggleShowServiceMenu = this.toggleShowServiceMenu.bind(this)
+    this.state = { showServiceMenu: true };
+    this.toggleShowServiceMenu = this.toggleShowServiceMenu.bind(this);
   }
 
   toggleShowServiceMenu() {
-    this.setState({showServiceMenu: !this.state.showServiceMenu})
+    this.setState({ showServiceMenu: !this.state.showServiceMenu });
   }
 
   render() {
-    console.log(this.state.showServiceMenu)
+    console.log(this.state.showServiceMenu);
     return (
-        <nav>
-            <div className="logo-links">
-                <img src={logo} alt="" />
-                <ul>
-                    <li className="nav-item">
-                      <Link to="/" className="nav-link">
-                        Home
-                      </Link>
-                    </li>                    
-                    <li className="services" onClick={this.toggleShowServiceMenu} >
-                      Services
-                      {this.state.showServiceMenu ? (<div className="services-menu">
-                      
-                      <ul>
-                        <li>Lawn Care</li>
-                        <li>Power Washing</li>
-                        <li>Snow Removal</li>
-                        <li>Stump Removal</li>
-                        <li>Demolition & Hauling</li>
-                        <li>Regrades</li>
-                      </ul>
-                    </div>) : ""}
-                      
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/testimonials" className="nav-link">
-                        Testimonials
-                      </Link>
-                    </li>
-                    <li> 
-                      <Link to="/contact" className="nav-link">
-                        Contact
-                      </Link>
-                    </li>
-                </ul>
-            </div>
-            
-            <div>
-            <a  
-                  href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon className="social-media-icon" icon={faFacebook} />
-                </a>
-                <a
-                  href="https://www.instagram.com/dietrich_landcarellc/"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon className="social-media-icon" icon={faInstagram} />
-                </a>
-            </div>
-        </nav>
+      <nav>
+        <div className="logo-links">
+          <img src={logo} alt="" />
+          <ul className="responsive-links">
+            <li className="nav-item">
+              <Link to="/" className="nav-link">
+                Home
+              </Link>
+            </li>
+
+            <li className="services" onClick={this.toggleShowServiceMenu}>
+              <OutsideAlerter clickOutside={() => this.setState({ showServiceMenu: false })}>
+                Services
+                {this.state.showServiceMenu ? (
+                  <div className="services-menu">
+                    <ul>
+                      <li>
+                        <a href="/services#lawn-care" className="nav-link">
+                          Lawn Care
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/services#power-washing" className="nav-link">
+                          Power Washing
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/services#snow-removal" className="nav-link">
+                          Snow Removal
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/services#stump-removal" className="nav-link">
+                          Stump Removal
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/services#demolition" className="nav-link">
+                          Demolition & Hauling
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/services#regrades" className="nav-link">
+                          Regrades
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </OutsideAlerter>
+            </li>
+
+            <li className="nav-item">
+              <Link to="/testimonials" className="nav-link">
+                Testimonials
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="nav-link">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="social-icons-container">
+          <a href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436" target="_blank">
+            <FontAwesomeIcon className="social-media-icon" icon={faFacebook} />
+          </a>
+          <a href="https://www.instagram.com/dietrich_landcarellc/" target="_blank">
+            <FontAwesomeIcon className="social-media-icon" icon={faInstagram} />
+          </a>
+        </div>
+
+        <div className="hamburger-menu">
+          <GiHamburgerMenu />
+        </div>
+      </nav>
     );
   }
 }
