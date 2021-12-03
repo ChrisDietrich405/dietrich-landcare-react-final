@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, BrowserRouter as Router } from "react-router-dom";
 
+import MenuMobile from "./MenuMobile";
+
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -17,8 +19,13 @@ import "../styles/Navbar.scss";
 export default class Navbar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showServiceMenu: true };
+    this.state = { showServiceMenu: true, toggleMobileMenu: false };
     this.toggleShowServiceMenu = this.toggleShowServiceMenu.bind(this);
+    this.setToggleMobileMenu = this.setToggleMobileMenu.bind(this);
+  }
+
+  setToggleMobileMenu() {
+    this.setState({ toggleMobileMenu: !this.state.toggleMobileMenu });
   }
 
   toggleShowServiceMenu() {
@@ -26,9 +33,12 @@ export default class Navbar extends React.Component {
   }
 
   render() {
-    console.log(this.state.showServiceMenu);
+    console.log(this.state.toggleMobileMenu)
     return (
       <nav>
+        { this.state.toggleMobileMenu && <MenuMobile whenUserClicksOnXIcon={() => this.setToggleMobileMenu()} />  }
+       
+
         <div className="logo-links">
           <img src={logo} alt="" />
           <ul className="responsive-links">
@@ -45,32 +55,32 @@ export default class Navbar extends React.Component {
                   <div className="services-menu">
                     <ul>
                       <li>
-                        <a href="/services#lawn-care" className="nav-link">
+                        <a href="/services#lawn-care" className="services-nav-link">
                           Lawn Care
                         </a>
                       </li>
                       <li>
-                        <a href="/services#power-washing" className="nav-link">
+                        <a href="/services#power-washing" className="services-nav-link">
                           Power Washing
                         </a>
                       </li>
                       <li>
-                        <a href="/services#snow-removal" className="nav-link">
+                        <a href="/services#snow-removal" className="services-nav-link">
                           Snow Removal
                         </a>
                       </li>
                       <li>
-                        <a href="/services#stump-removal" className="nav-link">
+                        <a href="/services#stump-removal" className="services-nav-link">
                           Stump Removal
                         </a>
                       </li>
                       <li>
-                        <a href="/services#demolition" className="nav-link">
+                        <a href="/services#demolition" className="services-nav-link">
                           Demolition & Hauling
                         </a>
                       </li>
                       <li>
-                        <a href="/services#regrades" className="nav-link">
+                        <a href="/services#regrades" className="services-nav-link">
                           Regrades
                         </a>
                       </li>
@@ -104,7 +114,7 @@ export default class Navbar extends React.Component {
           </a>
         </div>
 
-        <div className="hamburger-menu">
+        <div className="hamburger-menu" onClick={() =>  this.setState({toggleMobileMenu: true})}>
           <GiHamburgerMenu />
         </div>
       </nav>

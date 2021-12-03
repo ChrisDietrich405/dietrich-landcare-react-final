@@ -1,23 +1,9 @@
-//arrows should be inside the slides and the slides should be 100%
-//make sure that the arrows are easy to see, maybe have a circle white
-//background
-
-//gradient for slide show make it only for the text not the whole bottom
-//and make the background rectangle have maybe 70% opacity
-
-//The service field is required. in the center below the question
-//the inputs error messages to the left and the border should be the same color as the message color
-
-//practice delete, put in contact form
-
-//retaining walls service tab
-//slideshow needs to be reduced and add arrows to both sides so that the user has control
-
-//create one page for services, create a call to action
-//the cta would direct to his most direct communication
-//add Services title
-
-//fix the arrow on services
+//change color of hamburger to white
+//position title of each slide in the center of picture
+//and make font bigger and capitalize first word
+//over the entire image there will be a black layer with 10 percent opacity
+//so that you can see the title in the center better
+//like this https://dribbble.com/shots/14773037-Pickup-Website/attachments/6477895?mode=media
 
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
