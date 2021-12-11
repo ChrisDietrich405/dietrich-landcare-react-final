@@ -8,14 +8,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./styles.scss";
 
-export default function MenuMobile({whenUserClicksOnXIcon}) {
-
-
+export default function MenuMobile({ whenUserClicksOnXIcon }) {
   return (
     <div className="menuMobile">
       <ul className="menuMobile-responsive-links">
         <li className="menuMobile-nav-item">
-          <Link to="/">Home</Link>
+          <a href="/">Home</a>
         </li>
         <li>
           <a href="/services#lawn-care">Lawn Care</a>
@@ -37,17 +35,25 @@ export default function MenuMobile({whenUserClicksOnXIcon}) {
         </li>
 
         <li>
-          <Link to="/testimonials">Testimonials</Link>
+          <a href="/testimonials">Testimonials</a>
+          {/* <Link to="/testimonials">Testimonials</Link> */}
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <a href="/contact">Contact</a>
+          {/* <Link to="/contact">Contact</Link> */}
         </li>
       </ul>
       <div className="menuMobile-social-icons-container">
-        <a href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436" target="_blank">
+        <a
+          href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
+          target="_blank"
+        >
           <FontAwesomeIcon className="social-media-icon" icon={faFacebook} />
         </a>
-        <a href="https://www.instagram.com/dietrich_landcarellc/" target="_blank">
+        <a
+          href="https://www.instagram.com/dietrich_landcarellc/"
+          target="_blank"
+        >
           <FontAwesomeIcon className="social-media-icon" icon={faInstagram} />
         </a>
       </div>

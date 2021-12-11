@@ -23,13 +23,22 @@
     top: 0;
     left: 0;
     background: rgb(255, 255, 255);
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 70%,
+      rgba(0, 0, 0, 1) 100%
+    );
   }
+
   h3 {
+    margin: 0 auto;
+    text-align: center;
     position: absolute;
-    bottom: 10px;
-    left: 30px;
+    // bottom: 264px;
+    font-size: 3rem;
+    // left: 467px;
     color: white;
+    border: 1px solid red;
   }
 
   .arrow-left-container {

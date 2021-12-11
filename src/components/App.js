@@ -1,3 +1,5 @@
+
+//add toastify
 //change color of hamburger to white
 //position title of each slide in the center of picture
 //and make font bigger and capitalize first word
