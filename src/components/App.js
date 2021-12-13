@@ -1,3 +1,19 @@
+//double the size of the circles (arrows on home page)
+//increase the size of the font of home page in responsive version and fix the arrows
+//add an opacity of 20 percent to the background images
+
+//services dropdown titles shouldn't change to white
+//on home page reduce box shadow
+//on home page put all the text next to the picture (nothing below)
+//on services page reduce opacity by half and then use that same box shadow for the home page
+//Testimonials the images should be at the edge of the marging
+
+//contact page increase font of contact at top and put all three on the same line (just
+//like the social media icons)
+//the 6 services with the radio button should be aligned left
+//instead of 2 columns of 3 services, make 3 columns with 2 services
+//add some additional space between the radio buttons and when the first name moves  out of the input
+// and goes above
 
 //add toastify
 //change color of hamburger to white
@@ -6,6 +22,8 @@
 //over the entire image there will be a black layer with 10 percent opacity
 //so that you can see the title in the center better
 //like this https://dribbble.com/shots/14773037-Pickup-Website/attachments/6477895?mode=media
+
+//AFTER MVP ADD BULLETS TO SLIDESHOW IMAGES
 
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
