@@ -49,18 +49,14 @@ export default class HomePage extends React.Component {
                 different landscape services that you can choose from, and we
                 take the time to customize it to your specific needs in order
                 for it to reflect you best and ensure it aligns to the outdoor
-                activities you enjoy the most.
+                activities you enjoy the most. We are certified in all aspects
+                of landscaping that offers you efficient and dependable services
+                that suit your budget and needs best.We craft innovative patios,
+                terraces, retaining walls, dry rock creeks, outdoor fireplaces,
+                walkways, energy-efficient lighting and more.
               </p>
             </div>
-            <div className="box3">
-              <p>
-                We are certified in all aspects of landscaping that offers you
-                efficient and dependable services that suit your budget and
-                needs best.We craft innovative patios, terraces, retaining
-                walls, dry rock creeks, outdoor fireplaces, walkways,
-                energy-efficient lighting and more.
-              </p>
-            </div>
+            <div className="box3"></div>
           </section>
         </div>
       </>

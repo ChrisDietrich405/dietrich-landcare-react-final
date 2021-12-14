@@ -55,15 +55,21 @@
   }
 }
 
+.c-info {
+  display: flex;
+  justify-content: space-around;
+}
+
 .c-information {
   list-style: none;
+  margin-right: 10px;
   display: flex;
 }
 
 .c-information img {
   max-width: 30px;
   list-style-type: none;
-  margin-right: 20px;
+  margin-right: 5px;
   padding-bottom: 20px;
 }
 
@@ -73,8 +79,9 @@
 }
 
 .c-information p {
-  font-size: 0.8rem !important;
+  font-size: 1rem !important;
   font-weight: 4000 !important;
+  margin-right: 19px;
 }
 
 .grid-one,
@@ -113,9 +120,9 @@
   position: relative;
   padding: 11.5px 0;
   label {
-    font-size: 0.6rem !important;
+    font-size: 0.8 !important;
     position: absolute;
-    padding: 15px 15px;
+    padding: 6px 15px;
     transition: transform 0.5s ease;
   }
   input {

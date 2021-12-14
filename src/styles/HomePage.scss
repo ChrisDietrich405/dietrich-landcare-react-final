@@ -1,92 +1,95 @@
 @import "./Variables.scss";
 
 .home-page-container {
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-page-middle {
-    margin-bottom: 50px;
-    height: 6rem;
-    background-color: $primary-color;
-    color: white;
-    justify-content: center; 
-    text-align: center;
-    padding-top: 24px;
-    h3 {
-        font-size: 1.2rem;
-    }
+  margin-bottom: 50px;
+  height: 6rem;
+  background-color: $primary-color;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  padding-top: 24px;
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 .home-page-bottom-container {
-    width: 90%;
-    padding-top: 2rem; 
-    margin: 0 auto;
-    h2 {
-        text-align: center;
-        margin-bottom: 50px; 
-    }
+  width: 90%;
+  padding-top: 2rem;
+  margin: 0 auto;
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
 }
 
 .home-page-bottom-section {
-    margin: 0 3rem; 
-    display: grid;
-    grid-template-areas: "box1 box2"
+  margin: 0 3rem;
+  display: grid;
+  grid-template-areas:
+    "box1 box2"
     "box3 box3";
-    grid-template-columns: 50% 50%;
-    grid-column-gap: .1rem;
-    grid-row-gap: 2rem;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 0.1rem;
+  grid-row-gap: 2rem;
 }
 
-.box1{
-    width: 20rem; 
-    grid-area: box1;
+.box1 {
+  width: 20rem;
+  grid-area: box1;
 }
 
 .paragraph {
-    font-size: 1rem; 
-    line-height: 1.5rem; 
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
-.box2{
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    text-align: left; 
-    margin-top: 2rem; 
+.box2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-top: 10px;
 }
 
-.box3{
-    grid-area: box3; 
-    
+.box3 {
+  grid-area: box3;
 }
 
 .bottom-pic {
-    width: 500px;
-    height: 300px;   
-    box-shadow: 5px 10px 8px 10px #888888;
-    border-radius: 1rem; 
+  width: 500px;
+  height: 300px;
+  box-shadow: 2px 2px 2px #888;
+  border-radius: 1rem;
 }
 
-@media(max-width: 1305px) {
-    .home-page-bottom-section, .box1, .box2, .box3 {
-        font-size: .9rem;
-        display: block; 
-    }
+@media (max-width: 1305px) {
+  .home-page-bottom-section,
+  .box1,
+  .box2,
+  .box3 {
+    font-size: 0.9rem;
+    display: block;
+  }
 
-    .box1 {
-        display: flex; 
-        justify-content: center;
-        width: 100%;
-        
-        img {
-            height: 300px; 
-            width: 400px; 
-        }
-    }
+  .box1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 
-    .box2 {
-        margin-top: 1.4rem; 
+    img {
+      height: 300px;
+      width: 400px;
     }
+  }
+
+  .box2 {
+    margin-top: 1.4rem;
+  }
 }

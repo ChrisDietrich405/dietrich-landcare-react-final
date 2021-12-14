@@ -1,86 +1,86 @@
 .checkbox-container {
-    width: 100%; 
-    margin-bottom: 1rem; 
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .service-container {
-    display: flex; 
-    justify-content: space-around; 
+  margin-left: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
 
-    div {
-        display: flex; 
-        flex-direction: column;
-        align-items: start;  
-    }
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 .contact-radio-btn p {
-    font-size: .8rem; 
-    font-weight: 1500;
+  font-size: 1.4rem;
+  font-weight: 1500;
 }
 
 .contact-label {
-    font-size: .8rem; 
-    
-    span {
-        margin-left: 4px; 
-    }
+  font-size: 1rem;
+
+  span {
+    margin-left: 4px;
+  }
 }
 
-.radio-button-paragraph{
-    font-size: .4rem; 
-    padding: 0 .5rem; 
+.radio-button-paragraph {
+  font-size: 0.4rem;
+  padding: 0 0.5rem;
 }
 
 .contact-radio-button input {
-    margin-left: 8rem; 
+  margin-left: 8rem;
 }
 
 .contact-label {
-    padding: 0 1rem;
-    display: flex; 
-    align-items: center !important; 
-    justify-content: center !important;   
+  padding: 0 1rem;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .contact-label span {
-  padding-top: 5px; 
+  padding-top: 5px;
 }
 
 .checkbox-background-color {
-    position: relative; 
+  position: relative;
 }
 
 .checkbox-background-color::before {
-    border: solid 1px black; 
-    border-radius: 4px; 
-    padding-left: 2px; 
-    background: white; 
-    position: absolute; 
-    top: -2px; 
-    left: -8px; 
-    display: block; 
-    width: 17px; 
-    height: 17px; 
-    content: ""; 
-    box-sizing: unset; 
+  border: solid 1px black;
+  border-radius: 4px;
+  padding-left: 2px;
+  background: white;
+  position: absolute;
+  top: -2px;
+  left: -8px;
+  display: block;
+  width: 17px;
+  height: 17px;
+  content: "";
+  box-sizing: unset;
 }
 
 .checkbox-background-color:checked::before {
-    background-color: white; 
-    color: #448c7e; 
-    content: "\f00c"; 
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 900;
-    font-size: 13px;
-    line-height: 18px;  
+  background-color: white;
+  color: #448c7e;
+  content: "\f00c";
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 @media only screen and (max-width: 900px) {
-    .service-container {
-        display: flex; 
-        flex-direction: column; 
-    }
+  .service-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
-
