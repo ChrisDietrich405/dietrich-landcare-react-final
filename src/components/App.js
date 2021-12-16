@@ -1,24 +1,24 @@
-//services dropdown titles shouldn't change to white
+// this is what is in the BBJ slideshow put a black layer on top of the slideshow and give it an opacity of 30 percent
+// closed hamburger should all be white, links and close
+// vertically align social icons with the links
+// home page paragraph make that into two paragraphs
 
-//Testimonials the images should be at the edge of the marging
+//Testimonials
+//make the people picture more square
+//the people picture should be aligned horizontally with the landscape picture
 
-//contact page increase font of contact at top and put all three on the same line (just
-//like the social media icons)
-//the 6 services with the radio button should be aligned left
-//instead of 2 columns of 3 services, make 3 columns with 2 services
-//add some additional space between the radio buttons and when the first name moves  out of the input
-// and goes above
+//Contact
+//instagram icon needs to be filled
+// add some extra space after the social icons
+//what services are you interested should be h3 and bold
+//for the inputs the space between needs to be cut in half both vertically and horizontally
+//horizontally just increase the width of the inputs
 
-//add toastify
-//change color of hamburger to white
-//position title of each slide in the center of picture
-//and make font bigger and capitalize first word
-//over the entire image there will be a black layer with 10 percent opacity
-//so that you can see the title in the center better
 //like this https://dribbble.com/shots/14773037-Pickup-Website/attachments/6477895?mode=media
 
-//AFTER MVP ADD BULLETS TO SLIDESHOW IMAGES
-
+//AFTER MVP
+//ADD BULLETS TO SLIDESHOW IMAGES
+//for home page follow dribble.com hamburger menu drowpdown www.dribbble.com
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap";
