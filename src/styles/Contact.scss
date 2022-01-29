@@ -89,7 +89,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin: 20px;
+  margin: 10px 0 10px 0;
 }
 
 .message {
@@ -127,12 +127,12 @@
   }
   input {
     border: 1px solid gray;
-    width: 250px;
+    width: 305px;
     padding: 6px;
     border-radius: 6px;
   }
   textarea {
-    width: 593px;
+    width: 667px;
     height: 200px;
     padding: 6px;
     border-radius: 6px;

@@ -35,6 +35,7 @@ export default class SlideShow extends React.Component {
 
     return (
       <div className="slide-show-container">
+        <div className="darken" />
         <div
           className="slide-show"
           style={{ backgroundImage: `url(${this.state.select.url})` }}

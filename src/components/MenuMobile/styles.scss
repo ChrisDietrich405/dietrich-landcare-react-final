@@ -9,25 +9,32 @@
   z-index: 8999;
 
   .menuMobile-responsive-links {
-    margin-top: 30px; 
+    margin-top: 30px;
   }
 
   .menuMobile-close {
     position: absolute;
-    padding: 2px; 
+    padding: 2px;
     top: 5px;
     right: 5px;
   }
 
-  .menuMobile-responsive-links li {  
+  .menuMobile-responsive-links li {
     list-style: none;
-    padding-bottom: 20px;  
+    padding-bottom: 20px;
   }
 
   .menuMobile-responsive-links a {
-    color: black !important; 
-    text-decoration: none; 
-    list-style: none; 
-   
+    color: #fff !important;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .menuMobile-social-icons-container {
+    margin-left: 30px;
+  }
+
+  .close-button {
+    color: #fff;
   }
 }

@@ -59,7 +59,7 @@ export default function MenuMobile({ whenUserClicksOnXIcon }) {
       </div>
 
       <div className="menuMobile-close" onClick={() => whenUserClicksOnXIcon()}>
-        <AiFillCloseCircle size={50} />
+        <AiFillCloseCircle className="close-button" size={50} />
       </div>
     </div>
   );

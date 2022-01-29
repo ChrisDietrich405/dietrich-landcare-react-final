@@ -6,6 +6,7 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { AiFillInstagram } from "react-icons/ai";
 
 import classnames from "classnames";
 
@@ -74,7 +75,7 @@ export default class Contact extends React.Component {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      <FontAwesomeIcon icon={faInstagram} size="2x" />
+                      <AiFillInstagram size={40} />
                     </a>
                   </div>
                   <div className={classnames("c-twitter", { thing: false })}>

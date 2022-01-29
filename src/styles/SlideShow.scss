@@ -4,12 +4,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.darken {
+  height: 40vw;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 111;
+  margin-bottom: 70px;
 }
 
 .slide-show {
   display: flex;
   justify-content: center;
-  opacity: 80%;
   align-items: center;
   position: relative;
   text-align: center;
@@ -27,7 +36,12 @@
     margin-bottom: 50px;
   }
 
+  .gradient {
+    z-index: 112;
+  }
+
   .arrow-left-container {
+    z-index: 112;
     position: absolute;
     top: 41%;
     left: 4%;
@@ -38,6 +52,7 @@
   }
 
   .arrow-right-container {
+    z-index: 112;
     position: absolute;
     top: 41%;
     right: 4%;

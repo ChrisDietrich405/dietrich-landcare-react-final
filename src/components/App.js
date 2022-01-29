@@ -1,18 +1,8 @@
 // this is what is in the BBJ slideshow put a black layer on top of the slideshow and give it an opacity of 30 percent
-// closed hamburger should all be white, links and close
-// vertically align social icons with the links
-// home page paragraph make that into two paragraphs
 
 //Testimonials
 //make the people picture more square
 //the people picture should be aligned horizontally with the landscape picture
-
-//Contact
-//instagram icon needs to be filled
-// add some extra space after the social icons
-//what services are you interested should be h3 and bold
-//for the inputs the space between needs to be cut in half both vertically and horizontally
-//horizontally just increase the width of the inputs
 
 //like this https://dribbble.com/shots/14773037-Pickup-Website/attachments/6477895?mode=media
 

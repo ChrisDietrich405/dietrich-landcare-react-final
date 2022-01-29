@@ -15,7 +15,7 @@ class App extends Component {
     const { value } = this.state;
     return (
       <div className="checkbox-container">
-        <p>What services are you interested in?</p>
+        <h3>What services are you interested in?</h3>
         <div className="service-container">
           <div>
             <label className="contact-label">
