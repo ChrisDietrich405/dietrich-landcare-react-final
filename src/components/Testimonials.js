@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; //component
 import { faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 import testimonialLandscape1 from "../images/testimonial-landscape1.jpg";
-import testimonialPerson1 from "../images/testimonial-person1.png";
+import testimonialPerson1 from "../images/testimonial-person1.jpeg";
 import testimonialLandscape2 from "../images/testimonial-landscape2.jpg";
 import testimonialPerson2 from "../images/testimonial-person2.png";
 import testimonialLandscape3 from "../images/testimonial-landscape3.jpg";

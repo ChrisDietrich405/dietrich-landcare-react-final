@@ -32,6 +32,7 @@
 
 .c-info-icons {
   width: 1.2rem;
+  height: 1.2rem;
 }
 
 .col-md-6 .c-form {
@@ -67,7 +68,6 @@
 }
 
 .c-information img {
-  max-width: 30px;
   list-style-type: none;
   margin-right: 5px;
   padding-bottom: 20px;
@@ -132,9 +132,8 @@
     border-radius: 6px;
   }
   textarea {
-    width: 667px;
     height: 200px;
-    padding: 6px;
+    padding: 12px;
     border-radius: 6px;
   }
 }
@@ -213,15 +212,13 @@
   }
 
   .c-social-media {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
-
-    > div {
-      margin-right: 38px;
-    }
   }
+
   .grid-one,
   .grid-two {
     display: flex;
@@ -245,8 +242,29 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .row {
+    --bs-gutter-x: 0px !important;
+  }
+
   .c-info {
-    padding-left: 1rem !important;
+    padding-left: 0 !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-information {
+    margin-right: 0px;
+    display: block;
+    text-align: center;
+  }
+
+  .c-information p {
+    margin-right: 0px;
+  }
+
+  .c-info-icons {
+    color: #448c7e;
+    font-size: 1.6rem;
   }
 
   form {
@@ -255,12 +273,7 @@
     align-items: flex-start;
   }
 
-  .grid-one {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-  }
-
+  .grid-one,
   .grid-two {
     display: flex;
     flex-direction: column;
@@ -268,7 +281,28 @@
   }
 
   #Message {
-    max-width: 250px;
     margin: 0;
+    // padding: 12px;
+  }
+
+  .contact-label {
+    padding: 0;
+  }
+
+  .c-fields input {
+    width: 100%;
+  }
+
+  .grid-one,
+  .grid-two {
+    grid-gap: 0;
+  }
+
+  .connect-with-us-container {
+    width: 100%;
+  }
+
+  .c-social-media {
+    width: 100%;
   }
 }

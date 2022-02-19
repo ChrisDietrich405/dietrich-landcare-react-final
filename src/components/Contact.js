@@ -46,15 +46,17 @@ export default class Contact extends React.Component {
               <p>We are available by phone: Monday-Saturday 7am-7:30 pm.</p>
               <ul className="c-info">
                 <li className="c-information">
-                  <img src={Phone} alt="Phone" className="c-info-icons" />
+                  <span className="icon-phone c-info-icons"></span>
                   <p>(443) 608-3258</p>
                 </li>
                 <li className="c-information">
-                  <img src={Email} alt="Information" className="c-info-icons" />
+                  <span className="icon-mail3 c-info-icons"></span>
+
                   <p>office@dietrichlandcare.com</p>
                 </li>
                 <li className="c-information">
-                  <img src={Location} alt="Location" className="c-info-icons" />
+                  <span className="icon-location2 c-info-icons"></span>
+
                   <p>Baltimore, MD 21239</p>
                 </li>
               </ul>
@@ -190,7 +192,7 @@ export default class Contact extends React.Component {
                       )}
                     </div>
                   </div>
-                  <div className="message-container">
+                  <div className="grid-one">
                     <div
                       className="message-text"
                       className={classnames("c-fields", {
