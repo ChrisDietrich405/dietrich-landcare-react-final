@@ -87,12 +87,20 @@
     flex-direction: column-reverse;
   }
 
-  .image {
-    max-width: 90%;
+  .services-description .image {
+    width: 41rem;
+    height: 24rem;
   }
 
   .services-image-description {
     margin-top: 2rem;
     max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .services-description .image {
+    width: 22rem;
+    height: 20rem;
   }
 }
