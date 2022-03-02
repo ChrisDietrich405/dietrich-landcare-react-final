@@ -142,6 +142,11 @@ export default class Navbar extends React.Component {
                 </Link>
               </li>
               <li>
+                <Link to="/new-contact" className="nav-link">
+                  New Contact
+                </Link>
+              </li>
+              <li>
                 <div className="nav-link" onClick={this.openModal}>
                   Make a Payment
                 </div>

@@ -79,9 +79,20 @@
   line-height: 18px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .service-container {
     display: flex;
     flex-direction: column;
+    margin: auto;
+    padding-left: 12px;
   }
 }

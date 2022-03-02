@@ -79,7 +79,6 @@ class App extends Component {
                 type="checkbox"
                 value="regrades"
                 className="checkbox-background-color"
-                //  checked={value === "regrades"}
                 onChange={this.onChange}
               />
               <span>Regrades</span>

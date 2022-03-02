@@ -40,9 +40,9 @@ export default class Contact extends React.Component {
       <div className="viewport">
         <div className="container">
           <div className="row row-container">
-            <div className="col-8 center-block text-center second-column">
+            <div className="col-8  center-block text-center second-column">
               <h1 className="contact-title">Let's get in touch!</h1>
-              <hr />
+              <hr className="contact-hr" />
               <p>We are available by phone: Monday-Saturday 7am-7:30 pm.</p>
               <ul className="c-info">
                 <li className="c-information">

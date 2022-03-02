@@ -19,6 +19,7 @@ import Navbar from "./Navbar";
 import Testimonials from "./Testimonials";
 import HomePage from "./HomePage";
 import Contact from "./Contact";
+import NewContact from "./NewContact";
 import Footer from "./Footer";
 import SmoothScroll from "./SmoothScroll";
 
@@ -46,6 +47,7 @@ export default function App() {
           <Route path="/" exact={true} component={HomePage} />
           <Route path="/testimonials" component={Testimonials} />
           <Route path="/contact" component={Contact} />
+          <Route path="/new-contact" component={NewContact} />
           <Route path="/services" component={Services} />
         </Switch>
       </div>

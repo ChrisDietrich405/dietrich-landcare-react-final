@@ -1,0 +1,77 @@
+.new-viewport {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background-color: #fff;
+  padding-top: 3rem;
+}
+
+.contact-header {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact-line {
+  margin: 1rem 0;
+  color: black;
+  background-color: currentColor;
+  border: 0;
+  opacity: 1;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  padding-bottom: 2rem;
+  padding-left: 0px !important;
+}
+
+.contact-information {
+  display: flex;
+  align-items: baseline;
+}
+
+.contact-info-icons {
+  margin-right: 0.5rem;
+  color: #488d7f;
+}
+
+.contact-social-media {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    text-align: center;
+  }
+}
+
+.contact-form {
+  display: flex;
+  justify-content: center;
+
+  .contact-submit-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .contact-info {
+    display: flex;
+    flex-direction: row;
+  }
+}
