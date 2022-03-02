@@ -37,199 +37,197 @@ export default class Contact extends React.Component {
 
   render() {
     return (
-      <div className="viewport">
-        <div className="container">
-          <div className="row row-container">
-            <div className="col-8  center-block text-center second-column">
-              <h1 className="contact-title">Let's get in touch!</h1>
-              <hr className="contact-hr" />
-              <p>We are available by phone: Monday-Saturday 7am-7:30 pm.</p>
-              <ul className="c-info">
-                <li className="c-information">
-                  <span className="icon-phone c-info-icons"></span>
-                  <p>(443) 608-3258</p>
-                </li>
-                <li className="c-information">
-                  <span className="icon-mail3 c-info-icons"></span>
+      <div className="contact-viewport">
+        <div className="contact-header">
+          <h1 className="contact-title">Let's get in touch!</h1>
+          <hr className="contact-line" />
+          <p>We are available by phone: Monday-Saturday 7am-7:30 pm.</p>
+        </div>
 
-                  <p>office@dietrichlandcare.com</p>
-                </li>
-                <li className="c-information">
-                  <span className="icon-location2 c-info-icons"></span>
+        <ul className="contact-info">
+          <li className="contact-information">
+            <span className="icon-phone contact-info-icons"></span>
+            <p>(443) 608-3258</p>
+          </li>
+          <li className="contact-information">
+            <span className="icon-mail3 contact-info-icons"></span>
 
-                  <p>Baltimore, MD 21239</p>
-                </li>
-              </ul>
-              <div className="connect-with-us-container">
-                <div className="c-social-media">
-                  <div className="c-facebook">
-                    <a
-                      href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <FontAwesomeIcon icon={faFacebook} size="2x" />
-                    </a>
-                  </div>
-                  <div className="c-instagram">
-                    <a
-                      href="https://www.instagram.com/dietrich_landcarellc/"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <AiFillInstagram size={40} />
-                    </a>
-                  </div>
-                  <div className={classnames("c-twitter", { thing: false })}>
-                    <a href="/">
-                      <FontAwesomeIcon icon={faTwitter} size="2x" />
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <p>office@dietrichlandcare.com</p>
+          </li>
+          <li className="contact-information">
+            <span className="icon-location2 contact-info-icons"></span>
 
-              <div className="c-contact-form">
-                <ServicesCheckbox
-                  change={(targetValue) => {
-                    this.setState({ service: targetValue });
+            <p>Baltimore, MD 21239</p>
+          </li>
+        </ul>
+
+        <div className="contact-social-media">
+          <div className="contact-facebook">
+            <a
+              href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faFacebook} size="2x" />
+            </a>
+          </div>
+          <div className="contact-instagram">
+            <a
+              href="https://www.instagram.com/dietrich_landcarellc/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <AiFillInstagram size={40} />
+            </a>
+          </div>
+          <div className={classnames("contact-twitter", { thing: false })}>
+            <a href="/">
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
+            </a>
+          </div>
+        </div>
+
+        <div className="contact-services">
+          <ServicesCheckbox
+            change={(targetValue) => {
+              this.setState({ service: targetValue });
+            }}
+          />{" "}
+        </div>
+
+        <div className="contact-form">
+          {"service" in this.state.error && (
+            <p className="error-message">
+              {this.state.error.service.join(",")}
+            </p>
+          )}
+          <form onSubmit={this.onSubmit.bind(this)}>
+            <div className="contact-form-section">
+              <div
+                className={classnames("c-fields", {
+                  filled: this.state.firstName !== "",
+                })}
+              >
+                <label htmlFor="firstName">First Name</label>
+                <input
+                  onFocus={this.onInputFocus.bind(this)}
+                  onBlur={this.onInputBlur.bind(this)}
+                  id="firstName"
+                  value={this.state.firstName}
+                  onChange={(event) => {
+                    this.setState({ firstName: event.target.value });
                   }}
                 />{" "}
-                {"service" in this.state.error && (
+                {"firstName" in this.state.error && (
                   <p className="error-message">
-                    {this.state.error.service.join(",")}
+                    {this.state.error.firstName.join(",")}
                   </p>
                 )}
-                <form onSubmit={this.onSubmit.bind(this)}>
-                  <div className="grid-one">
-                    <div
-                      className={classnames("c-fields", {
-                        filled: this.state.firstName !== "",
-                      })}
-                    >
-                      <label htmlFor="firstName">First Name</label>
-                      <input
-                        onFocus={this.onInputFocus.bind(this)}
-                        onBlur={this.onInputBlur.bind(this)}
-                        id="firstName"
-                        value={this.state.firstName}
-                        onChange={(event) => {
-                          this.setState({ firstName: event.target.value });
-                        }}
-                      />{" "}
-                      {"firstName" in this.state.error && (
-                        <p className="error-message">
-                          {this.state.error.firstName.join(",")}
-                        </p>
-                      )}
-                    </div>
+              </div>
 
-                    <div
-                      className={classnames("c-fields", {
-                        filled: this.state.lastName != "",
-                      })}
-                    >
-                      <label htmlFor="lastName">Last Name</label>
-                      <input
-                        onFocus={this.onInputFocus.bind(this)}
-                        onBlur={this.onInputBlur.bind(this)}
-                        id="lastName"
-                        value={this.state.lastName}
-                        onChange={(event) => {
-                          this.setState({ lastName: event.target.value });
-                        }}
-                      />{" "}
-                      {"lastName" in this.state.error && (
-                        <p className="error-message">
-                          {this.state.error.lastName.join(",")}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="grid-two">
-                    <div
-                      className={classnames("c-fields", {
-                        filled: this.state.email != "",
-                      })}
-                    >
-                      <label htmlFor="Email">Email</label>
-                      <input
-                        onFocus={this.onInputFocus.bind(this)}
-                        onBlur={this.onInputBlur.bind(this)}
-                        id="Email"
-                        value={this.state.email}
-                        onChange={(event) => {
-                          this.setState({ email: event.target.value });
-                        }}
-                      />{" "}
-                      {"email" in this.state.error && (
-                        <p className="error-message">
-                          {this.state.error.email.join(",")}
-                        </p>
-                      )}
-                    </div>
-
-                    <div
-                      className={classnames("c-fields", {
-                        filled: this.state.phone != "",
-                      })}
-                    >
-                      {" "}
-                      <label htmlFor="Phone">Phone</label>
-                      <input
-                        onFocus={this.onInputFocus.bind(this)}
-                        onBlur={this.onInputBlur.bind(this)}
-                        id="Phone"
-                        value={this.state.phone}
-                        onChange={(event) => {
-                          this.setState({ phone: event.target.value });
-                        }}
-                      />
-                      {"phone" in this.state.error && (
-                        <p className="error-message">
-                          {this.state.error.phone.join(",")}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="grid-one">
-                    <div
-                      className="message-text"
-                      className={classnames("c-fields", {
-                        filled: this.state.message != "",
-                      })}
-                    >
-                      <label htmlFor="Message">Message</label>
-                      <textarea
-                        id="textarea-responsive"
-                        value={this.state.message}
-                        onFocus={this.onInputFocus.bind(this)}
-                        onBlur={this.onInputBlur.bind(this)}
-                        id="Message"
-                        onChange={(event) => {
-                          this.setState({ message: event.target.value });
-                        }}
-                      ></textarea>
-                      {"message" in this.state.error && (
-                        <p className="error-message">
-                          {this.state.error.message.join(",")}
-                        </p>
-                      )}
-                    </div>
-
-                    <div className="contact-submit-btn">
-                      <button className="c-btn">Submit</button>
-                    </div>
-                  </div>
-                </form>
+              <div
+                className={classnames("c-fields", {
+                  filled: this.state.lastName != "",
+                })}
+              >
+                <label htmlFor="lastName">Last Name</label>
+                <input
+                  onFocus={this.onInputFocus.bind(this)}
+                  onBlur={this.onInputBlur.bind(this)}
+                  id="lastName"
+                  value={this.state.lastName}
+                  onChange={(event) => {
+                    this.setState({ lastName: event.target.value });
+                  }}
+                />{" "}
+                {"lastName" in this.state.error && (
+                  <p className="error-message">
+                    {this.state.error.lastName.join(",")}
+                  </p>
+                )}
               </div>
             </div>
-          </div>
+
+            <div className="contact-form-section">
+              <div
+                className={classnames("c-fields", {
+                  filled: this.state.email != "",
+                })}
+              >
+                <label htmlFor="Email">Email</label>
+                <input
+                  onFocus={this.onInputFocus.bind(this)}
+                  onBlur={this.onInputBlur.bind(this)}
+                  id="Email"
+                  value={this.state.email}
+                  onChange={(event) => {
+                    this.setState({ email: event.target.value });
+                  }}
+                />{" "}
+                {"email" in this.state.error && (
+                  <p className="error-message">
+                    {this.state.error.email.join(",")}
+                  </p>
+                )}
+              </div>
+
+              <div
+                className={classnames("c-fields", {
+                  filled: this.state.phone != "",
+                })}
+              >
+                {" "}
+                <label htmlFor="Phone">Phone</label>
+                <input
+                  onFocus={this.onInputFocus.bind(this)}
+                  onBlur={this.onInputBlur.bind(this)}
+                  id="Phone"
+                  value={this.state.phone}
+                  onChange={(event) => {
+                    this.setState({ phone: event.target.value });
+                  }}
+                />
+                {"phone" in this.state.error && (
+                  <p className="error-message">
+                    {this.state.error.phone.join(",")}
+                  </p>
+                )}
+              </div>
+            </div>
+            <div className="contact-form-section">
+              <div
+                className="message-text"
+                className={classnames("c-fields", {
+                  filled: this.state.message != "",
+                })}
+              >
+                <label htmlFor="Message">Message</label>
+                <textarea
+                  id="textarea-responsive"
+                  value={this.state.message}
+                  onFocus={this.onInputFocus.bind(this)}
+                  onBlur={this.onInputBlur.bind(this)}
+                  id="Message"
+                  onChange={(event) => {
+                    this.setState({ message: event.target.value });
+                  }}
+                ></textarea>
+                {"message" in this.state.error && (
+                  <p className="error-message">
+                    {this.state.error.message.join(",")}
+                  </p>
+                )}
+              </div>
+
+              <div className="contact-submit-btn">
+                <button className="c-btn">Submit</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     );
   }
-
   onSubmit(event) {
     event.preventDefault();
 
