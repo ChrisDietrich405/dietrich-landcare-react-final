@@ -69,6 +69,31 @@
   }
 }
 
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-fields {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  label {
+    padding-right: 10px;
+  }
+
+  input,
+  textarea {
+    width: 200px;
+  }
+}
+
 @media only screen and (min-width: 800px) {
   .contact-info {
     display: flex;

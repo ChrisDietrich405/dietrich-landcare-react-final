@@ -101,10 +101,13 @@ export default class Contact extends React.Component {
               {this.state.error.service.join(",")}
             </p>
           )}
-          <form onSubmit={this.onSubmit.bind(this)}>
+          <form
+            className="contact-form-container"
+            onSubmit={this.onSubmit.bind(this)}
+          >
             <div className="contact-form-section">
               <div
-                className={classnames("c-fields", {
+                className={classnames("contact-fields", {
                   filled: this.state.firstName !== "",
                 })}
               >
@@ -126,7 +129,7 @@ export default class Contact extends React.Component {
               </div>
 
               <div
-                className={classnames("c-fields", {
+                className={classnames("contact-fields", {
                   filled: this.state.lastName != "",
                 })}
               >
@@ -146,11 +149,9 @@ export default class Contact extends React.Component {
                   </p>
                 )}
               </div>
-            </div>
 
-            <div className="contact-form-section">
               <div
-                className={classnames("c-fields", {
+                className={classnames("contact-fields", {
                   filled: this.state.email != "",
                 })}
               >
@@ -172,7 +173,7 @@ export default class Contact extends React.Component {
               </div>
 
               <div
-                className={classnames("c-fields", {
+                className={classnames("contact-fields", {
                   filled: this.state.phone != "",
                 })}
               >
@@ -197,7 +198,7 @@ export default class Contact extends React.Component {
             <div className="contact-form-section">
               <div
                 className="message-text"
-                className={classnames("c-fields", {
+                className={classnames("contact-fields", {
                   filled: this.state.message != "",
                 })}
               >
