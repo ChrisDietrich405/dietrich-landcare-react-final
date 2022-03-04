@@ -21,11 +21,19 @@
 
 .footer-container-top {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 90%;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 2rem;
+}
+
+.footer-container-top-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
 .footer-container-bottom {
@@ -45,20 +53,17 @@
   margin: 1px !important;
 }
 
-@media (max-width: 1043px) {
+@media only screen and (min-width: 800px) {
   .footer-container {
-    display: block;
     padding-bottom: 2rem;
   }
 
   .footer-container-top {
-    display: block;
-    text-align: center;
-    width: 100%;
+    flex-direction: row;
   }
 
   .footer-container-top-title {
-    margin-bottom: 1.5rem;
+    padding: 20px;
   }
 
   .footer-copyright {
