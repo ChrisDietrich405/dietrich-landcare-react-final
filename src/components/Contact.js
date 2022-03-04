@@ -105,125 +105,123 @@ export default class Contact extends React.Component {
             className="contact-form-container"
             onSubmit={this.onSubmit.bind(this)}
           >
-            <div className="contact-form-section">
-              <div
-                className={classnames("contact-fields", {
-                  filled: this.state.firstName !== "",
-                })}
-              >
-                <label htmlFor="firstName">First Name</label>
-                <input
-                  onFocus={this.onInputFocus.bind(this)}
-                  onBlur={this.onInputBlur.bind(this)}
-                  id="firstName"
-                  value={this.state.firstName}
-                  onChange={(event) => {
-                    this.setState({ firstName: event.target.value });
-                  }}
-                />{" "}
-                {"firstName" in this.state.error && (
-                  <p className="error-message">
-                    {this.state.error.firstName.join(",")}
-                  </p>
-                )}
-              </div>
+            <div className="contact-form-inputs">
+              <div className="contact-form-section">
+                <div
+                  className={classnames("contact-fields", {
+                    filled: this.state.firstName !== "",
+                  })}
+                >
+                  <label htmlFor="firstName">First Name</label>
+                  <input
+                    onFocus={this.onInputFocus.bind(this)}
+                    onBlur={this.onInputBlur.bind(this)}
+                    id="firstName"
+                    value={this.state.firstName}
+                    onChange={(event) => {
+                      this.setState({ firstName: event.target.value });
+                    }}
+                  />{" "}
+                  {"firstName" in this.state.error && (
+                    <p className="error-message">
+                      {this.state.error.firstName.join(",")}
+                    </p>
+                  )}
+                </div>
 
-              <div
-                className={classnames("contact-fields", {
-                  filled: this.state.lastName != "",
-                })}
-              >
-                <label htmlFor="lastName">Last Name</label>
-                <input
-                  onFocus={this.onInputFocus.bind(this)}
-                  onBlur={this.onInputBlur.bind(this)}
-                  id="lastName"
-                  value={this.state.lastName}
-                  onChange={(event) => {
-                    this.setState({ lastName: event.target.value });
-                  }}
-                />{" "}
-                {"lastName" in this.state.error && (
-                  <p className="error-message">
-                    {this.state.error.lastName.join(",")}
-                  </p>
-                )}
-              </div>
+                <div
+                  className={classnames("contact-fields", {
+                    filled: this.state.lastName != "",
+                  })}
+                >
+                  <label htmlFor="lastName">Last Name</label>
+                  <input
+                    onFocus={this.onInputFocus.bind(this)}
+                    onBlur={this.onInputBlur.bind(this)}
+                    id="lastName"
+                    value={this.state.lastName}
+                    onChange={(event) => {
+                      this.setState({ lastName: event.target.value });
+                    }}
+                  />{" "}
+                  {"lastName" in this.state.error && (
+                    <p className="error-message">
+                      {this.state.error.lastName.join(",")}
+                    </p>
+                  )}
+                </div>
 
-              <div
-                className={classnames("contact-fields", {
-                  filled: this.state.email != "",
-                })}
-              >
-                <label htmlFor="Email">Email</label>
-                <input
-                  onFocus={this.onInputFocus.bind(this)}
-                  onBlur={this.onInputBlur.bind(this)}
-                  id="Email"
-                  value={this.state.email}
-                  onChange={(event) => {
-                    this.setState({ email: event.target.value });
-                  }}
-                />{" "}
-                {"email" in this.state.error && (
-                  <p className="error-message">
-                    {this.state.error.email.join(",")}
-                  </p>
-                )}
-              </div>
+                <div
+                  className={classnames("contact-fields", {
+                    filled: this.state.email != "",
+                  })}
+                >
+                  <label htmlFor="Email">Email</label>
+                  <input
+                    onFocus={this.onInputFocus.bind(this)}
+                    onBlur={this.onInputBlur.bind(this)}
+                    id="Email"
+                    value={this.state.email}
+                    onChange={(event) => {
+                      this.setState({ email: event.target.value });
+                    }}
+                  />{" "}
+                  {"email" in this.state.error && (
+                    <p className="error-message">
+                      {this.state.error.email.join(",")}
+                    </p>
+                  )}
+                </div>
 
-              <div
-                className={classnames("contact-fields", {
-                  filled: this.state.phone != "",
-                })}
-              >
-                {" "}
-                <label htmlFor="Phone">Phone</label>
-                <input
-                  onFocus={this.onInputFocus.bind(this)}
-                  onBlur={this.onInputBlur.bind(this)}
-                  id="Phone"
-                  value={this.state.phone}
-                  onChange={(event) => {
-                    this.setState({ phone: event.target.value });
-                  }}
-                />
-                {"phone" in this.state.error && (
-                  <p className="error-message">
-                    {this.state.error.phone.join(",")}
-                  </p>
-                )}
+                <div
+                  className={classnames("contact-fields", {
+                    filled: this.state.phone != "",
+                  })}
+                >
+                  {" "}
+                  <label htmlFor="Phone">Phone</label>
+                  <input
+                    onFocus={this.onInputFocus.bind(this)}
+                    onBlur={this.onInputBlur.bind(this)}
+                    id="Phone"
+                    value={this.state.phone}
+                    onChange={(event) => {
+                      this.setState({ phone: event.target.value });
+                    }}
+                  />
+                  {"phone" in this.state.error && (
+                    <p className="error-message">
+                      {this.state.error.phone.join(",")}
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="contact-form-section">
+                <div
+                  className="message-text"
+                  className={classnames("contact-fields", {
+                    filled: this.state.message != "",
+                  })}
+                >
+                  <label htmlFor="Message">Message</label>
+                  <textarea
+                    id="textarea-responsive"
+                    value={this.state.message}
+                    onFocus={this.onInputFocus.bind(this)}
+                    onBlur={this.onInputBlur.bind(this)}
+                    onChange={(event) => {
+                      this.setState({ message: event.target.value });
+                    }}
+                  ></textarea>
+                  {"message" in this.state.error && (
+                    <p className="error-message">
+                      {this.state.error.message.join(",")}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
-            <div className="contact-form-section">
-              <div
-                className="message-text"
-                className={classnames("contact-fields", {
-                  filled: this.state.message != "",
-                })}
-              >
-                <label htmlFor="Message">Message</label>
-                <textarea
-                  id="textarea-responsive"
-                  value={this.state.message}
-                  onFocus={this.onInputFocus.bind(this)}
-                  onBlur={this.onInputBlur.bind(this)}
-                  id="Message"
-                  onChange={(event) => {
-                    this.setState({ message: event.target.value });
-                  }}
-                ></textarea>
-                {"message" in this.state.error && (
-                  <p className="error-message">
-                    {this.state.error.message.join(",")}
-                  </p>
-                )}
-              </div>
-
-              <div className="contact-submit-btn">
-                <button className="c-btn">Submit</button>
-              </div>
-            </div>
+            <button className="contact-submit-btn">Submit</button>
           </form>
         </div>
       </div>

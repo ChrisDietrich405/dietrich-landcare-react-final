@@ -90,13 +90,45 @@
 
   input,
   textarea {
-    width: 200px;
+    width: 192px;
   }
+
+  textarea {
+    height: 100px;
+  }
+}
+
+.contact-form-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-submit-btn {
+  background: #488d7f;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 20px;
+  width: 192px;
+  margin: 10px auto;
 }
 
 @media only screen and (min-width: 800px) {
   .contact-info {
     display: flex;
+    flex-direction: row;
+  }
+
+  .contact-form-container {
+    flex-direction: column;
+  }
+
+  .contact-fields {
+    textarea {
+      height: 171px;
+    }
+  }
+
+  .contact-form-inputs {
     flex-direction: row;
   }
 }
