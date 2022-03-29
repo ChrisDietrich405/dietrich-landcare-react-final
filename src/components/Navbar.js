@@ -59,7 +59,10 @@ export default class Navbar extends React.Component {
           )}
 
           <div className="logo-links">
-            <img src={logo} alt="" />
+            <Link to="/">
+              <img src={logo} alt="logo" />
+            </Link>
+            {/* <img src={logo} alt="logo" /> */}
             <ul className="responsive-links">
               <li className="nav-item">
                 <Link to="/" className="nav-link">
@@ -140,11 +143,6 @@ export default class Navbar extends React.Component {
                 <Link to="/contact" className="nav-link">
                   Contact
                 </Link>
-              </li>
-              <li>
-                <div className="nav-link" onClick={this.openModal}>
-                  Make a Payment
-                </div>
               </li>
             </ul>
           </div>
