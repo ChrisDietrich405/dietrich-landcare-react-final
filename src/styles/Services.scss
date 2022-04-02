@@ -88,12 +88,21 @@
   }
 
   .services-description .image {
-    width: 41rem;
+    align-items: center;
+    width: 31rem;
     height: 24rem;
   }
 
   .services-image-description {
     margin-top: 2rem;
     max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .services-description .image {
+    align-items: center;
+    width: 21rem;
+    height: 24rem;
   }
 }
