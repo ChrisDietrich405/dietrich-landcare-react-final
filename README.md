@@ -1,7 +1,7 @@
 # dietrich-landcare-react-final
 
-This app is an online cel phone store. 
-This project includes bootstrap and also the useContext React Hook
+I build this website for my oldest son's business. I used Object Oriented Programming, React JS, Bootstrap, and SASS 
+
 
 ## How To Run This Project
 
@@ -25,6 +25,6 @@ Home Page
 
 ![image](https://user-images.githubusercontent.com/70533870/132955522-c32a7d2a-b101-4c76-8502-7e3415edbe7b.png)
 
-WishList Page
+Services Page
 
-![image](https://user-images.githubusercontent.com/70533870/132955662-a5e038bd-86d6-4398-a3f5-e3c54e1fecd2.png)
+![image](images/git-hub-services.png)
