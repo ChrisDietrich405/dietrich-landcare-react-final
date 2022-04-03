@@ -250,10 +250,11 @@ export default class Contact extends React.Component {
         .post("http://localhost:3300/contact", this.state)
         .then((response) => alert("message was sent"))
         .catch((err) => {
-          if (err.response.status === 400) {
-          } else {
-            alert("some error happened");
-          }
+          console.log(err);
+          // if (err.response.status === 400) {
+          // } else {
+          //   alert("some error happened");
+          // }
         });
     } else {
       this.setState({ error: validator.errors.errors });
