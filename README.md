@@ -27,4 +27,4 @@ Home Page
 
 Services Page
 
-![image](images/git-hub-services.png)
+![image](github-images/git-hub-services.png)
