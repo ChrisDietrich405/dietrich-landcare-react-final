@@ -17,14 +17,15 @@ You will also see any lint errors in the console.
 
 ## Screenshots
 
-Loading Page
-
-![image](https://user-images.githubusercontent.com/70533870/132955620-46ff99b1-8e2b-4eb0-8ea8-7715166fb12e.png)
 
 Home Page
 
-![image](https://user-images.githubusercontent.com/70533870/132955522-c32a7d2a-b101-4c76-8502-7e3415edbe7b.png)
+![image](github-images/github-home.png)
 
 Services Page
 
-![image](github-images/git-hub-services.png)
+![image](github-images/github-services.png)
+
+Contact Page
+
+![image](github-images/github-contact.png)
