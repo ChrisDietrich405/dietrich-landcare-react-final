@@ -93,14 +93,13 @@ export default class Contact extends React.Component {
               this.setState({ service: targetValue });
             }}
           />{" "}
-        </div>
-
-        <div className="contact-form">
-          {"service" in this.state.error && (
-            <p className="error-message">
-              {this.state.error.service.join(",")}
-            </p>
-          )}
+          <div className="contact-form">
+            {"service" in this.state.error && (
+              <p className="error-message">
+                {this.state.error.service.join(",")}
+              </p>
+            )}
+          </div>
           <form
             className="contact-form-container"
             onSubmit={this.onSubmit.bind(this)}
@@ -113,20 +112,22 @@ export default class Contact extends React.Component {
                   })}
                 >
                   <label htmlFor="firstName">First Name</label>
-                  <input
-                    onFocus={this.onInputFocus.bind(this)}
-                    onBlur={this.onInputBlur.bind(this)}
-                    id="firstName"
-                    value={this.state.firstName}
-                    onChange={(event) => {
-                      this.setState({ firstName: event.target.value });
-                    }}
-                  />{" "}
-                  {"firstName" in this.state.error && (
-                    <p className="error-message">
-                      {this.state.error.firstName.join(",")}
-                    </p>
-                  )}
+                  <div className="input-container">
+                    <input
+                      onFocus={this.onInputFocus.bind(this)}
+                      onBlur={this.onInputBlur.bind(this)}
+                      id="firstName"
+                      value={this.state.firstName}
+                      onChange={(event) => {
+                        this.setState({ firstName: event.target.value });
+                      }}
+                    />{" "}
+                    {"firstName" in this.state.error && (
+                      <p className="error-message">
+                        {this.state.error.firstName.join(",")}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 <div
@@ -135,20 +136,22 @@ export default class Contact extends React.Component {
                   })}
                 >
                   <label htmlFor="lastName">Last Name</label>
-                  <input
-                    onFocus={this.onInputFocus.bind(this)}
-                    onBlur={this.onInputBlur.bind(this)}
-                    id="lastName"
-                    value={this.state.lastName}
-                    onChange={(event) => {
-                      this.setState({ lastName: event.target.value });
-                    }}
-                  />{" "}
-                  {"lastName" in this.state.error && (
-                    <p className="error-message">
-                      {this.state.error.lastName.join(",")}
-                    </p>
-                  )}
+                  <div className="input-container">
+                    <input
+                      onFocus={this.onInputFocus.bind(this)}
+                      onBlur={this.onInputBlur.bind(this)}
+                      id="lastName"
+                      value={this.state.lastName}
+                      onChange={(event) => {
+                        this.setState({ lastName: event.target.value });
+                      }}
+                    />{" "}
+                    {"lastName" in this.state.error && (
+                      <p className="error-message">
+                        {this.state.error.lastName.join(",")}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 <div
@@ -157,20 +160,22 @@ export default class Contact extends React.Component {
                   })}
                 >
                   <label htmlFor="Email">Email</label>
-                  <input
-                    onFocus={this.onInputFocus.bind(this)}
-                    onBlur={this.onInputBlur.bind(this)}
-                    id="Email"
-                    value={this.state.email}
-                    onChange={(event) => {
-                      this.setState({ email: event.target.value });
-                    }}
-                  />{" "}
-                  {"email" in this.state.error && (
-                    <p className="error-message">
-                      {this.state.error.email.join(",")}
-                    </p>
-                  )}
+                  <div className="input-container">
+                    <input
+                      onFocus={this.onInputFocus.bind(this)}
+                      onBlur={this.onInputBlur.bind(this)}
+                      id="Email"
+                      value={this.state.email}
+                      onChange={(event) => {
+                        this.setState({ email: event.target.value });
+                      }}
+                    />{" "}
+                    {"email" in this.state.error && (
+                      <p className="error-message">
+                        {this.state.error.email.join(",")}
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 <div
@@ -180,44 +185,47 @@ export default class Contact extends React.Component {
                 >
                   {" "}
                   <label htmlFor="Phone">Phone</label>
-                  <input
-                    onFocus={this.onInputFocus.bind(this)}
-                    onBlur={this.onInputBlur.bind(this)}
-                    id="Phone"
-                    value={this.state.phone}
-                    onChange={(event) => {
-                      this.setState({ phone: event.target.value });
-                    }}
-                  />
-                  {"phone" in this.state.error && (
-                    <p className="error-message">
-                      {this.state.error.phone.join(",")}
-                    </p>
-                  )}
+                  <div className="input-container">
+                    <input
+                      onFocus={this.onInputFocus.bind(this)}
+                      onBlur={this.onInputBlur.bind(this)}
+                      id="Phone"
+                      value={this.state.phone}
+                      onChange={(event) => {
+                        this.setState({ phone: event.target.value });
+                      }}
+                    />
+                    {"phone" in this.state.error && (
+                      <p className="error-message">
+                        {this.state.error.phone.join(",")}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="contact-form-section">
                 <div
-                  className="message-text"
-                  className={classnames("contact-fields", {
+                  className={classnames("message-text", "contact-fields", {
                     filled: this.state.message != "",
                   })}
                 >
                   <label htmlFor="Message">Message</label>
-                  <textarea
-                    id="textarea-responsive"
-                    value={this.state.message}
-                    onFocus={this.onInputFocus.bind(this)}
-                    onBlur={this.onInputBlur.bind(this)}
-                    onChange={(event) => {
-                      this.setState({ message: event.target.value });
-                    }}
-                  ></textarea>
-                  {"message" in this.state.error && (
-                    <p className="error-message">
-                      {this.state.error.message.join(",")}
-                    </p>
-                  )}
+                  <div className="input-container">
+                    <textarea
+                      id="textarea-responsive"
+                      value={this.state.message}
+                      onFocus={this.onInputFocus.bind(this)}
+                      onBlur={this.onInputBlur.bind(this)}
+                      onChange={(event) => {
+                        this.setState({ message: event.target.value });
+                      }}
+                    ></textarea>
+                    {"message" in this.state.error && (
+                      <p className="error-message">
+                        {this.state.error.message.join(",")}
+                      </p>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -241,8 +249,8 @@ export default class Contact extends React.Component {
         message: "required",
       },
       {
-        "required.firstName": "The first name field is required",
-        "required.lastName": "The last name field is required",
+        "required.firstName": "The name field is required",
+        "required.lastName": "The name field is required",
       }
     );
     if (validator.passes()) {
@@ -251,10 +259,6 @@ export default class Contact extends React.Component {
         .then((response) => alert("message was sent"))
         .catch((err) => {
           console.log(err);
-          // if (err.response.status === 400) {
-          // } else {
-          //   alert("some error happened");
-          // }
         });
     } else {
       this.setState({ error: validator.errors.errors });
