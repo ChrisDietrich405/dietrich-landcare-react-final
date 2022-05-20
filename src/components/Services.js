@@ -3,10 +3,6 @@ import "../styles/Services.scss";
 import Footer from "./Footer";
 
 export default class Services extends React.Component {
-  // componentDidUpdate() {
-  //   // window.scrollTo({top: document.getElementById(this.props.location.state).offsetTop - document.querySelector('nav').offsetHeight - 15, behavior: 'smooth'});
-  // }
-
   render() {
     return (
       <div className="services-main-container">

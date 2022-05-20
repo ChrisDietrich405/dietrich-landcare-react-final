@@ -3,12 +3,26 @@ import "../styles/ServicesCheckbox.scss";
 
 class App extends Component {
   state = {
-    value: "odin",
+    value: [],
   };
 
   onChange = (e) => {
-    this.setState({ value: e.target.value });
-    this.props.change(e.target.value);
+    if (!this.state.value.find((element) => element === e.target.value)) {
+      const services = [...this.state.value, e.target.value];
+      this.setState({
+        value: services,
+      });
+      this.props.change(services);
+    }
+    if (this.state.value.find((element) => element === e.target.value)) {
+      const services = this.state.value.filter(
+        (element) => element !== e.target.value
+      );
+      this.setState({
+        value: services,
+      });
+      this.props.change(services);
+    }
   };
 
   render() {
@@ -23,7 +37,6 @@ class App extends Component {
                 type="checkbox"
                 value="property-maintenance"
                 className="checkbox-background-color"
-                //  checked={value === "property-maintenance"}
                 onChange={this.onChange}
               />
               <span>Property Maintenance</span>
@@ -34,7 +47,6 @@ class App extends Component {
                 type="checkbox"
                 value="power-washing"
                 className="checkbox-background-color"
-                //  checked={value === "power-washing"}
                 onChange={this.onChange}
               />
               <span>Power-Washing</span>

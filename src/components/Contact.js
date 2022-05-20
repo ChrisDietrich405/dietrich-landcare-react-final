@@ -117,6 +117,7 @@ export default class Contact extends React.Component {
                       onFocus={this.onInputFocus.bind(this)}
                       onBlur={this.onInputBlur.bind(this)}
                       id="firstName"
+                      name="firstName"
                       value={this.state.firstName}
                       onChange={(event) => {
                         this.setState({ firstName: event.target.value });
@@ -255,7 +256,7 @@ export default class Contact extends React.Component {
     );
     if (validator.passes()) {
       axios
-        .post("http://localhost:3300/contact", this.state)
+        .post("http://localhost:3001/contact", this.state)
         .then((response) => alert("message was sent"))
         .catch((err) => {
           console.log(err);
@@ -266,9 +267,9 @@ export default class Contact extends React.Component {
   }
 
   onInputFocus(event) {
-    event.target.previousElementSibling.classList.add("focus");
+    // event.target.parent.previousElementSibling.classList.add("focus");
   }
   onInputBlur(event) {
-    event.target.previousElementSibling.classList.remove("focus");
+    // event.target.parent.previousElementSibling.classList.remove("focus");
   }
 }
