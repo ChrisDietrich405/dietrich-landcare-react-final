@@ -1,9 +1,6 @@
-import { Link } from "react-router-dom";
-
 import { AiFillCloseCircle } from "react-icons/ai";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./styles.scss";
@@ -36,11 +33,9 @@ export default function MenuMobile({ whenUserClicksOnXIcon }) {
 
         <li>
           <a href="/testimonials">Testimonials</a>
-          {/* <Link to="/testimonials">Testimonials</Link> */}
         </li>
         <li>
           <a href="/contact">Contact</a>
-          {/* <Link to="/contact">Contact</Link> */}
         </li>
       </ul>
       <div className="menuMobile-social-icons-container">

@@ -106,6 +106,15 @@
   flex-direction: column;
 }
 
+.input-container input {
+  padding-left: 7px;
+}
+
+.input-container textarea {
+  padding-left: 7px;
+  padding-top: 3px;
+}
+
 .error-message {
   color: #ff0000;
   font-size: 0.8rem;
