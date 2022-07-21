@@ -1,10 +1,17 @@
 import React, { Component } from "react";
+import axios from "axios";
 import "../styles/ServicesCheckbox.scss";
 
 class App extends Component {
   state = {
     value: [],
+    serviceItems: [],
   };
+
+  async componentDidMount() {
+    const { data } = await axios.get("http://localhost:3001/getServices");
+    //this.setState({ ...this.state, serviceItems: data });
+  }
 
   onChange = (e) => {
     if (!this.state.value.find((element) => element === e.target.value)) {
@@ -26,22 +33,13 @@ class App extends Component {
   };
 
   render() {
-    const { value } = this.state;
+    const { value, serviceItems } = this.state;
+
     return (
       <div className="checkbox-container">
         <h3>What services are you interested in?</h3>
         <div className="service-container">
           <div>
-            <label className="contact-label">
-              <input
-                type="checkbox"
-                value="property-maintenance"
-                className="checkbox-background-color"
-                onChange={this.onChange}
-              />
-              <span>Property Maintenance</span>
-            </label>
-
             <label className="contact-label">
               <input
                 type="checkbox"

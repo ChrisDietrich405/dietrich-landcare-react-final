@@ -1,11 +1,7 @@
 import React from "react";
 import "../styles/Footer.scss";
 
-import {
-  faBars,
-  faEnvelopeSquare,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEnvelopeSquare, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
