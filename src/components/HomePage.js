@@ -1,6 +1,5 @@
 import React from "react";
 import SlideShow from "./SlideShow";
-import Footer from "./Footer";
 
 import scrollImage1 from "../images/scroll-image1.png";
 import scrollImage2 from "../images/scroll-image2.png";

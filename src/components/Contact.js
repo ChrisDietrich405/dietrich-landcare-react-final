@@ -3,7 +3,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
-  faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { AiFillInstagram } from "react-icons/ai";
@@ -14,10 +13,6 @@ import axios from "axios";
 import * as Validator from "validatorjs";
 
 import ServicesCheckbox from "./ServicesCheckbox";
-
-import Phone from "../images/phone.png";
-import Email from "../images/email.png";
-import Location from "../images/location.png";
 
 import "../styles/Contact.scss";
 
@@ -90,7 +85,7 @@ export default class Contact extends React.Component {
         <div className="contact-services">
           <ServicesCheckbox
             change={(targetValue) => {
-              this.setState({ service: targetValue });
+              this.setState({ service : targetValue });
             }}
           />{" "}
           <div className="contact-form">
@@ -133,7 +128,7 @@ export default class Contact extends React.Component {
 
                 <div
                   className={classnames("contact-fields", {
-                    filled: this.state.lastName != "",
+                    filled: this.state.lastName !== "",
                   })}
                 >
                   <label htmlFor="lastName">Last Name</label>
@@ -157,7 +152,7 @@ export default class Contact extends React.Component {
 
                 <div
                   className={classnames("contact-fields", {
-                    filled: this.state.email != "",
+                    filled: this.state.email !== "",
                   })}
                 >
                   <label htmlFor="Email">Email</label>
@@ -181,7 +176,7 @@ export default class Contact extends React.Component {
 
                 <div
                   className={classnames("contact-fields", {
-                    filled: this.state.phone != "",
+                    filled: this.state.phone !== "",
                   })}
                 >
                   {" "}
@@ -207,7 +202,7 @@ export default class Contact extends React.Component {
               <div className="contact-form-section">
                 <div
                   className={classnames("message-text", "contact-fields", {
-                    filled: this.state.message != "",
+                    filled: this.state.message !== "",
                   })}
                 >
                   <label htmlFor="Message">Message</label>

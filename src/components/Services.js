@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Services.scss";
-import Footer from "./Footer";
 
 export default class Services extends React.Component {
   render() {

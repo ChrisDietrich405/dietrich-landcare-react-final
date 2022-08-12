@@ -10,7 +10,7 @@ class App extends Component {
 
   async componentDidMount() {
     const { data } = await axios.get("http://localhost:3001/getServices");
-    //this.setState({ ...this.state, serviceItems: data });
+    this.setState({ ...this.state, serviceItems: data });
   }
 
   onChange = (e) => {
@@ -33,7 +33,7 @@ class App extends Component {
   };
 
   render() {
-    const { value, serviceItems } = this.state;
+   
 
     return (
       <div className="checkbox-container">

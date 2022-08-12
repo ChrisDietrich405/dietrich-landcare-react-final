@@ -42,12 +42,14 @@ export default function MenuMobile({ whenUserClicksOnXIcon }) {
         <a
           href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
           target="_blank"
+          rel="noreferrer"
         >
           <FontAwesomeIcon className="social-media-icon" icon={faFacebook} />
         </a>
         <a
           href="https://www.instagram.com/dietrich_landcarellc/"
           target="_blank"
+          rel="noreferrer"
         >
           <FontAwesomeIcon className="social-media-icon" icon={faInstagram} />
         </a>

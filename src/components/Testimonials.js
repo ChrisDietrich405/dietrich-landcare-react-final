@@ -1,6 +1,4 @@
 import React from "react";
-import SlideShow from "./SlideShow";
-import Footer from "./Footer";
 import "bootstrap/dist/js/bootstrap";
 
 import "../styles/Testimonials.scss";
@@ -26,12 +24,12 @@ export default class Testimonials extends React.Component {
               {" "}
               <img
                 src={testimonialLandscape1}
-                alt="a picture of a beautiful and clean garden"
+                alt="beautiful and clean garden"
               />
             </div>
             <div className="col-12 col-lg-6 text-center testimonial-container-client">
               <div className="testimonial-person">
-                <img src={testimonialPerson1} alt="" />
+                <img src={testimonialPerson1} alt="woman's profile" />
                 <span>Mary Smith, Loch Raven</span>
               </div>
               <p>
@@ -53,7 +51,7 @@ export default class Testimonials extends React.Component {
           <div className="row">
             <div className="order-lg-0 order-1 col-12 col-lg-6 text-center testimonial-container-client">
               <div className="testimonial-person">
-                <img src={testimonialPerson2} alt="" />
+                <img src={testimonialPerson2} alt="woman profile" />
                 <span>&nbsp;Alicia Jones, Towson</span>
               </div>
               <p>
@@ -80,7 +78,7 @@ export default class Testimonials extends React.Component {
             </div>
             <div className="col-12 col-lg-6 text-center testimonial-container-client">
               <div className="testimonial-person">
-                <img src={testimonialPerson3} alt="" />
+                <img src={testimonialPerson3} alt="man's profile" />
                 <span>Robert Greene, Lutherville</span>
               </div>
               <p>

@@ -1,16 +1,12 @@
 import React from "react";
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import MenuMobile from "./MenuMobile";
-import Payment from "./Payment";
 
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { GiHamburgerMenu } from "react-icons/gi";
-// import { HashLink } from "react-router-hash-link";
 import logo from "../images/logo.jpg";
 
 import OutsideAlerter from "./OutsideAlerter";
@@ -151,6 +147,7 @@ export default class Navbar extends React.Component {
             <a
               href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
               target="_blank"
+              rel="noreferrer"
             >
               <FontAwesomeIcon
                 className="social-media-icon"
@@ -160,6 +157,7 @@ export default class Navbar extends React.Component {
             <a
               href="https://www.instagram.com/dietrich_landcarellc/"
               target="_blank"
+              rel="noreferrer"
             >
               <FontAwesomeIcon
                 className="social-media-icon"
