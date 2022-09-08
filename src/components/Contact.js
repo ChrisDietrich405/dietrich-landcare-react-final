@@ -251,7 +251,7 @@ export default class Contact extends React.Component {
     );
     if (validator.passes()) {
       axios
-        .post("http://localhost:3001/contact", this.state)
+        .post("http://localhost:3001/api/contact", this.state)
         .then((response) => alert("message was sent"))
         .catch((err) => {
           console.log(err);

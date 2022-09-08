@@ -9,7 +9,7 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const { data } = await axios.get("http://localhost:3001/getServices");
+    const { data } = await axios.get("http://localhost:3001/api/getServices");
     this.setState({ ...this.state, serviceItems: data });
   }
 
