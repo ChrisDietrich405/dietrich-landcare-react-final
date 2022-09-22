@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import MenuMobile from "./MenuMobile";
 
@@ -20,6 +21,7 @@ export default class Navbar extends React.Component {
       showServiceMenu: false,
       toggleMobileMenu: false,
       showModal: true,
+      services: [],
     };
     this.toggleShowServiceMenu = this.toggleShowServiceMenu.bind(this);
     this.setToggleMobileMenu = this.setToggleMobileMenu.bind(this);
@@ -41,6 +43,11 @@ export default class Navbar extends React.Component {
 
   toggleShowServiceMenu() {
     this.setState({ showServiceMenu: !this.state.showServiceMenu });
+  }
+
+  async componentDidMount() {
+    const { data } = await axios.get("http://localhost:3001/api/getServices");
+    this.setState({ ...this.state, services: data });
   }
 
   render() {
@@ -74,6 +81,14 @@ export default class Navbar extends React.Component {
                   {this.state.showServiceMenu ? (
                     <div className="services-menu">
                       <ul>
+                        {this.state.services.map((service) => {
+                          return (
+                            <li>
+                              <a  href="/services#lawn-care"
+                              className="services-nav-link"></a>
+                            </li>
+                          );
+                        })}
                         <li>
                           <a
                             href="/services#lawn-care"

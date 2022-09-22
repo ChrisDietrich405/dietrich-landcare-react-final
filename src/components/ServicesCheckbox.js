@@ -13,6 +13,8 @@ class App extends Component {
     this.setState({ ...this.state, serviceItems: data });
   }
 
+  
+
   onChange = (e) => {
     if (!this.state.value.find((element) => element === e.target.value)) {
       const services = [...this.state.value, e.target.value];
