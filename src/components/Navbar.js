@@ -47,7 +47,8 @@ export default class Navbar extends React.Component {
 
   async componentDidMount() {
     const { data } = await axios.get("http://localhost:3001/api/getServices");
-    this.setState({ ...this.state, services: data });
+    console.log(data);
+    this.setState({ ...this.state, services: data.services });
   }
 
   render() {
@@ -84,12 +85,16 @@ export default class Navbar extends React.Component {
                         {this.state.services.map((service) => {
                           return (
                             <li>
-                              <a  href="/services#lawn-care"
-                              className="services-nav-link"></a>
+                              <a
+                                href={`/services#${service.permalink}`}
+                                className="services-nav-link"
+                              >
+                                {service.name}
+                              </a>
                             </li>
                           );
                         })}
-                        <li>
+                        {/* <li>
                           <a
                             href="/services#lawn-care"
                             className="services-nav-link"
@@ -136,7 +141,7 @@ export default class Navbar extends React.Component {
                           >
                             Regrades
                           </a>
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
                   ) : (

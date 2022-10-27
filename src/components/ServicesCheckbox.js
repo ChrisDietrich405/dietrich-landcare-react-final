@@ -10,10 +10,8 @@ class App extends Component {
 
   async componentDidMount() {
     const { data } = await axios.get("http://localhost:3001/api/getServices");
-    this.setState({ ...this.state, serviceItems: data });
+    this.setState({ ...this.state, serviceItems: data.services });
   }
-
-  
 
   onChange = (e) => {
     if (!this.state.value.find((element) => element === e.target.value)) {
@@ -35,13 +33,27 @@ class App extends Component {
   };
 
   render() {
-   
-
     return (
       <div className="checkbox-container">
         <h3>What services are you interested in?</h3>
         <div className="service-container">
-          <div>
+          {this.state.serviceItems.map((service, index) => {
+            return (
+              <div>
+                <label className="contact-label">
+                  <input
+                    type="checkbox"
+                    value={service.permalink}
+                    className="checkbox-background-color"
+                    onChange={this.onChange}
+                  />
+                  <span>{service.name}</span>
+                </label>
+              </div>
+            );
+          })}
+
+          {/* <div>
             <label className="contact-label">
               <input
                 type="checkbox"
@@ -95,7 +107,7 @@ class App extends Component {
               />
               <span>Regrades</span>
             </label>
-          </div>
+          </div> */}
         </div>
       </div>
     );
