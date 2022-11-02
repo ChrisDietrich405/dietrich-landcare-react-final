@@ -4,17 +4,27 @@
   margin-bottom: 1rem;
 }
 
-
-
 .service-container {
-  margin-left: 10px;
+  width: 30%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
 
   div {
+    padding: 4px 0;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .contact-label {
+    font-size: 1rem;
+  
+    span {
+      margin-left: 4px;
+    }
   }
 }
 
@@ -23,13 +33,7 @@
   font-weight: 1500;
 }
 
-.contact-label {
-  font-size: 1rem;
 
-  span {
-    margin-left: 4px;
-  }
-}
 
 .radio-button-paragraph {
   font-size: 0.4rem;
@@ -79,6 +83,8 @@
   font-size: 13px;
   line-height: 18px;
 }
+
+
 
 @media only screen and (max-width: 1200px) {
   .service-container {

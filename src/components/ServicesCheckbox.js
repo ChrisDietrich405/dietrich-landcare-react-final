@@ -36,6 +36,22 @@ class App extends Component {
     return (
       <div className="checkbox-container">
         <h3>What services are you interested in?</h3>
+        {/* <div style={{ display: "flex" }}>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {this.state.serviceItems
+              .filter((e) => e % 2 !== 0)
+              .map((e) => (
+                <span>{e}</span>
+              ))}
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {this.state.serviceItems
+              .filter((e) => e % 2 === 0)
+              .map((e) => (
+                <span>{e}</span>
+              ))}
+          </div>
+        </div> */}
         <div className="service-container">
           {this.state.serviceItems.map((service, index) => {
             return (
@@ -53,61 +69,7 @@ class App extends Component {
             );
           })}
 
-          {/* <div>
-            <label className="contact-label">
-              <input
-                type="checkbox"
-                value="power-washing"
-                className="checkbox-background-color"
-                onChange={this.onChange}
-              />
-              <span>Power-Washing</span>
-            </label>
-          </div>
-          <div>
-            <label className="contact-label">
-              <input
-                type="checkbox"
-                value="snow-removal"
-                className="checkbox-background-color"
-                //  checked={value === "snow-removal"}
-                onChange={this.onChange}
-              />
-              <span>Snow Removal</span>
-            </label>
-            <label className="contact-label">
-              <input
-                type="checkbox"
-                value="stump-removal"
-                className="checkbox-background-color"
-                //  checked={value === "stump-removal"}
-                onChange={this.onChange}
-              />
-              <span>Stump Removal</span>
-            </label>
-          </div>
-          <div>
-            <label className="contact-label">
-              <input
-                type="checkbox"
-                value="demolition"
-                className="checkbox-background-color"
-                //  checked={value === "demolition"}
-                onChange={this.onChange}
-              />
-              <span>Demolition & Hauling</span>
-            </label>
-
-            <label className="contact-label">
-              <input
-                type="checkbox"
-                value="regrades"
-                className="checkbox-background-color"
-                onChange={this.onChange}
-              />
-              <span>Regrades</span>
-            </label>
-          </div> */}
+         
         </div>
       </div>
     );

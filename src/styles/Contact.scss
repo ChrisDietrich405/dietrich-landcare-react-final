@@ -31,7 +31,6 @@
   justify-content: space-around;
   list-style: none;
   align-items: center;
-  padding-bottom: 2rem;
   padding-left: 0px !important;
 }
 
@@ -93,10 +92,13 @@
   input,
   textarea {
     width: 192px;
+    border-radius: 8px;
+    border: 1px solid black; 
   }
 
   textarea {
     height: 100px;
+    resize: none; 
   }
 }
 
@@ -130,7 +132,7 @@
 .contact-submit-btn {
   background: #488d7f;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 8px 20px;
   width: 192px;
   margin: 10px auto;
