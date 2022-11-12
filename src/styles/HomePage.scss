@@ -1,5 +1,10 @@
 @import "./Variables.scss";
 
+h1 {
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
 .home-page-container {
   display: flex;
   align-items: center;
@@ -21,7 +26,6 @@
 
 .home-page-bottom-container {
   width: 90%;
-  padding-top: 2rem;
   margin: 0 auto;
   h2 {
     text-align: center;
@@ -33,16 +37,16 @@
   margin: 0 3rem;
   display: grid;
   grid-template-areas:
-    "box1 box2"
+    "home-page-image home-page-description"
     "box3 box3";
   grid-template-columns: 50% 50%;
   grid-column-gap: 0.1rem;
   grid-row-gap: 2rem;
 }
 
-.box1 {
+.home-page-image {
   width: 20rem;
-  grid-area: box1;
+  grid-area: home-page-image;
 }
 
 .paragraph {
@@ -50,12 +54,16 @@
   line-height: 1.5rem;
 }
 
-.box2 {
+.home-page-description {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
   margin-top: 10px;
+}
+
+.home-page-description p {
+  margin: 20px;  
 }
 
 .box3 {
@@ -71,14 +79,14 @@
 
 @media (max-width: 1305px) {
   .home-page-bottom-section,
-  .box1,
-  .box2,
+  .home-page-image,
+  .home-page-description,
   .box3 {
     font-size: 0.9rem;
     display: block;
   }
 
-  .box1 {
+  .home-page-image {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -89,7 +97,7 @@
     }
   }
 
-  .box2 {
+  .home-page-description {
     margin-top: 1.4rem;
   }
 }
@@ -99,7 +107,7 @@
     height: 30vh;
     padding-top: 2rem;
   }
-  .box1 img {
+  .home-page-image img {
     width: 100%;
   }
 
