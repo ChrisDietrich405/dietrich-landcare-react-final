@@ -247,27 +247,20 @@ export default class Contact extends React.Component {
     );
     if (validator.passes()) {
       console.log(this.state)
-      // let userEmail = document.getElementById("exampleFormControlInput1").value;
-      // let userMessage = document.getElementById(
-      //   "exampleFormControlTextarea1"
-      // ).value;
 
       var templateParams = {
-        firstName: "required",
-        lastName: "required",
-        email: "required|email",
-        phone: "required",
-        service: "required",
-        message: "required",
-        
-        
-
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        email: this.state.email,
+        phone: this.state.phone,
+        service: this.state.service,
+        message: this.state.message,
       };
 
       emailjs
         .send(
           "service_vuygmmf",
-          "template_93e3ex8",
+          "template_n3imorc",
           templateParams,
           "630uiCBV0K235A4GY"
 
@@ -284,8 +277,6 @@ export default class Contact extends React.Component {
             console.log(error.text);
           }
         );
-      // document.getElementById("exampleFormControlInput1").value = "";
-      // document.getElementById("exampleFormControlTextarea1").value = "";
       // axios
       //   .post("http://localhost:3001/api/contact", this.state)
       //   .then((response) => alert("message was sent"))
