@@ -1,16 +1,12 @@
 import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { AiFillInstagram } from "react-icons/ai";
-
 import classnames from "classnames";
-
-import axios from "axios";
 import * as Validator from "validatorjs";
+import emailjs from "@emailjs/browser";
+
 
 import ServicesCheckbox from "./ServicesCheckbox";
 
@@ -85,7 +81,7 @@ export default class Contact extends React.Component {
         <div className="contact-services">
           <ServicesCheckbox
             change={(targetValue) => {
-              this.setState({ service : targetValue });
+              this.setState({ service: targetValue });
             }}
           />{" "}
           <div className="contact-form">
@@ -250,12 +246,53 @@ export default class Contact extends React.Component {
       }
     );
     if (validator.passes()) {
-      axios
-        .post("http://localhost:3001/api/contact", this.state)
-        .then((response) => alert("message was sent"))
-        .catch((err) => {
-          console.log(err);
-        });
+      console.log("hello")
+      // let userEmail = document.getElementById("exampleFormControlInput1").value;
+      // let userMessage = document.getElementById(
+      //   "exampleFormControlTextarea1"
+      // ).value;
+
+      // var templateParams = {
+      //   firstName: "required",
+      //   lastName: "required",
+      //   email: "required|email",
+      //   phone: "required",
+      //   service: "required",
+      //   message: "required",
+        
+      //   email: userEmail,
+      //   message: userMessage,
+      //   to_name: "Chris",
+      // };
+
+      // emailjs
+      //   .send(
+      //     "service_vuygmmf",
+      //     "template_93e3ex8",
+      //     templateParams,
+      //     "630uiCBV0K235A4GY"
+
+      //     // process.env.REACT_APP_SERVICE_ID,
+      //     // process.env.REACT_APP_TEMPLATE_ID,
+      //     // templateParams,
+      //     // process.env.REACT_APP_USER_ID
+      //   )
+      //   .then(
+      //     (result) => {
+      //       console.log(result)
+      //     },
+      //     (error) => {
+      //       console.log(error.text);
+      //     }
+      //   );
+      // document.getElementById("exampleFormControlInput1").value = "";
+      // document.getElementById("exampleFormControlTextarea1").value = "";
+      // axios
+      //   .post("http://localhost:3001/api/contact", this.state)
+      //   .then((response) => alert("message was sent"))
+      //   .catch((err) => {
+      //     console.log(err);
+      //   });
     } else {
       this.setState({ error: validator.errors.errors });
     }
