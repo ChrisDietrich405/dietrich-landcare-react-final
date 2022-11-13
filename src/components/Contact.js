@@ -246,45 +246,44 @@ export default class Contact extends React.Component {
       }
     );
     if (validator.passes()) {
-      console.log("hello")
+      console.log(this.state)
       // let userEmail = document.getElementById("exampleFormControlInput1").value;
       // let userMessage = document.getElementById(
       //   "exampleFormControlTextarea1"
       // ).value;
 
-      // var templateParams = {
-      //   firstName: "required",
-      //   lastName: "required",
-      //   email: "required|email",
-      //   phone: "required",
-      //   service: "required",
-      //   message: "required",
+      var templateParams = {
+        firstName: "required",
+        lastName: "required",
+        email: "required|email",
+        phone: "required",
+        service: "required",
+        message: "required",
         
-      //   email: userEmail,
-      //   message: userMessage,
-      //   to_name: "Chris",
-      // };
+        
 
-      // emailjs
-      //   .send(
-      //     "service_vuygmmf",
-      //     "template_93e3ex8",
-      //     templateParams,
-      //     "630uiCBV0K235A4GY"
+      };
 
-      //     // process.env.REACT_APP_SERVICE_ID,
-      //     // process.env.REACT_APP_TEMPLATE_ID,
-      //     // templateParams,
-      //     // process.env.REACT_APP_USER_ID
-      //   )
-      //   .then(
-      //     (result) => {
-      //       console.log(result)
-      //     },
-      //     (error) => {
-      //       console.log(error.text);
-      //     }
-      //   );
+      emailjs
+        .send(
+          "service_vuygmmf",
+          "template_93e3ex8",
+          templateParams,
+          "630uiCBV0K235A4GY"
+
+          // process.env.REACT_APP_SERVICE_ID,
+          // process.env.REACT_APP_TEMPLATE_ID,
+          // templateParams,
+          // process.env.REACT_APP_USER_ID
+        )
+        .then(
+          (result) => {
+            console.log(result)
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
       // document.getElementById("exampleFormControlInput1").value = "";
       // document.getElementById("exampleFormControlTextarea1").value = "";
       // axios
