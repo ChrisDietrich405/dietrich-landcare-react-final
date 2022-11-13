@@ -248,12 +248,14 @@ export default class Contact extends React.Component {
     if (validator.passes()) {
       console.log(this.state)
 
+      const x = this.state.service.join(", ")
+
       var templateParams = {
-        firstName: this.state.firstName,
-        lastName: this.state.lastName,
+        first_name: this.state.firstName,
+        last_name: this.state.lastName,
         email: this.state.email,
         phone: this.state.phone,
-        service: this.state.service,
+        service: x,
         message: this.state.message,
       };
 
