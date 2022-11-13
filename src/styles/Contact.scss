@@ -91,7 +91,7 @@
 
   input,
   textarea {
-    width: 192px;
+    width: 250px;
     border-radius: 8px;
     border: 1px solid black; 
   }
@@ -124,6 +124,7 @@
 }
 
 .contact-form-inputs {
+  gap: 70px; 
   display: flex;
   flex-direction: column;
   justify-content: center;

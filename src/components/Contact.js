@@ -6,7 +6,8 @@ import { AiFillInstagram } from "react-icons/ai";
 import classnames from "classnames";
 import * as Validator from "validatorjs";
 import emailjs from "@emailjs/browser";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import ServicesCheckbox from "./ServicesCheckbox";
 
@@ -224,6 +225,7 @@ export default class Contact extends React.Component {
             <button className="contact-submit-btn">Submit</button>
           </form>
         </div>
+        <ToastContainer toastStyle={{ color: "red" }} />
       </div>
     );
   }
@@ -246,25 +248,25 @@ export default class Contact extends React.Component {
       }
     );
     if (validator.passes()) {
-      console.log(this.state)
+      console.log(this.state);
 
-      const x = this.state.service.join(", ")
+      const services = this.state.service.join(", ");
 
       var templateParams = {
         first_name: this.state.firstName,
         last_name: this.state.lastName,
         email: this.state.email,
         phone: this.state.phone,
-        service: x,
+        services,
         message: this.state.message,
       };
 
       emailjs
         .send(
-          "service_vuygmmf",
-          "template_n3imorc",
+          process.env.REACT_APP_SERVICE_ID,
+          process.env.REACT_APP_TEMPLATE_ID,
           templateParams,
-          "630uiCBV0K235A4GY"
+          process.env.REACT_APP_USER_ID
 
           // process.env.REACT_APP_SERVICE_ID,
           // process.env.REACT_APP_TEMPLATE_ID,
@@ -273,13 +275,18 @@ export default class Contact extends React.Component {
         )
         .then(
           (result) => {
-            console.log(result)
+            console.log("hi Romulo");
+            toast.success("Your message was successfully submitted");
           },
           (error) => {
             console.log(error.text);
           }
         );
-      // axios
+
+        this.setState({ firstName: "", lastName: "", email: "",  phone: "", message: "", services });
+        document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
+      
+        // axios
       //   .post("http://localhost:3001/api/contact", this.state)
       //   .then((response) => alert("message was sent"))
       //   .catch((err) => {
