@@ -1,5 +1,6 @@
 import React from "react";
 import SlideShow from "./SlideShow";
+import { Link } from "react-router-dom";
 
 import scrollImage1 from "../images/scroll-image1.png";
 import scrollImage2 from "../images/scroll-image2.png";
@@ -63,7 +64,10 @@ export default class HomePage extends React.Component {
                 energy-efficient lighting and more.
               </p>
             </div>
-            <div className="box3"></div>
+            
+           <button className="contact-btn" onClick={() => window.location.href = "/contact"}
+           
+           >Contact us today!</button>
           </section>
         </div>
       </>

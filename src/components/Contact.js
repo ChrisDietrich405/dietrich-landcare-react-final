@@ -225,7 +225,7 @@ export default class Contact extends React.Component {
             <button className="contact-submit-btn">Submit</button>
           </form>
         </div>
-        <ToastContainer toastStyle={{ color: "red" }} />
+        <ToastContainer/>
       </div>
     );
   }
