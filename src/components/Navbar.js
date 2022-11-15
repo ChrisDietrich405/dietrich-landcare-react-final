@@ -47,14 +47,12 @@ export default class Navbar extends React.Component {
 
   async componentDidMount() {
     const { data } = await axios.get("http://localhost:3001/api/getServices");
-    console.log(data);
     this.setState({ ...this.state, services: data.services });
   }
 
   render() {
     return (
       <>
-        {/* {this.state.showModal && <Payment closeModal={this.closeModal}/>} */}
         <nav>
           {this.state.toggleMobileMenu && (
             <MenuMobile

@@ -248,7 +248,6 @@ export default class Contact extends React.Component {
       }
     );
     if (validator.passes()) {
-      console.log(this.state);
 
       const services = this.state.service.join(", ");
 
@@ -268,39 +267,27 @@ export default class Contact extends React.Component {
           templateParams,
           process.env.REACT_APP_USER_ID
 
-          // process.env.REACT_APP_SERVICE_ID,
-          // process.env.REACT_APP_TEMPLATE_ID,
-          // templateParams,
-          // process.env.REACT_APP_USER_ID
         )
         .then(
           (result) => {
-            console.log("hi Romulo");
             toast.success("Your message was successfully submitted");
           },
           (error) => {
-            console.log(error.text);
+            toast.error("Your message wasn't successfully submitted")
           }
         );
 
         this.setState({ firstName: "", lastName: "", email: "",  phone: "", message: "", services });
         document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
       
-        // axios
-      //   .post("http://localhost:3001/api/contact", this.state)
-      //   .then((response) => alert("message was sent"))
-      //   .catch((err) => {
-      //     console.log(err);
-      //   });
     } else {
       this.setState({ error: validator.errors.errors });
     }
   }
 
+  //is this doing anything
   onInputFocus(event) {
-    // event.target.parent.previousElementSibling.classList.add("focus");
   }
   onInputBlur(event) {
-    // event.target.parent.previousElementSibling.classList.remove("focus");
   }
 }

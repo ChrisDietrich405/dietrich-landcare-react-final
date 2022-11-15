@@ -39,7 +39,6 @@ export default class Header extends React.Component {
   }
 
   render() {
-    console.log(this.state.toggle);
     return (
       <nav
         onMouseLeave={this.navbarMouseLeave.bind(this)}

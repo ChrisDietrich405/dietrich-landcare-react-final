@@ -27,7 +27,7 @@ export default class Services extends React.Component {
                 We are one of the leading exterior cleaning service providers
                 catering to residential and commercial soft washing, pressure
                 washing, power washing, pressure cleaning, and exterior property
-                maintenance in Maryland. We have been washing for over 19 years
+                maintenance in Maryland. We have been washing for 5 years
                 and know the "Ins and Outs" of the industry.
               </p>
             </div>
