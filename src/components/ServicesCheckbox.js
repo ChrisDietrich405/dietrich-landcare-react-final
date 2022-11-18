@@ -6,6 +6,7 @@ class App extends Component {
   state = {
     value: [],
     serviceItems: [],
+    isSubmitting: false,
   };
 
   async componentDidMount() {
@@ -33,29 +34,25 @@ class App extends Component {
   };
 
   render() {
+    // if (this.props.isSubmitting) {
+    //   this.setState({ isSubmitting: true });
+    // } else {
+    //   if (this.state.isSubmitting) {
+    //     this.setState({
+    //       value: [],
+    //       serviceItems: [],
+    //       isSubmitting: false,
+    //     });
+    //   }
+    // }
     return (
       <div className="checkbox-container">
         <h3>What services are you interested in?</h3>
-        {/* <div style={{ display: "flex" }}>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            {this.state.serviceItems
-              .filter((e) => e % 2 !== 0)
-              .map((e) => (
-                <span>{e}</span>
-              ))}
-          </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            {this.state.serviceItems
-              .filter((e) => e % 2 === 0)
-              .map((e) => (
-                <span>{e}</span>
-              ))}
-          </div>
-        </div> */}
+
         <div className="service-container">
           {this.state.serviceItems.map((service, index) => {
             return (
-              <div>
+              <div key={index}>
                 <label className="contact-label">
                   <input
                     type="checkbox"
@@ -68,8 +65,6 @@ class App extends Component {
               </div>
             );
           })}
-
-         
         </div>
       </div>
     );

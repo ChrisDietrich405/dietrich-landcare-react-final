@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
@@ -24,7 +25,14 @@ export default class Contact extends React.Component {
       message: "",
       service: "",
       error: {},
+      isSubmitting: false,
+      services: [],
     };
+  }
+
+  async componentDidMount() {
+    const { data } = await axios.get("http://localhost:3001/api/getServices");
+    this.setState({ ...this.state, services: data.services });
   }
 
   render() {
@@ -81,7 +89,9 @@ export default class Contact extends React.Component {
 
         <div className="contact-services">
           <ServicesCheckbox
+            isSubmitting={this.state.isSubmitting}
             change={(targetValue) => {
+              console.log(targetValue)
               this.setState({ service: targetValue });
             }}
           />{" "}
@@ -106,8 +116,6 @@ export default class Contact extends React.Component {
                   <label htmlFor="firstName">First Name</label>
                   <div className="input-container">
                     <input
-                      onFocus={this.onInputFocus.bind(this)}
-                      onBlur={this.onInputBlur.bind(this)}
                       id="firstName"
                       name="firstName"
                       value={this.state.firstName}
@@ -131,8 +139,6 @@ export default class Contact extends React.Component {
                   <label htmlFor="lastName">Last Name</label>
                   <div className="input-container">
                     <input
-                      onFocus={this.onInputFocus.bind(this)}
-                      onBlur={this.onInputBlur.bind(this)}
                       id="lastName"
                       value={this.state.lastName}
                       onChange={(event) => {
@@ -155,8 +161,6 @@ export default class Contact extends React.Component {
                   <label htmlFor="Email">Email</label>
                   <div className="input-container">
                     <input
-                      onFocus={this.onInputFocus.bind(this)}
-                      onBlur={this.onInputBlur.bind(this)}
                       id="Email"
                       value={this.state.email}
                       onChange={(event) => {
@@ -180,8 +184,6 @@ export default class Contact extends React.Component {
                   <label htmlFor="Phone">Phone</label>
                   <div className="input-container">
                     <input
-                      onFocus={this.onInputFocus.bind(this)}
-                      onBlur={this.onInputBlur.bind(this)}
                       id="Phone"
                       value={this.state.phone}
                       onChange={(event) => {
@@ -207,8 +209,6 @@ export default class Contact extends React.Component {
                     <textarea
                       id="textarea-responsive"
                       value={this.state.message}
-                      onFocus={this.onInputFocus.bind(this)}
-                      onBlur={this.onInputBlur.bind(this)}
                       onChange={(event) => {
                         this.setState({ message: event.target.value });
                       }}
@@ -222,10 +222,15 @@ export default class Contact extends React.Component {
                 </div>
               </div>
             </div>
-            <button className="contact-submit-btn">Submit</button>
+            <button
+              disabled={this.state.isSubmitting}
+              className="contact-submit-btn"
+            >
+              {this.state.isSubmitting ? "Submitting..." : "Submit"}
+            </button>
           </form>
         </div>
-        <ToastContainer/>
+        <ToastContainer />
       </div>
     );
   }
@@ -248,7 +253,6 @@ export default class Contact extends React.Component {
       }
     );
     if (validator.passes()) {
-
       const services = this.state.service.join(", ");
 
       var templateParams = {
@@ -260,34 +264,40 @@ export default class Contact extends React.Component {
         message: this.state.message,
       };
 
+      this.setState({ isSubmitting: true });
+
       emailjs
         .send(
           process.env.REACT_APP_SERVICE_ID,
           process.env.REACT_APP_TEMPLATE_ID,
           templateParams,
           process.env.REACT_APP_USER_ID
-
         )
         .then(
           (result) => {
+            this.setState({
+              firstName: "",
+              lastName: "",
+              email: "",
+              phone: "",
+              message: "",
+              isSubmitting: false,
+              services,
+            });
+
             toast.success("Your message was successfully submitted");
           },
           (error) => {
-            toast.error("Your message wasn't successfully submitted")
+            toast.error("Your message wasn't successfully submitted");
+            this.setState({ isSubmitting: false });
           }
         );
 
-        this.setState({ firstName: "", lastName: "", email: "",  phone: "", message: "", services });
-        document.querySelectorAll('input[type=checkbox]').forEach(el => el.checked = false);
-      
+      document
+        .querySelectorAll("input[type=checkbox]")
+        .forEach((el) => (el.checked = false));
     } else {
       this.setState({ error: validator.errors.errors });
     }
-  }
-
-  //is this doing anything
-  onInputFocus(event) {
-  }
-  onInputBlur(event) {
   }
 }
