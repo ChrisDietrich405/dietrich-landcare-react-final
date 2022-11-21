@@ -27,6 +27,7 @@ export default class Contact extends React.Component {
       error: {},
       isSubmitting: false,
       services: [],
+      submitted: false,
     };
   }
 
@@ -88,13 +89,22 @@ export default class Contact extends React.Component {
         </div>
 
         <div className="contact-services">
-          <ServicesCheckbox
-            isSubmitting={this.state.isSubmitting}
-            change={(targetValue) => {
-              console.log(targetValue)
-              this.setState({ service: targetValue });
-            }}
-          />{" "}
+          {this.state.submitted ? (
+            <ServicesCheckbox
+              isSubmitting={this.state.submitted}
+              change={(targetValue) => {
+                console.log(targetValue);
+                this.setState({ service: targetValue });
+              }}
+            />
+          ) : (
+            <ServicesCheckbox
+              change={(targetValue) => {
+                console.log(targetValue);
+                this.setState({ service: targetValue });
+              }}
+            />
+          )}{" "}
           <div className="contact-form">
             {"service" in this.state.error && (
               <p className="error-message">
@@ -222,6 +232,7 @@ export default class Contact extends React.Component {
                 </div>
               </div>
             </div>
+            <p>{this.state.submitted ? "yes" : "no"}</p>
             <button
               disabled={this.state.isSubmitting}
               className="contact-submit-btn"
@@ -282,8 +293,13 @@ export default class Contact extends React.Component {
               phone: "",
               message: "",
               isSubmitting: false,
-              services,
+              services: [],
+              submitted: true,
             });
+
+            setTimeout(() => {
+              this.setState({ submitted: false });
+            }, 2000);
 
             toast.success("Your message was successfully submitted");
           },
@@ -292,10 +308,6 @@ export default class Contact extends React.Component {
             this.setState({ isSubmitting: false });
           }
         );
-
-      document
-        .querySelectorAll("input[type=checkbox]")
-        .forEach((el) => (el.checked = false));
     } else {
       this.setState({ error: validator.errors.errors });
     }
