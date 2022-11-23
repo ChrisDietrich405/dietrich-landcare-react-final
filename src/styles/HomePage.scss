@@ -103,15 +103,19 @@ h1 {
 }
 
 .contact-btn {
+  background-color: #448c7e;
   display: flex; 
   margin: 0 auto;
   padding: 10px 20px;
   border: none; 
   border-radius: 9px;
+  transition: .4s;
+  color:#fff;
 }
 
 .contact-btn:hover {
-  color: #448c7e;
+  background-color: aquamarine;
+  color: #000; 
 }
 
 @media only screen and (max-width: 900px) {

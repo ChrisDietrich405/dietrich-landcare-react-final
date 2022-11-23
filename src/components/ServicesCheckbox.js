@@ -12,11 +12,21 @@ class ServicesCheckbox extends Component {
   async componentDidMount() {
     const { data } = await axios.get("http://localhost:3001/api/getServices");
     this.setState({ ...this.state, serviceItems: data.services });
-    console.log("data")
   }
 
   async shouldComponentUpdate(nextProps, nextState) {
-    console.log(nextProps, nextState)
+    if (nextProps.isSubmitting && !this.state.isSubmitting) {
+      this.setState({ isSubmitting: true });
+    }
+
+    if (!nextProps.isSubmitting && this.state.isSubmitting) {
+      this.setState({ isSubmitting: false, value: [] });
+      this.props.change([]);
+
+      document
+        .querySelectorAll("input[type=checkbox]")
+        .forEach((el) => (el.checked = false));
+    }
   }
 
   onChange = (e) => {
@@ -39,7 +49,6 @@ class ServicesCheckbox extends Component {
   };
 
   render() {
-
     return (
       <div className="checkbox-container">
         <h3>What services are you interested in?</h3>
