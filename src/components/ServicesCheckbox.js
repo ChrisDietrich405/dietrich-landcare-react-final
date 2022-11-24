@@ -6,7 +6,7 @@ class ServicesCheckbox extends Component {
   state = {
     value: [],
     serviceItems: [],
-    isSubmitting: false,
+    isFormSubmitting: false,
   };
 
   async componentDidMount() {
@@ -14,13 +14,13 @@ class ServicesCheckbox extends Component {
     this.setState({ ...this.state, serviceItems: data.services });
   }
 
-  async shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.isSubmitting && !this.state.isSubmitting) {
-      this.setState({ isSubmitting: true });
+  async shouldComponentUpdate(nextProps) {
+    if (nextProps.isSubmitting && !this.state.isFormSubmitting) {
+      this.setState({ isFormSubmitting: true });
     }
 
-    if (!nextProps.isSubmitting && this.state.isSubmitting) {
-      this.setState({ isSubmitting: false, value: [] });
+    if (!nextProps.isSubmitting && this.state.isFormSubmitting) {
+      this.setState({ isFormSubmitting: false, value: [] });
       this.props.change([]);
 
       document
@@ -30,22 +30,20 @@ class ServicesCheckbox extends Component {
   }
 
   onChange = (e) => {
-    if (!this.state.value.find((element) => element === e.target.value)) {
-      const services = [...this.state.value, e.target.value];
-      this.setState({
-        value: services,
-      });
-      this.props.change(services);
+    const isChecked = this.state.value.find((element) => element === e.target.value)
+    let services = []
+    if (!isChecked) {
+      services = [...this.state.value, e.target.value];
     }
-    if (this.state.value.find((element) => element === e.target.value)) {
-      const services = this.state.value.filter(
+    else { 
+      services = this.state.value.filter(
         (element) => element !== e.target.value
-      );
-      this.setState({
-        value: services,
-      });
-      this.props.change(services);
+      ); 
     }
+    this.setState({
+      value: services
+    })
+    this.props.change(services)
   };
 
   render() {

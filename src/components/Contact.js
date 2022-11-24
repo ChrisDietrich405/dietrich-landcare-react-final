@@ -27,7 +27,6 @@ export default class Contact extends React.Component {
       error: {},
       isSubmitting: false,
       services: [],
-      submitted: false,
     };
   }
 
@@ -90,7 +89,7 @@ export default class Contact extends React.Component {
 
         <div className="contact-services">
           <ServicesCheckbox
-            isSubmitting={this.state.submitted}
+            isSubmitting={this.state.isSubmitting}
             change={(targetValue) => {
               this.setState({ service: targetValue });
             }}
