@@ -41,7 +41,10 @@ export default class Contact extends React.Component {
         <div className="contact-header">
           <h1 className="contact-title">Let's get in touch!</h1>
           <hr className="contact-line" />
-          <p>We are available by phone: Monday-Saturday 7am-7:30 pm.</p>
+          <p>
+            Call or Text Us: Monday-Saturday 7am-7:30 pm. Saturday: 9am-3:30pm
+            Sunday: 9am-3:30pm
+          </p>
         </div>
 
         <ul className="contact-info">
@@ -57,7 +60,7 @@ export default class Contact extends React.Component {
           <li className="contact-information">
             <span className="icon-location2 contact-info-icons"></span>
 
-            <p>Baltimore, MD 21239</p>
+            <p>Towson, MD 21239</p>
           </li>
         </ul>
 
@@ -78,11 +81,6 @@ export default class Contact extends React.Component {
               target="_blank"
             >
               <AiFillInstagram size={40} />
-            </a>
-          </div>
-          <div className={classnames("contact-twitter", { thing: false })}>
-            <a href="/">
-              <FontAwesomeIcon icon={faTwitter} size="2x" />
             </a>
           </div>
         </div>

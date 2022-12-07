@@ -4,14 +4,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+
   background-color: $primary-color;
-  //WHY CAN'T  I USE $primary-color;
 
   img {
-    height: 60px;
-    width: 70px;
+    height: 106px;
+    width: 106px;
+    margin-left: 20px;
     border-radius: 8px;
+  }
+
+  .links-social-media-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
   }
 
   .logo-links {
@@ -44,7 +50,7 @@ nav {
   }
 
   .services:hover {
-    cursor: pointer; 
+    cursor: pointer;
   }
 
   .services-nav-link {

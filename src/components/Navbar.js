@@ -59,129 +59,131 @@ export default class Navbar extends React.Component {
               whenUserClicksOnXIcon={() => this.setToggleMobileMenu()}
             />
           )}
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
+          <div className="links-social-media-container">
+            <div className="logo-links">
+              <ul className="responsive-links">
+                <li className="nav-item">
+                  <Link to="/" className="nav-link">
+                    Home
+                  </Link>
+                </li>
 
-          <div className="logo-links">
-            <Link to="/">
-              <img src={logo} alt="logo" />
-            </Link>
-            {/* <img src={logo} alt="logo" /> */}
-            <ul className="responsive-links">
-              <li className="nav-item">
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
-              </li>
-
-              <li className="services" onClick={this.toggleShowServiceMenu}>
-                <OutsideAlerter
-                  clickOutside={() => this.setState({ showServiceMenu: false })}
-                >
-                  Services
-                  {this.state.showServiceMenu ? (
-                    <div className="services-menu">
-                      <ul>
-                        {this.state.services.map((service) => {
-                          return (
-                            <li>
-                              <a
-                                href={`/services#${service.permalink}`}
-                                className="services-nav-link"
-                              >
-                                {service.name}
-                              </a>
-                            </li>
-                          );
-                        })}
-                        {/* <li>
+                <li className="services" onClick={this.toggleShowServiceMenu}>
+                  <OutsideAlerter
+                    clickOutside={() =>
+                      this.setState({ showServiceMenu: false })
+                    }
+                  >
+                    Services
+                    {this.state.showServiceMenu ? (
+                      <div className="services-menu">
+                        <ul>
+                          {this.state.services.map((service) => {
+                            return (
+                              <li>
+                                <a
+                                  href={`/services#${service.permalink}`}
+                                  className="services-nav-link"
+                                >
+                                  {service.name}
+                                </a>
+                              </li>
+                            );
+                          })}
+                          {/* <li>
                           <a
-                            href="/services#lawn-care"
-                            className="services-nav-link"
+                          href="/services#lawn-care"
+                          className="services-nav-link"
                           >
-                            Lawn Care
+                          Lawn Care
                           </a>
-                        </li>
-                        <li>
+                          </li>
+                          <li>
                           <a
-                            href="/services#power-washing"
-                            className="services-nav-link"
+                          href="/services#power-washing"
+                          className="services-nav-link"
                           >
-                            Power Washing
+                          Power Washing
                           </a>
-                        </li>
-                        <li>
+                          </li>
+                          <li>
                           <a
-                            href="/services#snow-removal"
-                            className="services-nav-link"
+                          href="/services#snow-removal"
+                          className="services-nav-link"
                           >
-                            Snow Removal
+                          Snow Removal
                           </a>
-                        </li>
-                        <li>
+                          </li>
+                          <li>
                           <a
                             href="/services#stump-removal"
                             className="services-nav-link"
                           >
-                            Stump Removal
+                          Stump Removal
                           </a>
-                        </li>
-                        <li>
+                          </li>
+                          <li>
                           <a
-                            href="/services#demolition"
-                            className="services-nav-link"
+                          href="/services#demolition"
+                          className="services-nav-link"
                           >
-                            Demolition & Hauling
+                          Demolition & Hauling
                           </a>
-                        </li>
-                        <li>
+                          </li>
+                          <li>
                           <a
-                            href="/services#regrades"
-                            className="services-nav-link"
+                          href="/services#regrades"
+                          className="services-nav-link"
                           >
                             Regrades
                           </a>
                         </li> */}
-                      </ul>
-                    </div>
-                  ) : (
-                    ""
-                  )}
-                </OutsideAlerter>
-              </li>
+                        </ul>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                  </OutsideAlerter>
+                </li>
 
-              <li className="nav-item">
-                <Link to="/testimonials" className="nav-link">
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="nav-link">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
+                <li className="nav-item">
+                  <Link to="/testimonials" className="nav-link">
+                    Testimonials
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="nav-link">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          <div className="social-icons-container">
-            <a
-              href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon
-                className="social-media-icon"
-                icon={faFacebook}
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/dietrich_landcarellc/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon
-                className="social-media-icon"
-                icon={faInstagram}
-              />
-            </a>
+            <div className="social-icons-container">
+              <a
+                href="https://www.facebook.com/Dietrich-Land-Care-LLC-571934750168436"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className="social-media-icon"
+                  icon={faFacebook}
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/dietrich_landcarellc/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon
+                  className="social-media-icon"
+                  icon={faInstagram}
+                />
+              </a>
+            </div>
           </div>
 
           <div

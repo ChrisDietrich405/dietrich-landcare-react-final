@@ -23,26 +23,26 @@ export default class Footer extends React.Component {
                   <span>
                     <FontAwesomeIcon icon={faPhone} />
                   </span>
-                  &nbsp;432 444 5555
+                  &nbsp;(443) 608-3258
                 </p>
                 <p>
                   <span>
                     <FontAwesomeIcon icon={faEnvelopeSquare} />
                   </span>
-                  &nbsp;DietrichLandcare@gmail.com
+                  &nbsp;office@dietrichlandcare.com
                 </p>
               </div>
               <div className="footer-container-top-title">
-                <h3>Address</h3>
-                <p>1376 Loch Hill Rd</p>
-                <p>Baltimore, MD 21239</p>
+                <h3>Serving</h3>
+                <p>Towson, Lutherville and Timonium</p>
               </div>
             </div>
             <div className="footer-tablet-container">
               <div className="footer-container-top-title">
                 <h3>Office Hours</h3>
-                <p>Monday-Saturday 9am-6pm</p>
-                <p>Sundays 11am-5pm</p>
+                <p>Monday-Friday 7am-7:30pm</p>
+                <p>Saturday 9am-3:30pm</p>
+                <p>Sunday 9am-3:30pm</p>
               </div>
               <div className="footer-container-top-title">
                 <h3>Follow Us</h3>
@@ -67,7 +67,7 @@ export default class Footer extends React.Component {
           </div>
           <div className="footer-container-bottom">
             <div className="footer-copyright">
-              <h4>DietrichLandcare©{currentTime()}</h4>
+              <h4>DietrichLandCare©{currentTime()}</h4>
             </div>
           </div>
         </div>

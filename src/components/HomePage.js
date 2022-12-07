@@ -64,10 +64,13 @@ export default class HomePage extends React.Component {
                 energy-efficient lighting and more.
               </p>
             </div>
-            
-           <button className="contact-btn" onClick={() => window.location.href = "/contact"}
-           
-           >Contact us today!</button>
+
+            <button
+              className="contact-btn"
+              onClick={() => (window.location.href = "/contact")}
+            >
+              Contact us today!
+            </button>
           </section>
         </div>
       </>
