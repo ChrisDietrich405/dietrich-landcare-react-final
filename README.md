@@ -1,6 +1,8 @@
 # dietrich-landcare-react-final
 
-I build this website for my oldest son's business. I used Object Oriented Programming, React JS, Bootstrap, and SASS 
+My oldest son needed a website for his business so here it is. For
+this project I used object oriented programming. I used SASS for
+the styling and the Emailjs library for the contact functionality.
 
 
 ## How To Run This Project
