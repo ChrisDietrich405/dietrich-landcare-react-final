@@ -34,7 +34,7 @@ export default class Footer extends React.Component {
               </div>
               <div className="footer-container-top-title">
                 <h3>Serving</h3>
-                <p>Towson, Lutherville and Timonium</p>
+                <p>Baltimore, Anne Arundel, and Howard County</p>
               </div>
             </div>
             <div className="footer-tablet-container">
@@ -42,7 +42,6 @@ export default class Footer extends React.Component {
                 <h3>Office Hours</h3>
                 <p>Monday-Friday 7am-7:30pm</p>
                 <p>Saturday 9am-3:30pm</p>
-                <p>Sunday 9am-3:30pm</p>
               </div>
               <div className="footer-container-top-title">
                 <h3>Follow Us</h3>

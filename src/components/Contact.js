@@ -43,7 +43,6 @@ export default class Contact extends React.Component {
           <hr className="contact-line" />
           <p>
             Call or Text Us: Monday-Saturday 7am-7:30 pm. Saturday: 9am-3:30pm
-            Sunday: 9am-3:30pm
           </p>
         </div>
 
