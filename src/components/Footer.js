@@ -34,7 +34,8 @@ export default class Footer extends React.Component {
               </div>
               <div className="footer-container-top-title">
                 <h3>Serving</h3>
-                <p>Baltimore, Anne Arundel, and Howard County</p>
+                <p>Baltimore, Anne Arundel</p>
+                <p>and Howard County</p>
               </div>
             </div>
             <div className="footer-tablet-container">

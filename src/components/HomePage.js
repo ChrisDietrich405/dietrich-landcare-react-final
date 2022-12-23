@@ -38,7 +38,7 @@ export default class HomePage extends React.Component {
 
         <div className="home-page-bottom-container">
           <section className="home-page-bottom-section">
-            <h1>Dietrich LandCare</h1>
+            <h1>Dietrich Land Care</h1>
             <div className="home-page-image">
               <img src={lawnCare} alt="" className="bottom-pic" />
             </div>

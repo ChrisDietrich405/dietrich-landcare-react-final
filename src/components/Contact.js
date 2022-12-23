@@ -42,7 +42,8 @@ export default class Contact extends React.Component {
           <h1 className="contact-title">Let's get in touch!</h1>
           <hr className="contact-line" />
           <p>
-            Call or Text Us: Monday-Saturday 7am-7:30 pm. Saturday: 9am-3:30pm
+            Call or text us: Monday through Friday 7am-7:30pm Saturday:
+            9am-3:30pm
           </p>
         </div>
 
@@ -59,7 +60,7 @@ export default class Contact extends React.Component {
           <li className="contact-information">
             <span className="icon-location2 contact-info-icons"></span>
 
-            <p>Towson, MD 21239</p>
+            <p>Towson, MD 21286</p>
           </li>
         </ul>
 

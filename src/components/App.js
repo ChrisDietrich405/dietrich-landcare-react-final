@@ -24,8 +24,8 @@ export default function App() {
         <Navbar />
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Dietrich Landcare</title>
-          <meta name="Dietrich Landcare Title" content="Helmet application" />
+          <title>Dietrich Land Care</title>
+          <meta name="Dietrich Land Care Title" content="Helmet application" />
           <link rel="canonical" href="http://mysite.com/example" />
         </Helmet>
         <Switch>
